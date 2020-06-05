@@ -1,0 +1,50 @@
+\subsection{Der vollständige Graph $K_n$ (Satz von Cayley)}
+
+Als Einstieg soll der vollständige Graph mit n Knoten kurz $K_n$ dienen.\\%%%Wer hat das zuerst herausgefunden? Wo haben wir den Beweis her?Warum ist das interessant
+\begin{Tms}[Satz von Cayley]
+$K_n$ besitzt genau $n^{n-2}$ verschiedene Spannbäume.\\
+\end{Tms}
+\textbf{Beweis:}\\
+Ein sehr ähnlicher Beweis findet sich in ~\cite{Lau_2004}.
+Wir wollen das Matrix-Tree-Theorem verwenden und betrachten deshalb die Determinante der Matrix $M_n\in M_{n-1}(\mathbb{Z})$, die durch das Streichen der ersten Zeile und Spalte der Laplacematrix $L_n\in M_n(\mathbb{Z})$ von $K_n$ entsteht:
+\begin{equation}
+M_n:=
+\begin{pmatrix}
+n-1&-1&\ldots&\ldots&\ldots&-1\\
+-1&n-1&-1&\ldots&\ldots&-1\\
+-1&-1&n-1&-1&\ldots&-1\\
+\ldots&\ldots&\ldots&\ldots&\ldots&\ldots&\\
+-1&\ldots&\ldots&\ldots&-1&n-1\\
+\end{pmatrix}
+\end{equation}
+Da sich die Determinante durch elementare Zeilen- und Spaltenoperationen nicht ändert, dürfen wir die erste Spalte von allen anderen subtrahieren und erhalten:
+
+\begin{equation}
+det(M_n):=det
+\begin{pmatrix}
+n-1&-n&\ldots&\ldots&\ldots&-n\\
+-1&n&0&\ldots&\ldots&0\\
+-1&0&n&0&\ldots&0\\
+\ldots&\ldots&\ldots&\ldots&\ldots&\ldots&\\
+-1&0&\ldots&\ldots&0&n\\
+\end{pmatrix}
+\end{equation}
+Mit demselben Argument wie oben addieren wir zur ersten Zeile alle übrigen und es ergibt sich:
+
+\begin{equation}
+det(M_n):=det
+\begin{pmatrix}
+1&0&\ldots&\ldots&\ldots&0\\
+-1&n&0&\ldots&\ldots&0\\
+-1&0&n&0&\ldots&0\\
+\ldots&\ldots&\ldots&\ldots&\ldots&\ldots&\\
+-1&0&\ldots&\ldots&0&n\\
+\end{pmatrix}
+\end{equation}
+Wir berechnen den Wert dieser Determinante durch Entwicklung nach der ersten Zeile. Weil die Matrix $M_n$ eine $n-1 \times n-1$ Matrix ist, gilt:
+
+\begin{equation}
+ det(M_n)=n^{n-2}
+\end{equation}
+Nach Kirchhoff's Matrix-Tree-Theorem ist genau das die Anzahl der Spannbäume des $K_n$
+\begin{flushright} $\Box$ \end{flushright} 

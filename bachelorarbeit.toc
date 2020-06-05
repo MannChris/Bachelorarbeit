@@ -1,0 +1,13 @@
+\babel@toc {english}{}
+\contentsline {section}{\numberline {1}Einleitung}{3}% 
+\contentsline {section}{\numberline {2}Technische Lemmas und Definitionen}{4}% 
+\contentsline {section}{\numberline {3}Das Matrix-Tree-Theorem}{5}% 
+\contentsline {subsection}{\numberline {3.1}Tutte's Matrix-Tree-Theorem}{5}% 
+\contentsline {subsection}{\numberline {3.2}Kirchhoff's Matrix-Tree-Theorem}{5}% 
+\contentsline {section}{\numberline {4}Anzahl Spannb\IeC {\"a}ume f\IeC {\"u}r bestimmte Graphenklassen}{6}% 
+\contentsline {subsection}{\numberline {4.1}Der vollst\IeC {\"a}ndige Graph $K_n$ (Satz von Cayley)}{6}% 
+\contentsline {subsection}{\numberline {4.2}vollst\IeC {\"a}ndige multipartite Graphen}{7}% 
+\contentsline {subsection}{\numberline {4.3}Cartesische Produkte von Graphen}{7}% 
+\contentsline {subsection}{\numberline {4.4}$F_n$ (Fan)(F\IeC {\"a}cher?)}{7}% 
+\contentsline {subsection}{\numberline {4.5}$W_n$ (R\IeC {\"a}der)}{7}% 
+\contentsline {subsection}{\numberline {4.6}circulant Graphs}{8}% 

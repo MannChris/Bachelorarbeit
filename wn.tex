@@ -1,0 +1,38 @@
+\subsection{$W_n$ (Räder)}
+Der vorletzte Stop auf unserer Reise sind die sogenannten Wheel-Graphen. Hier wird zu einem zyklischen Graphen $C_n$ mit Knoten $\{v_1,..,v_n\}$, $n \geq 3$ ein weiterer Knoten $z$ hinzugefügt, der mit allen anderen Knoten benachbart ist, sodass der Wheel-Graph $W_{n}$ entsteht (Achtung: $W_n$ hat $n+1$ Knoten).\\
+%V1:
+%Um eine Formel für die Berechnung der Anzahl der Spannbäume eines solchen Graphen herzuleiten, werden wir vorgehen wie in ~\cite{sedlacek_1970}.
+%Wie nehmen uns also einen leicht modifizierten Graphen $H_n$ vor; dabei entfernen wir die Kante $v_1v_n$ aus $W_{n}$. Des weiteren definieren wir $H_1 := K_2$ und $H_2 := K_3$. 
+%Zuerst werden wir die Anzahl der Spannbäume von $H_n$ berechnen und anschließend damit die von $W_n$.
+%Wier zeigen also zunächst, dass die Anzahl der Spannbäume von $H_n$ gleich: $\frac{(3+\sqrt{5})^n - (3-\sqrt{5})^n}{2^n \sqrt{5}}$ ist.
+%Dazu sei $a_n$ die Anzahl der Spannbäume von $H_n$ und sei $b_n$ die Anzahl der Subgraphen des $H_n$ die alle Knoten von $H_n$ enthalten und aus zwei Komponenten bestehen, von denen die eine $v_n$ und die andere $z$ enthält. Mithilfe von vollständiger Induktion zeigen wir, dass $a_1 = b_1 = 1$ und die folgenden rekursiven Beziehungen gelten:
+%$a_{n+1} = 2a_n + b_n$ und $b_{n+1} = a_n + b_n$
+%Es ist leicht zu sehen, dass $a_1 = b_1 = 1$ und $a_2 = 3$, sowie $b_2 = 2$
+%%Induktionsbeweis...
+%V2:\\
+Um eine Formel für die Berechnung der Anzahl der Spannbäume eines solchen Graphen herzuleiten, lassen wir von ~\cite{sedlacek_1970} inspirieren.
+Unser Ziel ist es folgendes zu zeigen:
+\begin{equation}
+ \mathit{k}(W_n) = (\frac{3+\sqrt{5}}{2})+(\frac{3+\sqrt{5}}{2})^n-2
+\end{equation}
+Wir beobachten, dass wir den Fan-Graphen $F_n$ bekommen, wenn wir die Kante $v_1v_n$ aus $W_n$ entfernen.
+Die Anzahl der Spannbäume von $F_n$ kennen wir bereits von oben.
+Wir werden zeigen, dass $\mathit{k}(W_n) = \mathit{k}(F_n) + 2 \sum_{j=2}^n\mathit{k}(F_{j-1})$;
+damit können wir danach die Anzahl der Spannbäume von $W_n$ berechnen.
+Als ersten Schritt dahin beweisen wir, dass für $n \geq 3$ die nachfolgende rekursive Beziehung gilt:
+\begin{equation}
+ \mathit{k}(W_{n+1}) = \mathit{k}(F_{n+1}) + \mathit{k}(F_n) + \mathit{k}(W_n)
+\end{equation}
+Um das zu tun, werden die Spannbäume von $W_{n+1}$ in drei verschiedene Klassen einteilen:\\%%?Klassen hier richtiger Begriff?
+1) Alle Spannbäume, die die Kante $v_1v_{n+1}$ nicht enthalten; das sind genau die Spannbäume von $F_{n+1}$.\\
+2) Alle Spannbäume, die die Kante $v_1v_{n+1}$ enthalten, jedoch nicht die Kante $v_1z$; das sind die Spannbäume des Graphen $W_{n+1} \slash v_1v_{n+1}$, den wir durch Kontraktion der Kante $v_1v_{n+1}$ aus $W_{n+1}$ erhalten - dieser Graph ist aber $W_n$.\\
+3) Alle Spannbäume, die die Kanten $v_1v_{n+1}$ und $v_1z$ beinhalten; das sind die Spannbäume des Graphen, den wir durch die Kontraktion der Kante $v_1z$ gewinnen, also von $F_n$, wie wir aus der nachfolgenden Grafik entnehmen können.\\
+%%Grafik dazu einfügen
+Wie wir sehr leicht sehen können ist jeder Spannbaum von $W_{n+1}$ in genau einer dieser Klassen, also gilt die Rekursion.\\
+Wir können jetzt - zum Beispiel durch vollständige Induktion über $n \in \mathbb{N}$ - unsere Formel %%Formel von oben
+verifizieren.\\
+Nachdem wir im vorherigen Kapitel herausgefunden haben, wieviele Spannbäume Fan-Graphen haben, können wir das sofort in die Formel einsetzen, und erhalten:\\
+%%Formel konkret berechnen
+Damit haben wir erfolgreich gezeigt, dass für die Anzahl der Spannbäume in $W_n$ gilt:\\
+%% equation von oben.
+

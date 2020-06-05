@@ -1,0 +1,173 @@
+\documentclass[11pt,a4paper,twoside]{article}
+\usepackage[a4paper, bindingoffset=0.5cm, hmargin={2.5cm, 2.5cm},vmargin={2.5cm, 2.5cm}]{geometry}
+\usepackage[T1]{fontenc} 
+\usepackage[utf8]{inputenc} 
+\usepackage[ngerman,english]{babel} 
+\usepackage{mathptmx} 
+\usepackage{mathtools}
+\usepackage{amsmath,amssymb}
+\usepackage{bbm}
+\usepackage{latexsym}
+\usepackage{nicefrac}
+\usepackage{comment}
+\usepackage{fp}
+\usepackage{cite}
+
+\newtheorem{Tm}{Satz}[section]
+\newtheorem{Tms}{Satz}[subsection]
+\newtheorem{Lm}[Tm]{Lemma}
+\newtheorem{Df}[Tm]{Definition}
+\newtheorem{Lms}[Tms]{Lemma}
+\newtheorem{Dfs}[Tms]{Definition}
+\newtheorem{Bsps}[Tms]{Beispiel}
+\newtheorem{Bsp}[Tm]{Beispiel}
+
+%\ifpdf %%Einbindung von Grafiken mittels \includegraphics{datei}
+	\usepackage[pdftex]{graphicx} %%Grafiken in pdfLaTeX
+%\else
+%	\usepackage[dvips]{graphicx} %%Grafiken und normales LaTeX
+%\fi
+%\usepackage[hang,tight,raggedright]{subfigure} %%Teilabbildungen in einer Abbildung
+%\usepackage{pst-all} %%PSTricks - nicht verwendbar mit pdfLaTeX
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%% Zeilenabstand %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{setspace}
+%\singlespacing        %% 1-zeilig (Standard)
+%\onehalfspacing       %% 1,5-zeilig
+%\doublespacing        %% 2-zeilig
+
+%absaetze
+\parindent0cm
+\parskip0.2cm
+
+%\usepackage[pdftex,bookmarks=true,colorlinks=true,
+%        linkcolor=black,
+%        citecolor=black,
+%        filecolor=black,
+%        pagecolor=black,
+%        urlcolor=black,
+%        bookmarks=true,
+%        bookmarksopen=true,
+%        bookmarksopenlevel=3,
+%        plainpages=false,
+%        pdfpagelabels=true]{hyperref}
+
+
+% Title Page
+
+\begin{document}
+%% Abschnittsueberschriften auf rechter Seite(odd) links
+%% - Abschnitt - Seitenzahlen aussen
+\lhead[\fancyplain{}{\thepage}]{\fancyplain{}{\rightmark}}
+%% Kapitelueberschriften auf linker Seite(even) rechts
+%% - Kapitel - Seitenzahlen aussen
+\rhead[\fancyplain{}{\leftmark}]{\fancyplain{}{\thepage}}
+\cfoot{}
+\pagenumbering{roman}
+\begin{titlepage}
+\begin{center}
+\vspace*{0.65cm}
+\huge\pagenumbering{arabic}
+\setcounter{page}{1}
+\hspace*{-0.73cm}
+\textbf{Das Matrix-Tree-Theorem}\\
+\vspace*{2.2cm}
+
+\begin{figure}[h]
+	\begin{center}
+		\hspace*{-0.73cm}
+		\includegraphics{lmu_siegel}
+	\end{center}
+\end{figure}
+%%
+\vspace*{0.5cm}
+\Large
+\hspace*{-0.73cm}
+\hspace*{-0.5cm}Bachelorarbeit der Fakultät für Mathematik\\
+\vspace*{0.1cm}
+\hspace*{-0.73cm}
+\hspace*{-0.5cm}der\\
+\vspace*{0.1cm}
+\hspace*{-0.73cm}
+\hspace*{-0.5cm}Ludwig-Maximilians-Universität München\\
+%%
+%\vspace*{3.7cm}
+\vspace*{3.5cm}
+\large
+\hspace*{-0.73cm}
+\hspace*{-0.8cm} vorgelegt von\\
+\vspace*{0.1cm}
+\hspace*{-0.73cm}
+\hspace*{-0.7cm}\Large \textbf{Christopher Mann}\\
+\vspace*{0.15cm}
+\large
+\hspace*{-0.73cm}
+\hspace*{-0.8cm} geboren in Freising\\
+\vspace*{2.5cm}
+\vspace*{0.4cm}
+\hspace*{-0.73cm}
+\hspace*{-0.43cm}München, den ..........\\
+\end{center}
+\end{titlepage}
+
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\clearpage{\pagestyle{empty}\cleardoublepage}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\thispagestyle{empty}
+
+\cleardoublepage
+
+\pagestyle{plain}
+\pagenumbering{arabic} 
+\setcounter{page}{1}
+
+\tableofcontents
+
+\cleardoublepage
+
+\include{einleitung}
+\include{tLuD}
+\include{mtt}
+\include{as}
+\cleardoublepage
+
+%todo bibliography
+\bibliography{bachelorarbeit}{}
+\bibliographystyle{plain}
+
+%\begin{appendix}
+%\include{anhang}
+
+%\end{appendix}
+
+\clearpage{\pagestyle{empty}\cleardoublepage}
+%\cleardoublepage
+\thispagestyle{empty}
+
+\vspace*{1cm}
+{\huge \textbf{Selbständigkeitserklärung}}\\
+\vspace*{1.5cm}
+
+Ich versichere hiermit, die vorliegende Arbeit mit dem Titel
+
+\begin{center}
+	\textbf{Das Matrix-Tree-Theorem}
+\end{center}
+
+selbständig verfasst zu haben und keine anderen als die angegebenen Quellen und Hilfsmittel verwendet zu haben.
+
+\vspace*{3cm}
+
+Christopher Mann
+
+\vspace*{1cm}
+München, den .................
+
+\end{document}
