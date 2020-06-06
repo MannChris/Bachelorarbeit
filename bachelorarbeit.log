@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.23)  5 JUN 2020 00:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.23)  6 JUN 2020 15:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -355,19 +355,19 @@ s
 (./bachelorarbeit.aux (./einleitung.aux) (./tLuD.aux) (./mtt.aux) (./as.aux))
 \openout1 = `bachelorarbeit.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 59.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 63.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -468,7 +468,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 74.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 78.
 
 
 pdfTeX warning: /usr/bin/pdflatex (file ./lmu_siegel.pdf): PDF inclusion: found
@@ -476,10 +476,10 @@ pdfTeX warning: /usr/bin/pdflatex (file ./lmu_siegel.pdf): PDF inclusion: found
 <lmu_siegel.pdf, id=1, 188.705pt x 201.75375pt>
 File: lmu_siegel.pdf Graphic file (type pdf)
 <use lmu_siegel.pdf>
-Package pdftex.def Info: lmu_siegel.pdf  used on input line 80.
+Package pdftex.def Info: lmu_siegel.pdf  used on input line 84.
 (pdftex.def)             Requested size: 188.70453pt x 201.75325pt.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 102.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 106.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./lmu_siegel.pdf>]
@@ -599,39 +599,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
 
 ]) (./wn.tex
-Overfull \hbox (14.84612pt too wide) in paragraph at lines 25--38
+Underfull \hbox (badness 10000) in paragraph at lines 2--14
+
+ []
+
+
+Overfull \hbox (14.84612pt too wide) in paragraph at lines 29--43
 \T1/ptm/m/n/10.95 2) Alle Spannbäume, die die Kante $\OML/ztmcm/m/it/10.95 v[]v
 []$ \T1/ptm/m/n/10.95 en-thal-ten, je-doch nicht die Kante $\OML/ztmcm/m/it/10.
 95 v[]z$\T1/ptm/m/n/10.95 ; das sind die Spannbäume
  []
 
 
-Overfull \hbox (1.68478pt too wide) in paragraph at lines 25--38
+Overfull \hbox (1.68478pt too wide) in paragraph at lines 29--43
 \T1/ptm/m/n/10.95 3) Alle Spannbäume, die die Kan-ten $\OML/ztmcm/m/it/10.95 v[
 ]v[]$ \T1/ptm/m/n/10.95 und $\OML/ztmcm/m/it/10.95 v[]z$ \T1/ptm/m/n/10.95 bein
 -hal-ten; das sind die Spannbäume des Graphen,
  []
 
 
-Overfull \hbox (5.58485pt too wide) in paragraph at lines 25--38
+Overfull \hbox (5.58485pt too wide) in paragraph at lines 29--43
 \T1/ptm/m/n/10.95 Nachdem wir im vorheri-gen Kapi-tel her-aus-ge-fun-den haben,
  wieviele Spannbäume Fan-Graphen haben,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--38
+Underfull \hbox (badness 10000) in paragraph at lines 29--43
 
  []
 
-) (./cG.tex [7])) [8] (./bachelorarbeit.bbl) [9
+) (./cG.tex [7]
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+
+ []
+
+)) [8] (./bachelorarbeit.bbl) [9
 
 
 ] [10
 
 
-] [11]
-(./bachelorarbeit.aux (./einleitung.aux) (./tLuD.aux) (./mtt.aux) (./as.aux)) )
- 
+] [11] (./bachelorarbeit.aux
+(./einleitung.aux) (./tLuD.aux) (./mtt.aux) (./as.aux)) ) 
 Here is how much of TeX's memory you used:
  5410 strings out of 494553
  71998 string characters out of 6177377
@@ -640,18 +649,19 @@ Here is how much of TeX's memory you used:
  57903 words of font info for 109 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  41i,7n,43p,690b,353s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/latxfont/lasy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
-/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bachelorarbeit.pdf (13 pages, 122845 bytes).
+{/usr/share/texlive/te
+xmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont
+/lasy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/
+msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/time
+s/utmri8a.pfb>
+Output written on bachelorarbeit.pdf (13 pages, 126736 bytes).
 PDF statistics:
  98 PDF objects out of 1000 (max. 8388607)
  68 compressed objects within 1 object stream

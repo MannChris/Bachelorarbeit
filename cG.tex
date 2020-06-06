@@ -1,6 +1,23 @@
 \subsection{circulant Graphs}
-Als Letztes werden wir Graphen betrachten, deren Adjazenzmatrizen zyklisch sind.
-%Wo treten die auf (z.B. Circulant Graphs sind Cayley-Graphen zyklischer Gruppen)
+%Als Letztes werden wir Graphen betrachten, deren Adjazenzmatrizen zyklisch sind.\\
+%%Wo treten die auf (z.B. Circulant Graphs sind Cayley-Graphen zyklischer Gruppen)
+Wir nennen einen Graphen circulant mit $n$ Knoten, wenn für $n \in \mathbb{N}$ und eine Menge $I \subset{\{1,..,\lfloor \frac{n}{2} \rfloor \}}\subset{\mathbb{N}}$ gilt, dass jeder Knoten $v$ genau zu jedem Knoten $(v+i) (\mod{n})$ mit $i \in I$ benachbart ist; wir bezeichnen solch einen Graphen kurz mit $C_n^I$.\\
+Wir erinnern uns, dass eine $n\times n$ Matrix zyklisch genannt wird, falls jede Spalte aus der vorherigen durch Anwendung der Permutation $(1...n)$ hervorgeht.
+Das ist bei den Adjazenzmatrizen unserer circulant Graphs, aufgrund dessen, wann Konten benachbart sind, natürlich der Fall.
+Zu Gute kommt uns das bei der Berechnung der Anzahl von Spannbäumen in circulant Graphs, denn die Eigenwerte einer zyklischen Matrix sind wohlbekannt.%%gibts das Wort überhaupt?
+Um die Formel für die Anzahl der Spannbäume überhaupt zu verstehen, müssen wir einen weiteren Begriff einführen.%%Grad von C_n^I erklären
+Nachdem wir nun alles beisammen haben, formulieren wir folgenden Satz:
+
+\begin{Tms}
+Für die Anzahl der Spannbäume in circulant Graphs von Grad d gilt:\\
+\begin{equation}
+\mathit{k}\left( C_n^I \right) = \frac{1}{n} \prod_{j=1}^{n-1} \left(4 \sum_{i \in I} \sin^2 \left( \frac{ij\pi}{n}\right) \right),\,falls\,d\,gerade\,ist
+\end{equation}
+\begin{equation}
+\mathit{k}\left( C_n^I \right) = \frac{1}{n} \prod_{j=1}^{n-1} \left(4 \sum_{i \in I} \sin^2 \left( \frac{ij\pi}{n}\right)-(-1)^j+1\right),\,falls\,d\,ungerade\,ist
+\end{equation}
+\end{Tms}
+
 \begin{Bsps}[$C_n^2$ - Das Quadrat eines Kreises]
  %Bild von einem Square of a cycle
 \end{Bsps} 

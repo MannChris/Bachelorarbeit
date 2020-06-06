@@ -10,11 +10,15 @@ Der vorletzte Stop auf unserer Reise sind die sogenannten Wheel-Graphen. Hier wi
 %Es ist leicht zu sehen, dass $a_1 = b_1 = 1$ und $a_2 = 3$, sowie $b_2 = 2$
 %%Induktionsbeweis...
 %V2:\\
-Um eine Formel für die Berechnung der Anzahl der Spannbäume eines solchen Graphen herzuleiten, lassen wir von ~\cite{sedlacek_1970} inspirieren.
-Unser Ziel ist es folgendes zu zeigen:
+\begin{Tm}
+Für die Anzahl der Spannbäume in einem Rad gilt:
 \begin{equation}
  \mathit{k}(W_n) = (\frac{3+\sqrt{5}}{2})+(\frac{3+\sqrt{5}}{2})^n-2
 \end{equation}
+\end{Tm}
+
+\textbf{Beweis:}\\
+Um die Formel für die Berechnung der Anzahl der Spannbäume eines solchen Graphen herzuleiten, lassen wir von ~\cite{sedlacek_1970} inspirieren.
 Wir beobachten, dass wir den Fan-Graphen $F_n$ bekommen, wenn wir die Kante $v_1v_n$ aus $W_n$ entfernen.
 Die Anzahl der Spannbäume von $F_n$ kennen wir bereits von oben.
 Wir werden zeigen, dass $\mathit{k}(W_n) = \mathit{k}(F_n) + 2 \sum_{j=2}^n\mathit{k}(F_{j-1})$;
@@ -29,7 +33,8 @@ Um das zu tun, werden die Spannbäume von $W_{n+1}$ in drei verschiedene Klassen
 3) Alle Spannbäume, die die Kanten $v_1v_{n+1}$ und $v_1z$ beinhalten; das sind die Spannbäume des Graphen, den wir durch die Kontraktion der Kante $v_1z$ gewinnen, also von $F_n$, wie wir aus der nachfolgenden Grafik entnehmen können.\\
 %%Grafik dazu einfügen
 Wie wir sehr leicht sehen können ist jeder Spannbaum von $W_{n+1}$ in genau einer dieser Klassen, also gilt die Rekursion.\\
-Wir können jetzt - zum Beispiel durch vollständige Induktion über $n \in \mathbb{N}$ - unsere Formel %%Formel von oben
+Unsere Formel %%Formel von oben
+lässt sich - zum Beispiel durch vollständige Induktion über $n \in \mathbb{N}$ - sehr einfach
 verifizieren.\\
 Nachdem wir im vorherigen Kapitel herausgefunden haben, wieviele Spannbäume Fan-Graphen haben, können wir das sofort in die Formel einsetzen, und erhalten:\\
 %%Formel konkret berechnen
