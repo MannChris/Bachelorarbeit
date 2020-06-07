@@ -27,10 +27,16 @@ Als ersten Schritt dahin beweisen wir, dass für $n \geq 3$ die nachfolgende rek
 \begin{equation}
  \mathit{k}(W_{n+1}) = \mathit{k}(F_{n+1}) + \mathit{k}(F_n) + \mathit{k}(W_n)
 \end{equation}
-Um das zu tun, werden die Spannbäume von $W_{n+1}$ in drei verschiedene Klassen einteilen:\\%%?Klassen hier richtiger Begriff?
-1) Alle Spannbäume, die die Kante $v_1v_{n+1}$ nicht enthalten; das sind genau die Spannbäume von $F_{n+1}$.\\
-2) Alle Spannbäume, die die Kante $v_1v_{n+1}$ enthalten, jedoch nicht die Kante $v_1z$; das sind die Spannbäume des Graphen $W_{n+1} \slash v_1v_{n+1}$, den wir durch Kontraktion der Kante $v_1v_{n+1}$ aus $W_{n+1}$ erhalten - dieser Graph ist aber $W_n$.\\
-3) Alle Spannbäume, die die Kanten $v_1v_{n+1}$ und $v_1z$ beinhalten; das sind die Spannbäume des Graphen, den wir durch die Kontraktion der Kante $v_1z$ gewinnen, also von $F_n$, wie wir aus der nachfolgenden Grafik entnehmen können.\\
+Um das zu tun, werden die Spannbäume von $W_{n+1}$ in drei verschiedene Klassen einteilen, wie man auch in den Abbildungen unten sehen kann:\\%%?Klassen hier richtiger Begriff?
+%Die wegkommentierten stimmen zwar theoretisch, ist aber nicht zielführend
+%1) Alle Spannbäume, die die Kante $v_1v_{n+1}$ nicht enthalten; das sind genau die Spannbäume von $F_{n+1}$.\\
+%2) Alle Spannbäume, die die Kante $v_1v_{n+1}$ enthalten, jedoch nicht die Kante $v_1z$; das sind die Spannbäume des Graphen $W_{n+1} \slash v_1v_{n+1}$, den wir durch Kontraktion der Kante $v_1v_{n+1}$ aus $W_{n+1}$ erhalten - dieser Graph ist aber $W_n$.\\
+%3) Alle Spannbäume, die die Kanten $v_1v_{n+1}$ und $v_1z$ beinhalten; das sind die Spannbäume des 
+%Graphen, den wir durch die Kontraktion der Kante $v_1z$ gewinnen, also von $F_n$, wie wir aus der nachfolgenden Grafik entnehmen können.\\
+1) Alle Spannbäume, die die Kante $v_{n+1}v_1$, aber nicht die Kante $v_{n+1}z$ enthalten; das sind genau so viele, wie die Spannbäume von $W_n$. \\%%Grafik dazu einfügen
+2)Alle Spannbäume, die die Kante $v_{n+1}v_1$ nicht enthalten; das sind genau so viele, wie die Spannbäume von $F_{n+1}$.\\%%Grafik dazu einfügen
+3) Alle Spannbäume, die die Kante $v_{n+1}v_1$ und die Kante $v_{n+1}z$ enthalten; jetzt beweisen wir, dass das so viele sind, wie die Spannbäume von $F_n$.\\
+Dafür werden wir zeigen, dass für die Anzahl der Spannbäume in Klasse $3$ den gleichen rekursiven Formeln genügen wie die von $F_n$.\\
 %%Grafik dazu einfügen
 Wie wir sehr leicht sehen können ist jeder Spannbaum von $W_{n+1}$ in genau einer dieser Klassen, also gilt die Rekursion.\\
 Unsere Formel %%Formel von oben
