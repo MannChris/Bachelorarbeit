@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.23)  7 JUN 2020 23:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.23)  9 JUN 2020 17:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -604,20 +604,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--14
  []
 
 
-Overfull \hbox (3.40388pt too wide) in paragraph at lines 29--49
+Overfull \hbox (3.40388pt too wide) in paragraph at lines 32--60
 \T1/ptm/m/n/10.95 2)Alle Spannbäume, die die Kante $\OML/ztmcm/m/it/10.95 v[]v[
 ]$ \T1/ptm/m/n/10.95 nicht en-thal-ten; das sind genau so viele, wie die Spannb
 äume
  []
 
 
-Overfull \hbox (5.58485pt too wide) in paragraph at lines 29--49
+Overfull \hbox (5.58485pt too wide) in paragraph at lines 32--60
 \T1/ptm/m/n/10.95 Nachdem wir im vorheri-gen Kapi-tel her-aus-ge-fun-den haben,
  wieviele Spannbäume Fan-Graphen haben,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--49
+Underfull \hbox (badness 10000) in paragraph at lines 32--60
 
  []
 
@@ -640,11 +640,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--23
 ] [11] (./bachelorarbeit.aux
 (./einleitung.aux) (./tLuD.aux) (./mtt.aux) (./as.aux)) ) 
 Here is how much of TeX's memory you used:
- 5411 strings out of 494553
- 72014 string characters out of 6177377
+ 5417 strings out of 494553
+ 72047 string characters out of 6177377
  173897 words of memory out of 5000000
  8836 multiletter control sequences out of 15000+600000
- 57903 words of font info for 109 fonts, out of 8000000 for 9000
+ 61475 words of font info for 115 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  41i,7n,43p,690b,353s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/te
@@ -659,7 +659,7 @@ msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr
 exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/time
 s/utmri8a.pfb>
-Output written on bachelorarbeit.pdf (13 pages, 127083 bytes).
+Output written on bachelorarbeit.pdf (13 pages, 128041 bytes).
 PDF statistics:
  98 PDF objects out of 1000 (max. 8388607)
  68 compressed objects within 1 object stream
