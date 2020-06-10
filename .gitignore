@@ -1,1 +1,5 @@
- 
+*.aux
+*.log
+*.gz
+*.bgl
+test.tex
