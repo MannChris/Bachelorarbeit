@@ -1,20 +1,9 @@
 \subsection{$W_n$ (Räder)}
-Der vorletzte Stop auf unserer Reise sind die sogenannten Wheel-Graphen. Hier wird zu einem zyklischen Graphen $C_n$ mit Knoten $\{v_1,..,v_n\}$, $n \geq 3$ ein weiterer Knoten $z$ hinzugefügt, der mit allen anderen Knoten benachbart ist, sodass der Wheel-Graph $W_{n}$ entsteht (Achtung: $W_n$ hat $n+1$ Knoten).\\
-%V1:
-%Um eine Formel für die Berechnung der Anzahl der Spannbäume eines solchen Graphen herzuleiten, werden wir vorgehen wie in ~\cite{sedlacek_1970}.
-%Wie nehmen uns also einen leicht modifizierten Graphen $H_n$ vor; dabei entfernen wir die Kante $v_1v_n$ aus $W_{n}$. Des weiteren definieren wir $H_1 := K_2$ und $H_2 := K_3$. 
-%Zuerst werden wir die Anzahl der Spannbäume von $H_n$ berechnen und anschließend damit die von $W_n$.
-%Wier zeigen also zunächst, dass die Anzahl der Spannbäume von $H_n$ gleich: $\frac{(3+\sqrt{5})^n - (3-\sqrt{5})^n}{2^n \sqrt{5}}$ ist.
-%Dazu sei $a_n$ die Anzahl der Spannbäume von $H_n$ und sei $b_n$ die Anzahl der Subgraphen des $H_n$ die alle Knoten von $H_n$ enthalten und aus zwei Komponenten bestehen, von denen die eine $v_n$ und die andere $z$ enthält. Mithilfe von vollständiger Induktion zeigen wir, dass $a_1 = b_1 = 1$ und die folgenden rekursiven Beziehungen gelten:
-%$a_{n+1} = 2a_n + b_n$ und $b_{n+1} = a_n + b_n$
-%Es ist leicht zu sehen, dass $a_1 = b_1 = 1$ und $a_2 = 3$, sowie $b_2 = 2$
-%%Induktionsbeweis...
-%V2:\\
+Der vorletzte Stop auf unserer Reise sind die sogenannten Wheel-Graphen. Hier wird zu einem zyklischen Graphen $C_n$ mit Knoten $\{v_1,..,v_n\}$, $n \geq 3$ ein weiterer Knoten $z$ hinzugefügt, der mit allen anderen Knoten benachbart ist, sodass der Wheel-Graph $W_{n}$ entsteht (Achtung: $W_n$ hat $n+1$ Knoten).
 \begin{Tm}
 Für die Anzahl der Spannbäume in einem Rad gilt:
 \begin{equation}
  \mathit{k}(W_n) = (\frac{3+\sqrt{5}}{2})^n+(\frac{3+\sqrt{5}}{2})^n-2
- % (1) erstes ^n fehlte vorher, weil das in der Quelle falsch drinsteht
 \end{equation}
 \end{Tm}
 
@@ -22,31 +11,18 @@ Für die Anzahl der Spannbäume in einem Rad gilt:
 Um die Formel für die Berechnung der Anzahl der Spannbäume eines solchen Graphen herzuleiten, lassen wir von ~\cite{sedlacek_1970} inspirieren.
 Wir beobachten, dass wir den Fan-Graphen $F_n$ bekommen, wenn wir die Kante $v_1v_n$ aus $W_n$ entfernen.
 Die Anzahl der Spannbäume von $F_n$ kennen wir bereits von oben.
-%nicht notwendig (1)
-%Wir werden zeigen, dass $\mathit{k}(W_n) = \mathit{k}(F_n) + 2 \sum_{j=2}^n\mathit{k}(F_{j-1})$;
-%damit können wir danach die Anzahl der Spannbäume von $W_n$ berechnen.
-%Als ersten Schritt dahin beweisen wir, dass für $n \geq 3$ die nachfolgende rekursive Beziehung gilt:
-Um die Anzahl der Spannbäume von Rädern zu berechnen, zeigen wir folgende rekursive Beziehung
+Um die Anzahl der Spannbäume von Rädern zu berechnen, zeigen wir zuerst die rekursive Beziehung
 \begin{equation}
  \mathit{k}(W_{n+1}) = \mathit{k}(F_{n+1}) + \mathit{k}(F_n) + \mathit{k}(W_n)
 \end{equation}
-Um das zu tun, werden die Spannbäume von $W_{n+1}$ in drei verschiedene Klassen einteilen, wie man auch in den Abbildungen unten sehen kann:\\%%?Klassen hier richtiger Begriff?
-%Die wegkommentierten stimmen zwar theoretisch, ist aber nicht zielführend
-%1) Alle Spannbäume, die die Kante $v_1v_{n+1}$ nicht enthalten; das sind genau die Spannbäume von $F_{n+1}$.\\
-%2) Alle Spannbäume, die die Kante $v_1v_{n+1}$ enthalten, jedoch nicht die Kante $v_1z$; das sind die Spannbäume des Graphen $W_{n+1} \slash v_1v_{n+1}$, den wir durch Kontraktion der Kante $v_1v_{n+1}$ aus $W_{n+1}$ erhalten - dieser Graph ist aber $W_n$.\\
-%3) Alle Spannbäume, die die Kanten $v_1v_{n+1}$ und $v_1z$ beinhalten; das sind die Spannbäume des 
-%Graphen, den wir durch die Kontraktion der Kante $v_1z$ gewinnen, also von $F_n$, wie wir aus der nachfolgenden Grafik entnehmen können.\\
+Um das zu tun, werden die Spannbäume von $W_{n+1}$ in drei verschiedene Klassen einteilen, wie man auch in den Abbildungen unten sehen kann:\\
 1) Alle Spannbäume, die die Kante $v_{n+1}v_1$, aber nicht die Kante $v_{n+1}z$ enthalten; das sind genau so viele, wie die Spannbäume von $W_n$. \\%%Grafik dazu einfügen
 2)Alle Spannbäume, die die Kante $v_{n+1}v_1$ nicht enthalten; das sind genau so viele, wie die Spannbäume von $F_{n+1}$.\\%%Grafik dazu einfügen
 3) Alle Spannbäume, die die Kante $v_{n+1}v_1$ und die Kante $v_{n+1}z$ enthalten; jetzt beweisen wir, dass das so viele sind, wie die Spannbäume von $F_n$.\\
 Dafür werden wir zeigen, dass für die Anzahl der Spannbäume in Klasse $3$ den gleichen rekursiven Formeln genügen wie die von $F_n$.\\
-%%Grafik dazu einfügen
-Wie wir sehr leicht sehen können ist jeder Spannbaum von $W_{n+1}$ in genau einer dieser Klassen, also gilt die rekursive Beziehung
+\todo[inline, color=green]{Bilder davon}
+Da jeder Spannbaum von $W_{n+1}$ in genau einer dieser Klassen ist, gilt die rekursive Beziehung
 $\mathit{k}(W_{n+1}) = \mathit{k}(F_{n+1}) + \mathit{k}(F_n) + \mathit{k}(W_n)$\\
-%nicht notwendig(1)
-%Unsere Formel %%Formel von oben
-%lässt sich - zum Beispiel durch vollständige Induktion über $n \in \mathbb{N}$ - sehr einfach
-%verifizieren.\\
 Wir werden nun den Beweis per Induktion über $n \in \mathbb{N}, \, n \geq 3$ vervollständigen, wobei uns natürlich zu Gute kommt, dass uns die Anzahl der Spannbäume von Fan-Graphen schon bekannt ist.\\
 Für unseren Induktionsanfang sehen wir -zum Beispiel durch Anwendung von Krichhoffs Matrix-Tree-Theorem- leicht, dass $\mathit{k}(W_3) = 16 = (\frac{3+\sqrt{5}}{2})^3+(\frac{3+\sqrt{5}}{2})^3-2$.\\
 Wir nehmen nun an, dass für ein $n \in \mathbb{N}$ die Formel $\mathit{k}(W_n) = (\frac{3+\sqrt{5}}{2})^n+(\frac{3+\sqrt{5}}{2})^n-2$ gilt.\\
@@ -54,11 +30,10 @@ Damit bleibt noch zu Zeigen, dass  $\mathit{k}(W_{n+1}) = (\frac{3+\sqrt{5}}{2})
 Wie wir oben bereits gezeigt haben, gilt
 $\mathit{k}(W_{n+1}) = \mathit{k}(F_{n+1}) + \mathit{k}(F_n) + \mathit{k}(W_n)$\\
 Nachdem wir im vorherigen Kapitel herausgefunden haben, wieviele Spannbäume Fan-Graphen haben, setzen wir das und unsere Induktionsannahme sofort ein, und erhalten:\\
-$\mathit{k}(W_{n+1}) = \frac{(3+\sqrt{5})^{n+1}-(3-\sqrt{5})^{n+1}}{2^{n+1}\sqrt{5}} + \frac{(3+\sqrt{5})^{n}-(3-\sqrt{5})^{n}}{2^{n}\sqrt{5}} + (\frac{3+\sqrt{5}}{2})^n+(\frac{3-\sqrt{5}}{2})^n-2$\\%%fehler ausgebessert (2)
+$\mathit{k}(W_{n+1}) = \frac{(3+\sqrt{5})^{n+1}-(3-\sqrt{5})^{n+1}}{2^{n+1}\sqrt{5}} + \frac{(3+\sqrt{5})^{n}-(3-\sqrt{5})^{n}}{2^{n}\sqrt{5}} + (\frac{3+\sqrt{5}}{2})^n+(\frac{3-\sqrt{5}}{2})^n-2$\\
 Einfaches Umformen führt uns zu\\
-
-%%Formel konkret berechnen
+\todo[inline]{Rechnung! und danach zusammengehörige Terme farbig markieren}
 Damit haben wir erfolgreich gezeigt, dass für die Anzahl der Spannbäume in $W_n$ gilt:\\
 
-%% Alle Rechnungen evtl. in equations packen
+\todo[inline, color=yellow]{Rechnungen evtl. in equations packen}
 

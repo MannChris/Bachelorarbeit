@@ -60,6 +60,8 @@
 
 % Title Page
 
+\usepackage{todonotes}
+
 \begin{document}
 %% Abschnittsueberschriften auf rechter Seite(odd) links
 %% - Abschnitt - Seitenzahlen aussen
@@ -133,7 +135,7 @@
 \setcounter{page}{1}
 
 \tableofcontents
-
+\todo[inline, color=blue]{Leerzeichen im Dokument!!!!!!!!}
 \cleardoublepage
 
 \include{einleitung}
@@ -142,7 +144,6 @@
 \include{as}
 \cleardoublepage
 
-%todo bibliography
 \bibliography{bachelorarbeit}{}
 \bibliographystyle{plain}
 
