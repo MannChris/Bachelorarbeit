@@ -3,4 +3,5 @@
 *.gz
 *.bgl
 *.toc
+*.bbl
 test.tex
