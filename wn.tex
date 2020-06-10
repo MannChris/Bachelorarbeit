@@ -1,14 +1,12 @@
-\graphicspath{{grafiken/}}
-
 \subsection{$W_n$ (Räder)}
 Der vorletzte Stop auf unserer Reise sind die sogenannten Wheel-Graphen. Hier wird zu einem zyklischen Graphen $C_n$ mit Knoten $\{v_1,..,v_n\}$, $n \geq 3$ ein weiterer Knoten $z$ hinzugefügt, der mit allen anderen Knoten benachbart ist, sodass der Wheel-Graph $W_{n}$ entsteht (Achtung: $W_n$ hat $n+1$ Knoten).
 \begin{Tm}
 Für die Anzahl der Spannbäume in einem Rad gilt:
 \begin{equation}
  \mathit{k}(W_n) = (\frac{3+\sqrt{5}}{2})^n+(\frac{3+\sqrt{5}}{2})^n-2
+ \label{wn}
 \end{equation}
 \end{Tm}
-
 \textbf{Beweis:}\\
 Um die Formel für die Berechnung der Anzahl der Spannbäume eines solchen Graphen herzuleiten, lassen wir von ~\cite{sedlacek_1970} inspirieren.
 Wir beobachten, dass wir den Fan-Graphen $F_n$ bekommen, wenn wir die Kante $v_1v_n$ aus $W_n$ entfernen.
@@ -18,24 +16,58 @@ Um die Anzahl der Spannbäume von Rädern zu berechnen, zeigen wir zuerst die re
  \mathit{k}(W_{n+1}) = \mathit{k}(F_{n+1}) + \mathit{k}(F_n) + \mathit{k}(W_n)
 \end{equation}
 Um das zu tun, werden die Spannbäume von $W_{n+1}$ in drei verschiedene Klassen einteilen, wie man auch in den Abbildungen unten sehen kann:\\
-1) Alle Spannbäume, die die Kante $v_{n+1}v_1$, aber nicht die Kante $v_{n+1}z$ enthalten; das sind genau so viele, wie die Spannbäume von $W_n$. \\%%Grafik dazu einfügen
-2)Alle Spannbäume, die die Kante $v_{n+1}v_1$ nicht enthalten; das sind genau so viele, wie die Spannbäume von $F_{n+1}$.\\%%Grafik dazu einfügen
-3) Alle Spannbäume, die die Kante $v_{n+1}v_1$ und die Kante $v_{n+1}z$ enthalten; jetzt beweisen wir, dass das so viele sind, wie die Spannbäume von $F_n$.\\
-Dafür werden wir zeigen, dass für die Anzahl der Spannbäume in Klasse $3$ den gleichen rekursiven Formeln genügen wie die von $F_n$.\\
-\todo[inline, color=green]{Bilder davon}
+\par %eingerückt
+\begingroup
+\leftskip=20pt% Parameter anpassen
+\rightskip=20pt
+\noindent
+1) Alle Spannbäume, die die Kante $v_{n+1}v_1$, aber nicht die Kante $v_{n+1}z$ enthalten; das sind genau so viele, wie die Spannbäume von $W_n$.
+\todo[inline, color=green]{Grafik dazu}
+2)Alle Spannbäume, die die Kante $v_{n+1}v_1$ nicht enthalten; das sind genau so viele, wie die Spannbäume von $F_{n+1}$.\\
+\todo[inline, color=green]{Grafik dazu}
+3) Alle Spannbäume, die die Kante $v_{n+1}v_1$ und die Kante $v_{n+1}z$ enthalten; jetzt beweisen wir, dass das so viele sind, wie die Spannbäume von $F_n$.
+Dafür werden wir zeigen, dass für die Anzahl der Spannbäume in Klasse $3$ den gleichen rekursiven Formeln genügen wie die von $F_n$.
+\par
+\endgroup
+\todo[inline, color=green]{Beweis und grafische Veranschaulichung davon}
 Da jeder Spannbaum von $W_{n+1}$ in genau einer dieser Klassen ist, gilt die rekursive Beziehung
-$\mathit{k}(W_{n+1}) = \mathit{k}(F_{n+1}) + \mathit{k}(F_n) + \mathit{k}(W_n)$\\
+\begin{equation}
+\mathit{k}(W_{n+1}) = \mathit{k}(F_{n+1}) + \mathit{k}(F_n) + \mathit{k}(W_n)
+\label{eq:wrek}
+\end{equation}
 Wir werden nun den Beweis per Induktion über $n \in \mathbb{N}, \, n \geq 3$ vervollständigen, wobei uns natürlich zu Gute kommt, dass uns die Anzahl der Spannbäume von Fan-Graphen schon bekannt ist.\\
-Für unseren Induktionsanfang sehen wir -zum Beispiel durch Anwendung von Krichhoffs Matrix-Tree-Theorem- leicht, dass $\mathit{k}(W_3) = 16 = (\frac{3+\sqrt{5}}{2})^3+(\frac{3+\sqrt{5}}{2})^3-2$.\\
-Wir nehmen nun an, dass für ein $n \in \mathbb{N}$ die Formel $\mathit{k}(W_n) = (\frac{3+\sqrt{5}}{2})^n+(\frac{3+\sqrt{5}}{2})^n-2$ gilt.\\
-Damit bleibt noch zu Zeigen, dass  $\mathit{k}(W_{n+1}) = (\frac{3+\sqrt{5}}{2})^{n+1}+(\frac{3+\sqrt{5}}{2})^{n+1}-2$.\\
-Wie wir oben bereits gezeigt haben, gilt
-$\mathit{k}(W_{n+1}) = \mathit{k}(F_{n+1}) + \mathit{k}(F_n) + \mathit{k}(W_n)$\\
-Nachdem wir im vorherigen Kapitel herausgefunden haben, wieviele Spannbäume Fan-Graphen haben, setzen wir das und unsere Induktionsannahme sofort ein, und erhalten:\\
-$\mathit{k}(W_{n+1}) = \frac{(3+\sqrt{5})^{n+1}-(3-\sqrt{5})^{n+1}}{2^{n+1}\sqrt{5}} + \frac{(3+\sqrt{5})^{n}-(3-\sqrt{5})^{n}}{2^{n}\sqrt{5}} + (\frac{3+\sqrt{5}}{2})^n+(\frac{3-\sqrt{5}}{2})^n-2$\\
-Einfaches Umformen führt uns zu\\
-\todo[inline]{Rechnung! und danach zusammengehörige Terme farbig markieren}
-Damit haben wir erfolgreich gezeigt, dass für die Anzahl der Spannbäume in $W_n$ gilt:\\
-
+Für unseren Induktionsanfang sehen wir -zum Beispiel durch Anwendung von Krichhoffs Matrix-Tree-Theorem- leicht, dass \begin{equation}
+\mathit{k}(W_3) = 16 = (\frac{3+\sqrt{5}}{2})^3+(\frac{3+\sqrt{5}}{2})^3-2.
+\end{equation}
+Wir nehmen nun an, dass für ein $n \in \mathbb{N}$ die Formel 
+\begin{equation}
+ \mathit{k}(W_n) = (\frac{3+\sqrt{5}}{2})^n+(\frac{3+\sqrt{5}}{2})^n-2
+\end{equation}
+gilt.\\
+Damit bleibt noch zu zeigen, dass
+\begin{equation}
+ \mathit{k}(W_{n+1}) = (\frac{3+\sqrt{5}}{2})^{n+1}+(\frac{3+\sqrt{5}}{2})^{n+1}-2.
+\end{equation}
+Das werden wir nun einfach ausrechnen.
+Nachdem wir im vorherigen Kapitel herausgefunden haben, wieviele Spannbäume Fan-Graphen haben, setzen wir das und unsere Induktionsannahme in die Gleichung (\ref{eq:wrek}) ein, und erhalten:\\
+\begin{equation}
+\begin{aligned}
+\mathit{k}(W_{n+1}) ={} & \frac{(3+\sqrt{5})^{n+1}-(3-\sqrt{5})^{n+1}}{2^{n+1}\sqrt{5}} + \frac{(3+\sqrt{5})^{n}-(3-\sqrt{5})^{n}}{2^{n}\sqrt{5}}\\
+& + (\frac{3+\sqrt{5}}{2})^n+(\frac{3-\sqrt{5}}{2})^n-2
+\end{aligned}
+\end{equation}
+Wir bringen fast alles auf einen Nenner, sortieren die Terme und bekommen
+\begin{equation}
+\begin{aligned}
+\mathit{k}(W_{n+1}) = {}  & \frac{(3+\sqrt{5}+2+2\sqrt{5})(3+\sqrt{5})^{n}}{2^{n+1}\sqrt{5}} \\
+                        & -\frac{(3+\sqrt{5}+2-2\sqrt{5})(3-\sqrt{5})^{n}}{2^{n+1}\sqrt{5}}-2 
+\end{aligned}
+\end{equation}
+\todo[inline]{zusammengehörige Terme farbig markieren}
+Ausrechnen führt uns zu\\
+\begin{equation}
+\mathit{k}(W_{n+1}) = \frac{3+\sqrt{5}}{2})^{n+1}+(\frac{3+\sqrt{5}}{2})^{n+1}-2
+\end{equation}
+Damit ist unser Induktionsbeweis abgeschlossen und wir haben gezeigt, dass unser Satz \ref{wn} über die Anzahl der Spannbäume in einem Rad gilt.
 \todo[inline, color=yellow]{Rechnungen evtl. in equations packen}
 
