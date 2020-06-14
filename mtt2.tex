@@ -1,8 +1,27 @@
-\graphicspath{{grafiken/}}
-
-\subsection{Tutte's Matrix-Tree-Theorem}
-\begin{Tms}[Tutte's Matrix-Tree-Theorem]
-Sei D ein gerichteter Multigraph mit Kirchoffmatrix K(D). Die Anzahl der out-branchings aus dem Knoten i ist gleich der det($K_{\bar{i}}(D)$).
+\subsection{Tuttes Matrix-Tree-Theorem}
+Um die Version des Matrix-Tree-Theorems für gerichtete Multigraphen und den Beweis zu verstehen, müssen wir erst den Begiff der Aboreszenz einführen.
+\todo[inline]{Aboreszenz, branching, etc.}
+\begin{Tms}[Tuttes Matrix-Tree-Theorem]
+Sei D ein gerichteter Multigraph mit Kirchoffmatrix K(D). Die Anzahl der Aboreszenzen aus einem Knoten $i$ ist gleich der det($K_{\bar{i}}(D)$).
 \end{Tms}
-\textbf{Beweis:} 
-\todo[inline]{Beweis schreiben}
+Um das zu beweisen lassen wir uns von ~\cite{bang-jensen_2009} inspirieren.
+Also zeigen wir zuerst folgendes Lemma:
+\begin{Lms}
+Sei $D$ ein gerichteter Multigraph mit maximalem Eingangsgrad $=1$ und $i$ ein Knoten in $D$.\\
+Dann hat $D$ maximal eine Aboreszenz mit Wurzel $i$. Desweiteren ist $det(K_{\bar{i}}(D)) \in \{0,1\}$
+und genau dann, wenn $D$ eine Aboreszenz mit Wurzel $i$ besitzt, ist $det(K_{\bar{i}}(D)) = 1$.
+\label{L1}
+\end{Lms}
+\textbf{Beweis von Lemma ~\ref{L1}:}\\
+Wir nehmen zuerst an, dass $D$ eine Aboreszenz mit Wurzel $i$ hat.\\
+Da der maximale Eingangsgrad $=1$ ist, schließen wir, dass für jeden Knoten außer $i$ die eine, eingehnende Kante in dieser Aboreszenz enthalten ist. \\
+Weil das Vertauschen von Zeilen einer Matrix deren Determinante nicht ändert, dürfen wir annehmen, dass $i=1$ ist und die übrigen Knoten in der Reihenfolge einer Breitensuche durchnummeriert sind.\\ 
+Dann ist nämlich $K_{\bar{i}}(D)$ eine obere Dreiecksmatrix mit Diagonaleinträgen $=1$, also $det(K_{\bar{i}}(D)) = 1$.
+Jetzt nehmen wir an, dass $D$ keine Aboreszenz mit Wurzel $i$ besitzt.\\
+Falls ein anderer Knoten als $i$ Eingangsgrad $=0$ hat, sind die alle Einträge der entsprechenden Spalte von $K_{\bar{i}}(D)$ und damit auch $det(K_{\bar{i}}(D))$ gleich $0$\\
+Also dürfen wir zu guter Letzt annehmen, dass für alle von $i$ verschiedenen Knoten der Eingangsgrad $=1$ ist.\\
+Da jedoch $D$ keine Aboreszenz mit Wurzel $i$ besitzt, hat $D$ einen Zyklus, der $i$ nicht enthält.\\
+Da aber jeder Knoten $\neq i$ Eingangsgrad $=1$ hat, sind die Spalten, die mit den Knoten in diesem Zyklus korrespondieren linear abhängig und damit $det(K_{\bar{i}}(D)) = 0$.
+Damit haben wir unser Lemma bewiesen.
+\todo[inline]{Beweis fertig schreiben}
+\textbf{Beweis von Tuttes Matrix-Tree-Theorem:}

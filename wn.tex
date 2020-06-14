@@ -29,23 +29,12 @@ Um das zu tun, werden die Spannbäume von $W_{n+1}$ in drei verschiedene Klassen
 \par
 \endgroup
 Dafür werden wir zeigen, dass für die Anzahl der Spannbäume in Klasse 3 den gleichen rekursiven Formeln genügen wie die von $F_n$.\\
-
-Quatsch:
-Sei also $a_n$ die Anzahl der Spannbäume eines Graphen, der Knoten mit Label (<- deutsch) $z$ und $v_n$ enthält und sei $b_n$ die Anzahl der Subgraphen, die aus genau zwei Komponenten bestehen, von denen eine den Knoten $z$ und $v_n$ enthält.\\
-Sei $\prime{W}_{n+1}$ der Graph, der aus der Vereinigung aller Spannbäume aus der Klasse 3) entsteht
-Wir sehen, dass sowohl für $F_1$, als auch für $\prime{W}_2$, gilt, dass $a_1=1_2=1$.\\
-Wir werden uns nun vor Augen führen, dass für $F_{n+1}$ und $\prime{W}_{n+2}$ $a_n+1 = 2a_n + b_n$ und $b_n+1 = a_n + b_n$ gilt.\\
-Das veranschaulichen wir grafisch, wobei wir uns darüber im Klaren sind, dass der Knoten $v_{n+1}$ in den Graphen $F_{n+1}$ respektive $\prime{W}_{n+1}$ mit dem Knoten $v_n$ in $F_{n}$ respektive $\prime{W}_{n}$ correspondiert:
-\todo[inline, color=green]{grafische Veranschaulichung davon, mit farbigen Kanten}
-Jeder Spannbaum von $F_{n+1}$ beziehungsweise $\prime{W}_{n+1}$ entsteht nämlich entweder durch verbinden des Knoten $v_{n+1}$ mit
-Quatsch ende
-\\
 Sei $a_n$ die Anzahl der Subgraphen von $F_n$, die aus genau zwei Komponenten bestehen, von denen eine den Knoten $z$ und die andere $v_n$ enthält.
 Wir definieren $b_n$ als die Anzahl der Spannbäume in Klasse 3, die die Kanten $v_nv_{n+1}$ und $v_nz$ nicht enthalten. 
 Die nachfolgende Abbildung verdeutlicht, dass $\mathit{k}(F_{n+1})=2\mathit{k}(F_{n})+a_n$ für $n\geq 2$.
 \todo[inline, color=green]{Grafik Konstruktion von Fn+1 aus Fn, und diesmal stimmt der Beweis wirklich}
 \todo[inline]{Wenn die Grafik drin ist evtl noch ein-zwei Sätze dazu}
-Sei $M_n$ die Menge der Spannbäume von $W_{n+1}$ aus Klasse 3
+Sei $M_n$ die Menge der Spannbäume von $W_{n+1}$ aus Klasse 3;\\
 Die nächste Grafik zeigt, dass $|M_{n+1}|=|M_n|+b_n$ ist.
 \todo[inline, color=green]{Grafik zur Konstruktion, damit ist das offensichtlich}
 \todo[inline]{Wenn die Grafik drin ist, evtl. noch ein-zwei Sätze dazu}
