@@ -21,36 +21,25 @@ Jetzt nehmen wir an, dass $D$ keine Aboreszenz mit Wurzel $i$ besitzt.\\
 Falls ein anderer Knoten als $i$ Eingangsgrad $=0$ hat, sind die alle Einträge der entsprechenden Spalte von $K_{\bar{i}}(D)$ und damit auch $det(K_{\bar{i}}(D))$ gleich $0$\\
 Also dürfen wir zu guter Letzt annehmen, dass für alle von $i$ verschiedenen Knoten der Eingangsgrad $=1$ ist.\\
 Da jedoch $D$ keine Aboreszenz mit Wurzel $i$ besitzt, hat $D$ einen Zyklus, der $i$ nicht enthält.\\
-Da aber jeder Knoten $\neq i$ Eingangsgrad $=1$ hat, sind die Spalten, die mit den Knoten in diesem Zyklus korrespondieren linear abhängig und damit $det(K_{\bar{i}}(D)) = 0$.
+Da aber jeder Knoten $\neq i$ Eingangsgrad $=1$ hat, sind die Spalten, die mit den Knoten in diesem Zyklus korrespondieren linear abhängig und damit $det(K_{\bar{i}}(D)) = 0$.\\
 Damit haben wir unser Lemma bewiesen.
+\begin{flushright} $\Box$ \end{flushright} 
 
 Nun können wir uns dem Beweis von Tuttes Matrix-Tree-Theorem widmen.
 
 \textbf{Beweis von Tuttes Matrix-Tree-Theorem:}
-\todo[inline]{Beweis fertig schreiben}
-%%
-%Proof: Recall the following basic identity for the determinant of a matrix%
-%consisting of columns c1 , c2 , . . . , cn each on n elements:
-% det(c1 , . . . , (ci + ci ), . . . , cn ) = det(c1 , . . . , c i, . . . , cn ) + det(c1 , . . . , ci , . . . , cn ).
-%Since the only entries in K(D) which are greater than zero occur in the
-%diagonal elements and each column sums to zero, we may decompose K(D)
-%into s = Πi=1
-% n
-% Kii n × n matrices {K(Hi )}i∈[s] by writing each column i as
-%the sum of Kii columns which correspond in a one-to-one fashion to the arcs
-%entering vertex i (see Figure 9.2).
-%%
 Wir werden die Matrix $K(D)$ in kleinere Matrizen zerlegen und dann mit dem Lemma von oben arbeiten.\\
 Für die Zerlegung in kleinere Matrizen erinnern wir uns an ein Ergebnis aus der linearen Algebra;
 Für eine Matrix aus Spalten $c_1,..,c_n$ mit jeweils n Elementen gilt:
 \begin{equation}
  det(c_1,..,(c_i+\prime{c_i}),..,c_n) = det(c_1,..,c_i,..,c_n) + det(c_1,..,\prime{c_i},..,c_n)
 \end{equation}
-Weil sich die einzigen positiven Einträge von $K(D)$ auf der Diagonale befinden und die Spaltensummen alle $=0$ sind, können wir $K(D)$ in  $s=\prod_{i=1}^nk_{ii}$ $n \times n$ Matrizen $K(D_i), i\in\{1,..,s\}$ zerlegen, indem wir jede Spalte als Summe von $k_{ii}$ Spalten schreiben von denen jede mit einer in $i$ eingehenden Kante korrespondiert.\\
-\todo[inline, color=green]{evtl. Grafik}
+\todo[inline, color=blue]{Im folgenden Satz nachm Leerzeichen einfügen dieselben zwischen nxn und Matrix wieder wegmachen, das gehört nämlich zusammen}
+Weil sich die einzigen positiven Einträge von $K(D)$ auf der Diagonale befinden und die Spaltensummen alle $=0$ sind, können wir $K(D)$ in  $s=\prod_{i=1}^nk_{ii}$ $n \times n$-Matrizen $K(D_i), i\in\{1,..,s\}$ zerlegen, indem wir jede Spalte als Summe von $k_{ii}$ Spalten schreiben von denen jede mit einer in $i$ eingehenden Kante korrespondiert.\\
+\todo[inline, color=green]{Grafik oder Matrix}
 Ohne Beschränkung der Allgemeinheit können wir $i=1$ annehmen.\\
 Wir werden jetzt $det(K_{\bar{1}}(D))$ mithilfe der Matrizen von oben vereinfachen und dann ausrechnen.\\
-Hierzu sei $\hat{D}$ der Graph der aus $D$ durch löschen aller in den Knoten 1 eingehenden Kanten entsteht und $d^{-}(j)$ der Eingangsgrad eines Knoten $j$. Dann folgt:
+Hierzu sei $\hat{D}$ der Graph der aus $D$ durch löschen aller in den Knoten $1$ eingehenden Kanten entsteht und $d^{-}(j)$ der Eingangsgrad eines Knoten $j$. Dann folgt:
 \begin{equation}
  det(K_{\bar{1}}(\hat{D})) = \sum_{e_2}^{d^{-}(2)}det(K_{e_2}(\hat{D}))
 \end{equation}
@@ -65,5 +54,5 @@ Da $det(K_{\bar{i}}(D))$ aus $K(D)$ durch löschen der mit Knoten $i$ korrespond
  det(K_{\bar{1}}(\hat{D}))=det(K_{\bar{1}}(D))=det(K_{\bar{i}}(D))
 \end{equation}
 Das vervollständigt unseren Beweis von Tuttes Matrix-Tree-Theorem.
-\todo[inline]{Beweis fertig schreiben}
+\begin{flushright} $\Box$ \end{flushright} 
 

@@ -1,5 +1,3 @@
-\graphicspath{{grafiken/}}
-
 \subsection{Kirchhoffs Matrix-Tree-Theorem}
 Nun werden wir das Matrix-Tree-Theorem für ungerichtete Graphen formulieren und beweisen, dass wir auch im weiteren Verlauf dieser Arbeit verwenden werden um die Anzahl der Spannbäume für verschiedene Graphenklassen zu bestimmen.
 \begin{Tms}[Kirchoffs Matrix Tree Theorem]
@@ -21,7 +19,7 @@ Dann gilt:
 Teil 1 des Kirchhoffs Matrix-Tree-Theorem folgt quasi direkt aus Tuttes Matrix-Tree-Theorem. \\
 Sei $\vec{G}$ der gerichtete Graph, der entsteht, wenn man jede Kante in $G$ als zwei gerichtete ansieht.\\
 Wir betrachten einen beliebigen Knoten aus $\vec{G}$, der natürlich auch in $G$ ist. \\
-Da nach Definition jeder Knoten in jedem Spannbaum mit jedem anderen wegverbunden ist, korrespondiert jeder Spannbaum von $G$ mit genau einem out-branching aus unserem Knoten in $\vec{G}$. \\
+Da nach Definition jeder Knoten in jedem Spannbaum mit jedem anderen wegverbunden ist, korrespondiert jeder Spannbaum von $G$ mit genau einer Aboreszenz \textbf{(out-branching <- Reminder, nicht Teil der BA)} mit unserem Knoten als Wurzel in $\vec{G}$. \\
 Da jede Kante in $\vec{G}$ auch in die entgegengesetzte Richtung vorhanden ist, können wir schließen, dass $L_n=K(\vec{G})$, wobei $L_n$ die Laplacematrix von $G$ ist. \\
 Jeder Kofaktor von $L_n$ ist also gleich jedem Kofaktor von $K(\vec{G})$.
 \todo[inline]{Beweis: es ist irrelevant, welchen Kofaktor vo Ln wir nehmen!}
@@ -30,5 +28,6 @@ Um Teil 2 zu zeigen, berufen wir uns auf ein bekanntes Ergebnis der linearen Alg
 Das Produkt der Eigenwerte einer Matrix ist gleich der Summe seiner Hauptminoren. Das kann man zum Beispiel in ~\cite{meyer_2005} nachlesen. \\
 Da $L_n$ $n$ Hauptminoren hat, folgt mit Teil 1, dass die Anzahl der Spannbäume von $G$ ist gleich $\frac{1}{n}\lambda_1\ldots\lambda_{n-1}$, wobei $\lambda_1,\ldots,\lambda_{n-1}$ die Eigenwerte von $L_n$ sind, die ungleich null sind. \\
 Damit ist Kirchhoffs Matrix-Tree-Theorem bewiesen.
+\begin{flushright} $\Box$ \end{flushright} 
 \todo[inline]{out-branching ersetzen}
  

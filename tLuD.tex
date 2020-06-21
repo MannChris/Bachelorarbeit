@@ -1,21 +1,19 @@
-\graphicspath{{grafiken/}}
-
 %\section{Technische Lemmas und Definitionen}
 \section{Grundlegende Definitionen und Notationen}
+\todo[inline, color=pink]{Definitionen formellastiger im Fall von Matrizen sinnvoller? (Je nachdem, wie schnell ich mit dem Schreiben bin, könnte ich noch Links in die Bachelorarbeit integrieren, dauert nicht lang)}
 Wir beginnen damit, ein paar wichtige Begriffe und Notationen einzuführen, die wir später häufiger benutzen werden.
 In einem Matrix-Tree-Theorem wird immer ein Zusammenhang zwischen bestimmten Matrizen und den Spannbäumen eines Graphen beschrieben. Daher bieten sich die folgenden zwei Definitionen an, wobei wir eine für ungerichtete und die andere für gerichtete Graphen verwenden werden:
 \begin{Df}\textbf{Laplacematrix}\\
 %Definition Laplacematrix $L_n$
-Für einen Graphen G mit Knoten $1,..,n$ definieren wir die Laplacematrix $L_n(G)$ wie folgt:\\
+Für einen Graphen $G$ mit Knoten $1,..,n$ definieren wir die Laplacematrix $L_n(G)$ wie folgt:\\
 Der Eintrag $l_{ii}$ ist gleich dem Grad von $i$ und für $i \neq j$ ist $l_{ij}$ gleich $(-1)$, falls $i$ und $j$ beachbart sind, und sonst $0$.
 \end{Df}
+\todo[inline]{Definition Multigraph bleibt wenn dann hier, im Kapitel "Tuttes..." stört das nur, ich weiß aber noch nicht ob die überhaupt nötig ist, das sollte allgemein bekannt sein}
 \begin{Df}\textbf{Kirchhoffmatrix}\\
  %Definition Kirchhoff Matrix $K(D)$
  Für einen gerichteten Multigraphen $D$ mit Knoten $1,..,n$ definieren wir die Kirchhoffmatrix $K(D)$ wie folgt:\\
  Der Eintrag $k_{ij}$ der Kirchhoff-Matrix gleich dem Ausgangsgrad des Knoten $i$, falls $i=j$, und gleich minus der Anzahl von Kanten von $i$ nach $j$, für $i \neq j$.
 \end{Df}
-\todo[inline]{Definition Multigraph bleibt wenn dann hier, im Kapitel "Tuttes..." stört das nur, ich weiß aber noch nicht ob die überhaupt nötig ist, das sollte allgemein bekannt sein}
 Im Verlauf dieser Arbeit werden wir immer wieder die Anzahl der Spannbäume eines Graphen ausrechnen, daher definieren wir $\mathit{k}(G)$ als die Anzahl der Spannbäume eines beliebigen Graphen $G$.
-\todo[inline, color=pink]{Das kam später dazu; ich bin noch unschlüssig ob ich die Definitionen lieber wie oben, oder wie hier als Text machen soll (Je nachdem, wie schnell ich mit dem Schreiben bin, könnte ich noch Links in die Bachelorarbeit integrieren)}
 \todo[inline]{Stand jetzt werde ich die Definitionen hervorheben, notation jedoch im Fließtext unterbringen}
 \todo[inline]{Definition out-branching (aboreszenz!), nicht hier!!}
