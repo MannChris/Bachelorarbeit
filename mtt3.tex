@@ -21,8 +21,8 @@ Sei $\vec{G}$ der gerichtete Graph, der entsteht, wenn man jede Kante in $G$ als
 Wir betrachten einen beliebigen Knoten aus $\vec{G}$, der natürlich auch in $G$ ist. \\
 Da nach Definition jeder Knoten in jedem Spannbaum mit jedem anderen wegverbunden ist, korrespondiert jeder Spannbaum von $G$ mit genau einer Aboreszenz \textbf{(out-branching <- Reminder, nicht Teil der BA)} mit unserem Knoten als Wurzel in $\vec{G}$. \\
 Da jede Kante in $\vec{G}$ auch in die entgegengesetzte Richtung vorhanden ist, können wir schließen, dass $L_n=K(\vec{G})$, wobei $L_n$ die Laplacematrix von $G$ ist. \\
-Jeder Kofaktor von $L_n$ ist also gleich jedem Kofaktor von $K(\vec{G})$.
-\todo[inline]{Beweis: es ist irrelevant, welchen Kofaktor vo Ln wir nehmen!}
+\todo[inline, color=yellow]{Soll ich hier einen Beweis dafür schreiben, warum es egal ist, welchen Kofaktor wir nehmen (also zum Beispiel mit Eigenschaften der Kofaktormatrix), oder darf ich einfach schreiben, dass die Spalten und Zeilensummen alle 0 sind und es deswegen egal ist?}
+Jeder Kofaktor von $L_n$ ist also gleich jedem Kofaktor von $K(\vec{G})$.\\
 Wir folgern daraus mit Tuttes Matrix-Tree-Theorem, dass die Anzahl der Spannbäume in G gleich einem beliebigen Kofaktor von $L_n$ ist.\\ \\
 Um Teil 2 zu zeigen, berufen wir uns auf ein bekanntes Ergebnis der linearen Algebra; \\
 Das Produkt der Eigenwerte einer Matrix ist gleich der Summe seiner Hauptminoren. Das kann man zum Beispiel in ~\cite{meyer_2005} nachlesen. \\
