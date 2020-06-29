@@ -1,0 +1,29 @@
+\subsection{Warm-up}
+Als kleines Aufwärmprogramm für den Rest dieser Arbeit werden wir in diesem Kapitel die Anzahl der Spannbäume von ein paar wohlbekannten sehr einfachen Graphen mit Kirchhoffs Matrix-Tree-Theorem berechnen.\\
+Unsere Ergebnisse aus diesem Kapitel wollen wir uns im Kapitel zu kartesischen Produkten von Graphen zu Nutze machen, deswegen werden wir jedes mal die Eigenwerte der Laplace Matrizen berechnen, weil wir diese später brauchen.\\
+Dazu brauchen wir aber ersteinmal zusätzliches Werkzeug und zwar einen Zusammenhang zwischen 
+\begin{Lms}
+ Der Pfad-Graph $P_n$ mit $n$ Knoten hat genau einen Spannbaum.
+\end{Lms}
+\textbf{Beweis:}\\
+Dass ein Pfadg-Gaph nur einen Spannbaum hat ist offensichtlich; er ist ja selbst ein Baum.\\
+Wir sind aber an den Eigenwerten der Laplacematrix interessiert.\\
+Da wir die Knoten beliebig benennen dürfen, können wir ohne Beschränkung der Allgemeinheit annehmen, dass diese dann von der Form
+\begin{equation}
+\begin{pmatrix}
+1&-1&0&\ldots&\ldots&\ldots\\
+-1&2&-1&0&\ldots&\ldots\\
+0&\ldots&\ldots&\ldots&\ldots&\ldots\\
+\ldots&\ldots&\ldots&\ldots&\ldots&0\\
+\ldots&\ldots&0&-1&2&-1\\
+\ldots&\ldots&\ldots&0&-1&1\\
+\end{pmatrix}
+\end{equation}
+ist.
+
+Mit Kirchhoffs Matrix-Tree-Theorem folgt, dass $P_n$ nur einen Spannbaum hat.
+\begin{flushright} $\Box$ \end{flushright} 
+\begin{Lms}
+ Der Kreis-Graph $C_n$ mit $n$ Knoten hat genau $n$ Spannbäume.
+\end{Lms}
+\textbf{Beweis:}\\

@@ -4,7 +4,11 @@ In diesem Teil zeigen wir, was im Bezug auf die Anzahl der Spannbäume geschieht
 \todo[inline, color=yellow]{Vielleicht ist es sinnvoll ein weiteres Kapitel mit einfachen Graphen wie Kreis-Graphen, Pfad-Graphen,etc. zu machen, dann könnte man sich in diesem Kapitel fast alle Rechnungen  ersparen und nur ein/zwei Beispiele geben, was man daraus "basteln" kann (Gute Idee?)}
 \begin{Tms}
  Sei $G$ ein Graph mit $m$ Knoten und Eigenwerten $\mu_1(G),..,\mu_m(G)$ und $H$ ein Graph mit $n$ Knoten und Eigenwerten $\mu_1(H),..,\mu_n(H)$. \\
- Dann sind die Eigenwerte des kartesischen Produkts $G \times H$ genau $\mu_i(G)+\mu_j(H)$ mit $i \in \{ 1,..,m\}, j \in \{ 1,..,n\}$.
+% Dann sind die Eigenwerte des kartesischen Produkts $G \times H$ genau $\mu_i(G)+\mu_j(H)$ mit $i \in \{ 1,..,m\}, j \in \{ 1,..,n\}$.
+Dann hat der Graph $G \times H$ genau \\
+$\displaystyle\prod_{i,j}(\mu_i(G)+\mu_j(H))1_{\{\mu_i(G)+\mu_j(H)\}\neq0}$\\ Spannbäume.
 \end{Tms}
+
 \todo[inline]{Beweis schreiben, Satz umformulieren zu einer Aussage über Spannbäume, Reminder:(Kronekersumme Aidb + idaB)}
 
+\todo[inline]{Bei den Beispielen werden wir vollstänige Graphen nutzen, da muss noch kurz argumentiert werden wie da die Eigenwerte sind}

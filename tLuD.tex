@@ -1,19 +1,33 @@
-%\section{Technische Lemmas und Definitionen}
 \section{Grundlegende Definitionen und Notationen}
-\todo[inline, color=yellow]{formellastige Definitionen im Fall von Matrizen sinnvoller?(Übersichtlichkeit?)}
 Wir beginnen damit, ein paar wichtige Begriffe und Notationen einzuführen, die wir später häufiger benutzen werden.
-In einem Matrix-Tree-Theorem wird immer ein Zusammenhang zwischen bestimmten Matrizen und den Spannbäumen eines Graphen beschrieben. Daher bieten sich die folgenden zwei Definitionen an, wobei wir eine für ungerichtete und die andere für gerichtete Graphen verwenden werden:
+In einem Matrix-Tree-Theorem wird immer ein Zusammenhang zwischen bestimmten Matrizen und den Spannbäumen eines Graphen beschrieben. Daher bieten sich die folgenden zwei Definitionen an, wobei wir eine für ungerichtete und die andere für gerichtete Graphen verwenden werden.
 \begin{Df}\textbf{Laplacematrix}\\
 %Definition Laplacematrix $L_n$
-Für einen Graphen $G$ mit Knoten $1,..,n$ definieren wir die Laplacematrix $L_n(G)$ wie folgt:\\
-Der Eintrag $l_{ii}$ ist gleich dem Grad von $i$ und für $i \neq j$ ist $l_{ij}$ gleich $(-1)$, falls $i$ und $j$ beachbart sind, und sonst $0$.
+%Für einen Graphen $G$ mit Knoten $1,..,n$ definieren wir die Laplacematrix $L_n(G)$ wie folgt:\\
+%Der Eintrag $l_{ii}$ ist gleich dem Grad von $i$ und für $i \neq j$ ist $l_{ij}$ gleich $(-1)$, falls $i$ und $j$ beachbart sind, und sonst $0$.
+$$
+l_{ij}=
+\begin{cases}
+ d(i),\, \, falls\,\, i=j,\\
+ (-1), \, \, falls \,\, ij \in E,\\
+ 0, \,\, sonst.
+\end{cases}
+$$
 \end{Df}
+Für einen Knoten $i$ bezeichnen mit $d^{-}(i)$ seinen Ausgangsgrad.\\
 \todo[inline]{Definition Multigraph bleibt wenn dann hier, im Kapitel "Tuttes..." stört das nur, ich weiß aber noch nicht ob die überhaupt nötig ist, das sollte allgemein bekannt sein}
 \begin{Df}\textbf{Kirchhoffmatrix}\\
  %Definition Kirchhoff Matrix $K(D)$
  Für einen gerichteten Multigraphen $D$ mit Knoten $1,..,n$ definieren wir die Kirchhoffmatrix $K(D)$ wie folgt:\\
- Der Eintrag $k_{ij}$ der Kirchhoff-Matrix gleich dem Ausgangsgrad des Knoten $i$, falls $i=j$, und gleich minus der Anzahl von Kanten von $i$ nach $j$, für $i \neq j$.
+ $$
+k_{ij}=
+\begin{cases}
+ d^{-}(i),\, \, falls\,\, i=j,\\
+ (-m), \, \, wobei \,\, m \,\, die\, Anzahl\, der\, Kanten\, von\,\, i\,\, nach \,\,j\,\, ist.
+\end{cases}
+$$
+Der Eintrag $k_{ij}$ der Kirchhoff-Matrix gleich dem Ausgangsgrad des Knoten $i$, falls $i=j$, und gleich minus der Anzahl von Kanten von $i$ nach $j$, für $i \neq j$.
 \end{Df}
-Im Verlauf dieser Arbeit werden wir immer wieder die Anzahl der Spannbäume eines Graphen ausrechnen, daher definieren wir $\mathit{k}(G)$ als die Anzahl der Spannbäume eines beliebigen Graphen $G$.
+Im Verlauf dieser Arbeit werden wir immer wieder die Anzahl der Spannbäume eines Graphen ausrechnen, daher verwenden wir $\mathit{k}(G)$ als die Anzahl der Spannbäume eines beliebigen Graphen $G$.
 \todo[inline, color=yellow]{Stand jetzt werde ich die Definitionen als solche hervorheben, Notation jedoch im Fließtext unterbringen, passt das so?}
 \todo[inline]{Definition aboreszenz nicht hier!!}
