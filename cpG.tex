@@ -1,8 +1,8 @@
-\subsection{Cartesische Produkte von Graphen}
+\subsection{Kartesische Produkte von Graphen}
 In diesem Teil zeigen wir, was im Bezug auf die Anzahl der Spannbäume geschieht, wenn man das kartesische Produkt von Graphen bildet.\\
 Das kartesische Produkt $G_1\times G_2$ zweier Graphen $G1=(V_1,E_1)$ und $G2=(V_2,E_2)$ bezeichnet dabei den Graphen mit Knotenmenge $V_1\times V_2$ und Kantenmenge $(E_1\times V_2)\cup(V_1\times E_2)$, wobei zwei Knoten $(u_1,u_2), (v_1,v_2) \in (V_1\times V_2)$ genau dann in $G_1\times G_2$ benachbart sind, wenn entweder $u_1=v_1$ in $G_1$ oder $u_2=v_2$ in $G_2$ ist.\\
-\todo[inline, color=yellow]{Ich werde wahrscheinlich ein/zwei Beispiele davon zeigen, z.B. Lattice-Graph, aber nicht mehr, weil das im Grund genommen einfach nur Rechnungen sind und das Matrix-Tree-Theorem nicht mehr als solches angewendet wird, sondern nur über den Satz unten(passt das?)}
-\todo[inline, color=yellow]{Vielleicht ist es sinnvoll ein weiteres Kapitel mit einfachen Graphen wie Kreis-Graphen, Pfad-Graphen,etc. zu machen, dann könnte man sich in diesem Kapitel fast alle Rechnungen  ersparen und nur ein/zwei Beispiele geben, was man daraus "basteln" kann (Gute Idee?)}
+\todo[inline, color=yellow]{Ich werde wahrscheinlich ein/zwei Beispiele davon zeigen, z.B. Lattice-Graph, aber nicht mehr, weil das im Grund genommen einfach nur Rechnungen sind und das Matrix-Tree-Theorem nicht mehr als solches angewendet wird, sondern nur über den Satz unten(passt das?)---Antwort:JA->warmup-kapitel}
+\todo[inline, color=yellow]{Vielleicht ist es sinnvoll ein weiteres Kapitel mit einfachen Graphen wie Kreis-Graphen, Pfad-Graphen,etc. zu machen, dann könnte man sich in diesem Kapitel fast alle Rechnungen  ersparen und nur ein/zwei Beispiele geben, was man daraus "basteln" kann (Gute Idee?)---Antwort:JA}
 \begin{Tms}
  Sei $G$ ein Graph mit $m$ Knoten und Eigenwerten $\mu_1(G),..,\mu_m(G)$ und $H$ ein Graph mit $n$ Knoten und Eigenwerten $\mu_1(H),..,\mu_n(H)$. \\
 % Dann sind die Eigenwerte des kartesischen Produkts $G \times H$ genau $\mu_i(G)+\mu_j(H)$ mit $i \in \{ 1,..,m\}, j \in \{ 1,..,n\}$.
@@ -22,6 +22,15 @@ Mit Kirchhoffs Matrix-Tree-Theorem folgt nun
 \end{equation}
 Damit ist unser Satz bewiesen.
 \begin{flushright} $\Box$ \end{flushright} 
-\todo[inline]{Beweis ganz sauber fertigmachen, evtrl. Quelle in der man was über ide Kroneckersumme nachlesen kann}
-
+\todo[inline]{Beweis ganz sauber fertigmachen, evtl. Quelle in der man was über ide Kroneckersumme nachlesen kann}
+\begin{Bsps}[Zylinder-Graph]
+%pfad und kreis
+\end{Bsps}
+\begin{Bsps}[Torus-Graph]
+kreis und Kreis
+\end{Bsps}
+\todo[inline, color=red]{Lattice Graph ist wieder Mehrdeutig, Gittergraph hier falsch}
+\begin{Bsps}[kartesisches Produkt von vollständigen Graphen]
+%z.B. rooks graph
+\end{Bsps}
 \todo[inline]{Bei den Beispielen werden wir vollstänige Graphen nutzen, da muss noch kurz argumentiert werden wie da die Eigenwerte sind}
