@@ -25,7 +25,17 @@
 \newtheorem{Dfs}[Tms]{Definition}
 \newtheorem{Bsps}[Tms]{Beispiel}
 \newtheorem{Bsp}[Tm]{Beispiel}
-
+%Abbildungen sollen Abb. genannt werden und nicht Figure
+\addto{\captionsngerman}{%
+  \renewcommand*{\contentsname}{Inhalt}
+  \renewcommand*{\listfigurename}{Abbildungen}
+  \renewcommand*{\figurename}{Abb.}
+}
+\addto{\captionsenglish}{%
+  \renewcommand*{\contentsname}{Inhalt}
+  \renewcommand*{\listfigurename}{Abbildungen}
+  \renewcommand*{\figurename}{Abb.}
+}
 
 %\ifpdf %%Einbindung von Grafiken mittels \includegraphics{datei}
 	\usepackage[pdftex]{graphicx} %%Grafiken in pdfLaTeX
