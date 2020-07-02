@@ -2,11 +2,155 @@
 Als nächste Graphenklasse betrachten wir vollständige multipartite Graphen.
 \todo[inline]{Notation}
 \begin{Tms}
- Für die Anzahl der Spannbäume in einem vollständig m-partiten Graphen $K_{n_1,..,n_m}$ mit n Knoten gilt:\\
+ Für die Anzahl der Spannbäume in einem vollständig m-partiten Graphen $K_{n_1,..,n_m}$ mit $n$ Knoten gilt:\\
  $\mathit{k}(K_{n_1,..,n_m})=n^{m-2}\prod_{i=1}^{m}(n-n_1)^{n_i-1}$
 \end{Tms}
 \textbf{Beweis:}
 Wir beweisen den Satz ähnlich wie Austin in ~\cite{austin_1960}, der ein äquivalentes Problem zu dem ebengenannten bewiesen hat.\\
 Dazu werden wir im Geist dieser Arbeit Kirchhoffs Matrix-Tree-Theorem verwenden.\\
-Zuerst werden wir bemerken, dass alle Laplace-Matrizen, die unseren Sachverhalt beschreiben, bei geschickter Nummerierung Blockmatrizen einer bestimmten Gestalt sind und Schlüsse über deren Kofaktoren  ziehen. Im nächsten Schritt werden wir dann einen beliebigen solchen Graphen auswählen und die entsprechenden Werte einsetzen. Mit Kirchhoffs Matrix-Tree-Theorem folgt dann der Satz.\\
-\todo[inline]{Beweis fertigmachen}
+Zuerst werden wir bemerken, dass alle Laplace-Matrizen, die unseren Sachverhalt beschreiben, bei geschickter Nummerierung Blockmatrizen einer bestimmten Gestalt sind und Schlüsse über deren Kofaktoren ziehen. Im nächsten Schritt werden wir dann einen beliebigen solchen Graphen auswählen und die entsprechenden Werte einsetzen.\\
+Mit Kirchhoffs Matrix-Tree-Theorem folgt dann der Satz.\\
+Wir beobachten, dass die Laplacematrix und die, die entsteht, wenn man davon die erste Zeile und Spalte streicht, von der Form
+\begin{equation}
+\begin{pmatrix}
+ {\gamma_1}id_{d_1}&-V_{12}&\ldots&\ldots&-V_{1m}\\
+ -V_{21}&{\gamma_2}id_{d_2}&\ldots&\ldots&-V_{2m}\\
+ \ldots&\ldots&\ldots&\ldots&\ldots\\
+  \ldots&\ldots&\ldots&\ldots&-V_{(m-1)m}\\
+ -V_{m1}&\ldots&\ldots&-V_{m(m-1)}&{\gamma_m}id_{d_m}
+\end{pmatrix}
+\end{equation}
+\todo[inline, color=blue]{Im folgenden Satz nachm Leerzeichen einfügen dieselben zwischen nxn und Matrix wieder wegmachen, das gehört nämlich zusammen}
+ist, wobei $V_{ij}$ $(d_i)\times(d_j)$-Matrizen sind, bei denen alle Einträge gleich $-1$ sind und $d_l\in\mathbb{N}$ für $l\in \{1,\ldots,m\}$.\\
+Das ist eine symmetrische Matrix mit ganzzahligen Einträgen, deshalb wissen wir, dass alle Eigenwerte reell sind und wir die Determinante aus den Eigenwerten ausrechnen können.\\
+Um die Eigenwerte herauszufinden betrachten wir das folgende Gleichungssystem:
+\begin{equation}
+\begin{pmatrix}
+ {\gamma_1}id_{d_1}&-V_{12}&\ldots&\ldots&-V_{1m}\\
+ -V_{21}&{\gamma_2}id_{d_2}&\ldots&\ldots&-V_{2m}\\
+ \ldots&\ldots&\ldots&\ldots&\ldots\\
+  \ldots&\ldots&\ldots&\ldots&-V_{(m-1)m}\\
+ -V_{m1}&\ldots&\ldots&-V_{m(m-1)}&{\gamma_m}id_{d_m}
+\end{pmatrix}
+\begin{pmatrix}
+ Y_1\\
+ Y_2\\
+ \ldots\\
+ Y_{m-1}\\
+ Y_m
+\end{pmatrix}
+ =\lambda
+ \begin{pmatrix}
+ Y_1\\
+ Y_2\\
+ \ldots\\
+ Y_{m-1}\\
+ Y_m
+\end{pmatrix}
+\end{equation}
+Hier sind die $Y_i:=(y_{i_1},\ldots,y_{i_j})^T$, wobei $j=d_i$.\\
+Für $\lambda$ verschieden von $\gamma_1,\ldots,\gamma_m$ können wir\\ \\
+!!!!!!!If lamda is different from each of gamma1,gamma2, . . . , gammam then a consideration of the
+equations two at a time shows that each vector Yi must be a constant vector.
+!!!!!! \\ \\
+Deswegen können wir das Gleichungssystem in die $m$ voneinander unabhängigen Gleichungen 
+\begin{equation}
+ \sum_{i=1}^m((\gamma_j-d_j)\delta_{ij}-d_j)Y_j=\lambda_iY_i
+  \hspace{5pt}(i\in{1,\ldots,m})
+\end{equation}
+umformulieren.
+Das gibt uns $m$  von $\gamma_1,\ldots,\gamma_m$ verschiedene Eigenwerte, deren Produkt die Determinante der Matrix $K \in M_m(\mathbb{R})$ mit Einträgen $k_{i,j}=((\gamma_j-d_j)\delta_{ij}-d_j)$ ist.\\
+Die übrigen Eigenwerte müssen also aus $\gamma_1,\ldots,\gamma_m$ sein.\\
+Angenommen $\lambda=\gamma_i$ für ein $i\in\{1,\ldots,m\}$; Dann sehen wir bei Betrachtung des Gleichungssystems von oben, dass $Y_j=0$ für $i\neq j$, !!!!!!!!!$\sum_iy_{li}=0$!!!!!.
+\todo[inline, color=blue]{Im folgenden Satz nachm Leerzeichen einfügen dieselben zwischen di-1 und facher wieder wegmachen, das gehört nämlich zusammen}
+Also ist $\gamma_i$ ein $(d_i-1)$-facher Eigenwert.
+Wir schließen also
+\begin{equation}
+{det
+\begin{pmatrix}
+ {\gamma_1}id_{d_1}&-V_{12}&\ldots&\ldots&-V_{1m}\\
+ -V_{21}&{\gamma_2}id_{d_2}&\ldots&\ldots&-V_{2m}\\
+ \ldots&\ldots&\ldots&\ldots&\ldots\\
+  \ldots&\ldots&\ldots&\ldots&-V_{(m-1)m}\\
+ -V_{m1}&\ldots&\ldots&-V_{m(m-1)}&{\gamma_m}id_{d_m}
+\end{pmatrix}
+}
+={det(K)\prod_{i=1}^m \gamma_i^{(d_i -1)}}
+\end{equation}
+Um einen Kofaktor von $L(K_{n_1,..,n_m})$ zu berechnen, setzen wir in diese Gleichung jetzt die Werte für die Matrix ein, die entsteht wenn wir die erste Spalte und Zeile von $L(K_{n_1,..,n_m})$ streichen. Also setzen wir 
+$\gamma_i=(n-n_i)$ für $i\in\{1,\ldots,m\}$ und
+$d_1=(n_1 -1)$ und $d_i=n_i$ für $i\in\{2,\ldots,m\}$.\\
+Wir berechnen also
+\begin{equation}
+\label{vmp_1}
+det
+\begin{pmatrix}
+ (n-n_1)&-n_2&\ldots&\ldots&\ldots&-n_m\\
+ (1-n_1)&(n-n_2)&\ldots&\ldots&\ldots&\ldots\\
+ (1-n_1)&-n_2&\ldots&\ldots&\ldots&\ldots\\
+ \ldots&\ldots&\ldots&\ldots&\ldots&\ldots\\
+ \ldots&\ldots&\ldots&\ldots&\ldots&-n_m\\
+ (1-n_1)&-n_2&\ldots&\ldots&-n_{m-1}&(n-n_m)
+\end{pmatrix}
+(n-n_1)^{(n_1 -2)}\prod_{i=2}^m (n-n_i)^{(n_i -1)}
+\end{equation}
+Um das auszurechnen, müssen wir die Determinante auswerten. 
+Da elementare Zeilenoperationen die Determinante nicht ändern, subtrahieren wir die erste Zeile von allen anderen. Die zu berechnende Determinante ist nun
+\begin{equation}
+det
+\begin{pmatrix}
+ (n-n_1)&-n_2&\ldots&\ldots&\ldots&-n_m\\
+ (1-n)&n&0&\ldots&\ldots&0\\
+ \ldots&0&\ldots&\ldots&\ldots&\ldots\\
+ \ldots&\ldots&\ldots&\ldots&\ldots&\ldots\\
+ \ldots&\ldots&\ldots&\ldots&\ldots&0\\
+ (1-n)&0&\ldots&\ldots&0&n
+\end{pmatrix}
+\end{equation}
+Jetzt addieren wir zur ersten Zeile für alle $i=2,\ldots,m$ das $\left(\frac{n_i}{n}\right)$-fache der $i$-ten Zeile und erhalten
+\begin{equation}
+det
+\begin{pmatrix}
+ a&0&\ldots&\ldots&\ldots&0\\
+ (1-n)&n&0&\ldots&\ldots&\ldots\\
+ \ldots&0&\ldots&\ldots&\ldots&\ldots\\
+ \ldots&\ldots&\ldots&\ldots&\ldots&\ldots\\
+ \ldots&\ldots&\ldots&\ldots&\ldots&0\\
+ (1-n)&0&\ldots&\ldots&0&n
+\end{pmatrix}
+\end{equation}
+wobei $a = (n-n_1)+\sum_{i=2}^m\left(\frac{(1-n)n_i}{n}\right)$ ist.\\
+Berücksichtigen wir die Gleichheit $n=n_1+\ldots+n_m$, sehen wir leicht, dass $a=\frac{n-n_1}{n}$.\\
+Die Determinante einer Dreiecksmatrix können wir ablesen und folgern
+\begin{equation}
+det
+\begin{pmatrix}
+ a&0&\ldots&\ldots&\ldots&0\\
+ (1-n)&n&0&\ldots&\ldots&\ldots\\
+ \ldots&0&\ldots&\ldots&\ldots&\ldots\\
+ \ldots&\ldots&\ldots&\ldots&\ldots&\ldots\\
+ \ldots&\ldots&\ldots&\ldots&\ldots&0\\
+ (1-n)&0&\ldots&\ldots&0&n
+\end{pmatrix}
+= n^{m-2}(n-n_1)
+\end{equation}
+Das setzen wir nun in(~\ref{vmp_1}) ein:
+\begin{equation}
+ det
+\begin{pmatrix}
+ (n-n_1)&-n_2&\ldots&\ldots&\ldots&-n_m\\
+ (1-n_1)&(n-n_2)&\ldots&\ldots&\ldots&\ldots\\
+ (1-n_1)&-n_2&\ldots&\ldots&\ldots&\ldots\\
+ \ldots&\ldots&\ldots&\ldots&\ldots&\ldots\\
+ \ldots&\ldots&\ldots&\ldots&\ldots&-n_m\\
+ (1-n_1)&-n_2&\ldots&\ldots&-n_{m-1}&(n-n_m)
+\end{pmatrix}
+= n^{m-2}\prod_{i=1}^{m}(n-n_1)^{n_i-1}
+\end{equation}
+Damit haben wir erfolgreich einen Kofaktor der Laplacematrix von $K_{n_1,..,n_m}$ berechnet.\\
+Mit Kirchhoffs Matrix-Tree-Theorem folgt nun
+\begin{equation}
+ \mathit{k}(K_{n_1,..,n_m})=n^{m-2}\prod_{i=1}^{m}(n-n_1)^{n_i-1}
+\end{equation}
+Damit ist der Satz über die Anzahl der Spannbäume in vollständig multipartiten Graphen bewiesen.
+\begin{flushright} $\Box$ \end{flushright}
