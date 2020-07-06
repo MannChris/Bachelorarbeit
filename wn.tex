@@ -15,16 +15,26 @@ Um die Anzahl der Spannbäume von Rädern zu berechnen, zeigen wir zuerst die re
 \begin{equation}
  \mathit{k}(W_{n+1}) = \mathit{k}(F_{n+1}) + \mathit{k}(F_n) + \mathit{k}(W_n)
 \end{equation}
-Um das zu tun, werden die Spannbäume von $W_{n+1}$ in drei verschiedene Klassen einteilen, wie man auch in den Abbildungen unten sehen kann:\\
+Um das zu tun, werden die Spannbäume von $W_{n+1}$ in drei verschiedene Klassen einteilen:\\
 \par %eingerückt
 \begingroup
 \leftskip=20pt% Parameter anpassen
 \rightskip=20pt
 \noindent
-1) Alle Spannbäume, die die Kante $v_{n+1}v_1$, aber nicht die Kante $v_{n+1}z$ enthalten; das sind genau so viele, wie die Spannbäume von $W_n$.
-\todo[inline, color=green]{Grafik dazu}
+1) Alle Spannbäume, die die Kante $v_{n+1}v_1$, aber nicht die Kante $v_{n+1}z$ enthalten; das sind genau so viele, wie die Spannbäume von $W_n$, wie man in der Abbildung~\ref{klasse1} sehen kann. Wir beachten hier, dass ein $W_n$ entsteht, wenn man im standardnummerierten $F_n$ die Kante $v_{n}v_1$ hinzufügt.
+\begin{figure}[H]
+  \centering
+ \includegraphics[width=0.5\textwidth]{klasse1.png}
+%  \caption{In Klasse 1 sind die Spannbäume dieses Graphen, wobei die schwarze Kante in diesen Spannbäumen enthalten sein muss und der grün markierte Teil ein $F_n$ ist}
+ \label{klasse1} %caption vor label unbedingt
+\end{figure}
 2)Alle Spannbäume, die die Kante $v_{n+1}v_1$ nicht enthalten; das sind genau so viele, wie die Spannbäume von $F_{n+1}$.\\
-\todo[inline, color=green]{Grafik dazu}
+\begin{figure}[H]
+  \centering
+ \includegraphics[width=0.5\textwidth]{klasse2.png}
+ \caption{In Klasse 2 sind genau die Spannbäume dieses Graphen, wobei der grün markierte Teil ein $F_{n+1}$ ist}
+ \label{klasse2} %caption vor label unbedingt
+\end{figure}
 3) Alle Spannbäume, die die Kante $v_{n+1}v_1$ und die Kante $v_{n+1}z$ enthalten; Wir beweisen im Folgenden, dass das so viele sind, wie die Spannbäume von $F_n$;
 \par
 \endgroup
@@ -35,7 +45,7 @@ Die nachfolgende Abbildung verdeutlicht, dass $\mathit{k}(F_{n+1})=2\mathit{k}(F
 \todo[inline, color=green]{Grafik Konstruktion von Fn+1 aus Fn, und diesmal stimmt der Beweis wirklich}
 \todo[inline]{Wenn die Grafik drin ist evtl noch ein-zwei Sätze dazu}
 Sei $M_n$ die Menge der Spannbäume von $W_{n+1}$ aus Klasse 3;\\
-Die nächste Grafik zeigt, dass $|M_{n+1}|=|M_n|+b_n$ ist.
+Die nächste Grafik zeigt, dass $|M_{n+1}|=2|M_n|+b_n$ ist; wir erinnern uns dabei an dieser Stelle daran, dass wir die Knoten beliebig umnummerieren können.
 \todo[inline, color=green]{Grafik zur Konstruktion, damit ist das offensichtlich}
 \todo[inline]{Wenn die Grafik drin ist, evtl. noch ein-zwei Sätze dazu}
 Wir sehen leicht, dass $\mathit{k}(F_2) = |M_2|$ und $a_2=b_2$; daraus schließen wir, dass die Anzahl der Spannbäume in Klasse 3 gleich $\mathit{k}(F_{n})$ ist, was wir zeigen wollten.
