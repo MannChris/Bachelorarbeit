@@ -5,13 +5,12 @@ Im Kapitel Warm-up ist uns schon ein zirkulärer Graph begegnet; der Kreis-Graph
 Wir nennen einen Graphen zirkulär (engl. "circulant") mit $n$ Knoten, wenn für $n \in \mathbb{N}$ und eine Menge $I \subset{\{1,..,\lfloor \frac{n}{2} \rfloor \}}\subset{\mathbb{N}}$ gilt, dass jeder Knoten $v$ genau zu jedem Knoten $(v+i) (\mod{n})$ mit $i \in I$ benachbart ist; wir bezeichnen solch einen Graphen kurz mit $C_n^I$.\\
 \todo[inline, color=blue]{Im folgenden Satz nachm Leerzeichen einfügen dieselben zwischen nxn und Matrix wieder wegmachen, das gehört nämlich zusammen}
 Wir erinnern uns, dass eine $n\times n$-Matrix zyklisch genannt wird, falls jede Spalte aus der vorherigen durch Anwendung der Permutation $(1...n)$ hervorgeht.\\
-Das ist bei den Adjazenzmatrizen unserer zirkulären Graphen, aufgrund dessen, wann Konten benachbart sind, natürlich der Fall.\\
+Das ist bei den Adjazenz- und Laplacematrizen von zirkulären Graphen, aufgrund dessen, wann Knoten benachbart sind, der Fall.\\
 Zu Gute kommt uns das bei der Berechnung der Anzahl von Spannbäumen in zirkulären Graphen, denn die Eigenwerte einer zyklischen Matrix sind wohlbekannt.\\
-Um die Formel für die Anzahl der Spannbäume überhaupt zu verstehen, müssen wir allerdings einen weiteren Begriff einführen. \\
-%%Grad von C_n^I erklären, (Grad maximalgrad eines knoten?)
-Nachdem wir nun alles beisammen haben, formulieren wir folgenden Satz:
+Wir wollen in diesem Zusammenhang folgendes zeigen:
 \begin{Tms}
-Für die Anzahl der Spannbäume in zirkulären Graphen von Grad $d$ gilt:\\
+Für die Anzahl der Spannbäume in zusammenhängenden zirkulären Graphen von Grad $d$ gilt:\\
+\todo[inline]{case distinction}
 \begin{equation}
 \mathit{k}\left( C_n^I \right) = \frac{1}{n} \prod_{j=1}^{n-1} \left(4 \sum_{i \in I} \sin^2 \left( \frac{ij\pi}{n}\right) \right),\,falls\,d\,gerade\,ist
 \end{equation}
@@ -20,8 +19,29 @@ Für die Anzahl der Spannbäume in zirkulären Graphen von Grad $d$ gilt:\\
 \end{equation}
 \end{Tms}
 \textbf{Beweis:}\\
-Wir beweisen den Satz wie ~\cite{wang_yang_1984}.\\
-\todo[inline]{Beweis schreiben}
+Wir beweisen den Satz ähnlich wie ~\cite{wang_yang_1984}, berechnen daher die Eigenwerte der Laplacematrix und können dann Kirchhoffs Matrix-Tree-Theorem anwenden.\\
+Für unseren Graphen $C_n^I$ ist die Laplacematrix zirkulär; wir können sie also durch die erste Spalte eindeutig beschreiben. Der erste Eintrag ist $|I|$, die Einträge $(i+1)$ sind $-1$ für $i \in I$, die übrigen $0$.\\
+Des weiteren ist sind die Eigenwerte von zirkulären Matrizen ein bekanntes Resultat aus der linearen Algebra:
+\begin{equation}
+ \lambda_j = \sum_{k=1}^{n}l_kexp\left(\frac{2\pi ij}{n}\right), \,\,\,\,\, {j\in\{0,\ldots,n-1\}}
+\end{equation}
+$l_k$ ist hier der $k$-te Eintrag der ersten Spalte.\\ 
+Der Eigenwert $\lambda_0 = 0$. Da der Graph zusammenhängend ist, sind die übrigen Eigenwerte ungleich $0$ und mit Kirchhoffs Matrix-Tree-Theorem folgt:
+\begin{equation}
+ \mathit{k}(C_n^I)=\prod_{j=1}^{n-1} \lambda_j
+\end{equation}
+An dieser Stelle machen wir die Fallunterscheidung, ob der Graph geraden Grad hat, oder nicht.\\
+\par %eingerückt
+\begingroup
+\leftskip=20pt% Parameter anpassen
+\rightskip=20pt
+\noindent
+Fall 1: Grad gerade\\
+Fall 2: Grad ungerade
+\par
+\endgroup
+\todo[inline]{Beweis fertig schreiben}
+\begin{flushright} $\Box$ \end{flushright} 
 \begin{Bsps}[$C_n^2$ - Das Quadrat eines Kreises]
 \todo[inline, color=green]{Bild von einem Square of a cycle}
 \todo[inline]{Herleitung Formel}

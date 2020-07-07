@@ -5,9 +5,8 @@ $K_n$ besitzt genau $n^{n-2}$ verschiedene Spannbäume.\\
 \end{Tms}
 \textbf{Beweis:}\\
 Unser Beweis orientiert sich an ~\cite{Lau_2004}.
-Wir wollen das Matrix-Tree-Theorem verwenden und betrachten deshalb die Determinante der Matrix $A_n\in M_{n-1}(\mathbb{Z})$, die durch das Streichen der ersten Zeile und Spalte der Laplacematrix $L_n(K_n)\in M_n(\mathbb{Z})$ entsteht:
+Wir wollen das Matrix-Tree-Theorem verwenden und betrachten deshalb die Determinante der Matrix, die durch das Streichen der ersten Zeile und Spalte der Laplacematrix $L_n(K_n)\in M_n(\mathbb{Z})$ entsteht:
 \begin{equation}
-A_n:=
 \begin{pmatrix}
 n-1&-1&\ldots&\ldots&\ldots&-1\\
 -1&n-1&-1&\ldots&\ldots&-1\\
@@ -17,9 +16,7 @@ n-1&-1&\ldots&\ldots&\ldots&-1\\
 \end{pmatrix}
 \end{equation}
 Da sich die Determinante durch elementare Zeilen- und Spaltenoperationen nicht ändert, dürfen wir die erste Spalte von allen anderen subtrahieren und erhalten:
-
-\begin{equation}
-det(A_n):=det
+\begin{equation}det
 \begin{pmatrix}
 n-1&-n&\ldots&\ldots&\ldots&-n\\
 -1&n&0&\ldots&\ldots&0\\
@@ -30,7 +27,7 @@ n-1&-n&\ldots&\ldots&\ldots&-n\\
 \end{equation}
 Mit demselben Argument wie oben addieren wir zur ersten Zeile alle übrigen und es ergibt sich:
 \begin{equation}
-det(A_n):=det
+det
 \begin{pmatrix}
 1&0&\ldots&\ldots&\ldots&0\\
 -1&n&0&\ldots&\ldots&0\\
@@ -39,10 +36,6 @@ det(A_n):=det
 -1&0&\ldots&\ldots&0&n\\
 \end{pmatrix}
 \end{equation}
-Wir berechnen den Wert dieser Determinante durch Entwicklung nach der ersten Zeile. Weil die Matrix $A_n$ eine $n-1 \times n-1$ Matrix ist, gilt:
-
-\begin{equation}
- det(A_n)=n^{n-2}
-\end{equation}
+Wir berechnen den Wert dieser Determinante durch Entwicklung nach der ersten Zeile. Weil die betrachtete Matrix eine $n-1 \times n-1$ Matrix ist, ist die Determinante gleich $n^{n-2}$.\\
 Nach Kirchhoff's Matrix-Tree-Theorem ist genau das die Anzahl der Spannbäume des $K_n$.
 \begin{flushright} $\Box$ \end{flushright} 
