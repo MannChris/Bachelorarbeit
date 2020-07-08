@@ -45,14 +45,15 @@ Um das zu tun, werden die Spannbäume von $W_{n+1}$ in drei verschiedene Klassen
 \vspace{1cm}
 
 Um zu zeigen dass die Klasse 3 genausoviele Spannbäume enthält wie $F_n$, werden wir beweisen, dass für die Anzahl der Spannbäume in Klasse 3 den gleichen rekursiven Formeln genügen, wie die von $F_n$.\\
-Sei $a_n$ die Anzahl der Subgraphen von $F_n$, die aus genau zwei Komponenten bestehen, von denen eine den Knoten $z$ und die andere $v_n$ enthält.
+Sei $a_n$ die Anzahl der Subgraphen von $F_n$, die aus genau zwei Komponenten bestehen, von denen eine den Knoten $z$ und die andere $v_n$ enthält.\\
 Wir definieren $b_n$ als die Anzahl der Spannbäume in Klasse 3, die die Kanten $v_nv_{n+1}$ und $v_nz$ nicht enthalten.\\
 Wir beweisen zuerst, dass $\mathit{k}\left(F_{n+1}\right)=2\mathit{k}\left(F_{n}\right)+a_n$ für $n\geq 2$.
 Dazu nehmen wir ohne Beschränkung der Allgemeinheit an, dass $v_{n+1}$ nur zu den Knoten $v_n$ und $z$ adjazent ist. Ein Spannbaum des $F_n+1$ ist dann entweder durch hinzufügen einer der beiden Kanten $v_nv_{n+1}$ und $v_{n+1}z$ entstanden, oder durch hinzufügen beider Kanten an einen Subgraphen von $F_n$, der aus genau zwei Komponenten besteht, von denen eine den Knoten $z$ und die andere $v_n$ enthält.\\
 Es gilt also $\mathit{k}\left(F_{n+1}\right)=2\mathit{k}\left(F_{n}\right)+a_n$.\\
 Jetzt betrachten wir die Spannbäume aus Klasse 3.\\
 Sei $M_n$ die Menge der Spannbäume von $W_{n+1}$ aus Klasse 3;\\
-Nun zeigen wir, dass $|M_{n+1}|=2|M_n|+b_n$ ist; wir erinnern uns dabei an dieser Stelle daran, dass wir die Knoten beliebig umnummerieren können. In $M_{n+1}$ sind also die Spannbäume des Graphen aus Abbildung~\ref{mn1}.
+Nun zeigen wir, dass für $n \geq 3$ $|M_{n+1}|=2|M_n|+b_n$ ist.\\
+Im folgenden betrachten wir nur $n \geq 3$. Wir erinnern uns an dieser Stelle daran, dass wir die Knoten beliebig umnummerieren können; in $M_{n+1}$ sind also die Spannbäume des Graphen aus Abbildung~\ref{mn1}.
 \begin{figure}[H]
   \centering
  \includegraphics[width=0.5\textwidth]{mn1.png}
@@ -65,9 +66,9 @@ Wir unterteilen die Spannbäume davon auch in drei Klassen:\\
 \leftskip=20pt
 \rightskip=20pt
 \noindent
-Die Erste bilden diejenigen, in denen die Kante $v_{n+1}z$ enthalten ist; Wie wir in der Grafik~\ref{mn2} erkennen können, sind das soviele, wie in $M_n$.\\
-Die Zweite besteht aus denen, die die Kante $v_nv_{n+1}$ enthalten; In Abbildung~\ref{mn3} sehen wir, dass das auch $|M|$ Stück sind.\\
-Die Dritte beinhaltet die, die weder die Kante $v_{n+1}z$ noch die Kante $v_nv_{n+1}$ enthalten; Das sind nach Definition genau $b_n$ viele.\\
+Die Erste bilden diejenigen, in denen die Kante $v_{n+1}z$ enthalten ist; Wie wir in der Abbildung~\ref{mn2} erkennen können, sind das soviele, wie in $M_n$.\\
+Die Zweite besteht aus denen, die die Kante $v_nv_{n+1}$ enthalten; In Abbildung~\ref{mn3} sehen wir, dass das auch $|M_n|$ Stück sind.\\
+Die Dritte beinhaltet die, die weder die Kante $v_{n+1}z$ noch die Kante $v_nv_{n+1}$ enthalten; Die Anzahl ist nach Definition genau $b_n$.\\
 \par
 \endgroup
 \begin{figure}[H]
@@ -85,8 +86,8 @@ Die Dritte beinhaltet die, die weder die Kante $v_{n+1}z$ noch die Kante $v_nv_{
  \label{mn3} %caption vor label unbedingt
     \end{minipage}
 \end{figure}
-Daraus schließen wir also $|M_{n+1}|=2|M_n|+b_n$.\\
-Wir sehen leicht, dass $\mathit{k}\left(F_2\right) = |M_2|$ und $a_2=b_2$; daraus schließen wir, dass die Anzahl der Spannbäume in Klasse 3 gleich $\mathit{k}\left(F_{n}\right)$ ist, was wir zeigen wollten.
+Daraus schließen wir also $|M_{n+1}|=2|M_n|+b_n$ für $n\geq3$.\\
+Wir sehen leicht, dass $\mathit{k}\left(F_2\right) = |M_2|$, $\mathit{k}\left(F_2\right)=|M_3|$ $a_2=b_2$ und $a_3=b_3$; daraus schließen wir, dass die Anzahl der Spannbäume in Klasse 3 gleich $\mathit{k}\left(F_{n}\right)$ ist, was wir zeigen wollten.\\
 Da jeder Spannbaum von $W_{n+1}$ in genau einer der 3 Klassen ist, gilt die rekursive Beziehung
 \begin{equation}
 \mathit{k}\left(W_{n+1}\right) = \mathit{k}\left(F_{n+1}\right) + \mathit{k}\left(F_n\right) + \mathit{k}\left(W_n\right)
@@ -120,7 +121,7 @@ Wir bringen fast alles auf einen Nenner, sortieren die Terme und bekommen
                         & -\frac{\left(3+\sqrt{5}+2-2\sqrt{5}\right)\left(3-\sqrt{5}\right)^{n}}{2^{n+1}\sqrt{5}}-2 
 \end{aligned}
 \end{equation}
-\todo[inline]{zusammengehörige Terme farbig markieren}
+\todo[inline]{zusammengehörige Terme evtl. farbig markieren}
 Ausrechnen führt uns zu\\
 \begin{equation}
 \mathit{k}\left(W_{n+1}\right) = \left(\frac{3+\sqrt{5}}{2}\right)^{n+1}+\left(\frac{3+\sqrt{5}}{2}\right)^{n+1}-2
