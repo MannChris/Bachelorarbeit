@@ -12,18 +12,18 @@ Wir wollen in diesem Zusammenhang folgendes zeigen:
 Für die Anzahl der Spannbäume in zusammenhängenden zirkulären Graphen von Grad $d$ gilt:\\
 \todo[inline]{case distinction}
 \begin{equation}
-\mathit{k}\left( C_n^I \right) = \frac{1}{n} \prod_{j=1}^{n-1} \left(4 \sum_{i \in I} \sin^2 \left( \frac{ij\pi}{n}\right) \right),\,falls\,d\,gerade\,ist
+\mathit{k}\left( C_n^I \right) = \frac{1}{n} \prod_{j=1}^{n-1} \left(4 \sum_{k \in I} \sin^2 \left( \frac{kj\pi}{n}\right) \right),\,falls\,d\,gerade\,ist
 \end{equation}
 \begin{equation}
-\mathit{k}\left( C_n^I \right) = \frac{1}{n} \prod_{j=1}^{n-1} \left(4 \sum_{i \in I} \sin^2 \left( \frac{ij\pi}{n}\right)-(-1)^j+1\right),\,falls\,d\,ungerade\,ist
+\mathit{k}\left( C_n^I \right) = \frac{1}{n} \prod_{j=1}^{n-1} \left(4 \sum_{k \in I/\mathrm{sup}(I)} \sin^2 \left( \frac{kj\pi}{n}\right)-(-1)^j+1\right),\,falls\,d\,ungerade\,ist
 \end{equation}
 \end{Tms}
 \textbf{Beweis:}\\
 Wir beweisen den Satz ähnlich wie ~\cite{wang_yang_1984}, berechnen daher die Eigenwerte der Laplacematrix und können dann Kirchhoffs Matrix-Tree-Theorem anwenden.\\
-Für unseren Graphen $C_n^I$ ist die Laplacematrix zirkulär; wir können sie also durch die erste Spalte eindeutig beschreiben. Der erste Eintrag ist $|I|$, die Einträge $(i+1)$ sind $-1$ für $i \in I$, die übrigen $0$.\\
+Für unseren Graphen $C_n^I$ ist die Laplacematrix zirkulär; wir können sie also durch die erste Spalte eindeutig beschreiben. Der erste Eintrag ist $|I|$, die Einträge $(i+1)$  und $(n-i)$ sind $-1$ für $i \in I$, die übrigen $0$.\\
 Des weiteren ist sind die Eigenwerte von zirkulären Matrizen ein bekanntes Resultat aus der linearen Algebra:
 \begin{equation}
- \lambda_j = \sum_{k=1}^{n}l_kexp\left(\frac{2\pi ij}{n}\right), \,\,\,\,\, {j\in\{0,\ldots,n-1\}}
+ \lambda_j = \sum_{k=1}^{n}l_k\mathrm{exp}{\left(\frac{2\pi \mathrm{i}j}{n}\right)}, \,\,\,\,\, {j\in\{0,\ldots,n-1\}}
 \end{equation}
 $l_k$ ist hier der $k$-te Eintrag der ersten Spalte.\\ 
 Der Eigenwert $\lambda_0 = 0$. Da der Graph zusammenhängend ist, sind die übrigen Eigenwerte ungleich $0$ und mit Kirchhoffs Matrix-Tree-Theorem folgt:
@@ -36,8 +36,28 @@ An dieser Stelle machen wir die Fallunterscheidung, ob der Graph geraden Grad ha
 \leftskip=20pt% Parameter anpassen
 \rightskip=20pt
 \noindent
-Fall 1: Grad gerade\\
-Fall 2: Grad ungerade
+Fall 1: Grad gerade; das heißt der Grad ist gleich $2|I|$\\
+Dann ist für alle $j \in \{1,\ldots,n-1\}$
+\begin{equation}
+\begin{aligned}
+ \lambda_j = {} & {2|I| - \left( \sum_{k\in I}\left(\mathrm{exp}{\left(\frac{2\pi \mathrm{i}jk}{n}\right)} + \mathrm{exp}{\left(\frac{2\pi \mathrm{i}j(n-k)}{n}\right)}\right)\right)}\\
+ = {} &-\left( \sum_{k\in I}\left(\mathrm{exp}{\left(\frac{\pi \mathrm{i}jk}{n}\right)}+ \mathrm{exp}{\left(\frac{\pi \mathrm{i}j(n-k)}{n}\right)}\right)^2\right)\\
+ ={} & 4\sum_{k\in I} \sin^2 \left( \frac{kj\pi}{n}\right)
+ \end{aligned}
+\end{equation}
+,wobei wir benutzt haben, dass exp...sin!!!!!!!
+Fall 2: Grad ungerade; das heißt der Grad ist $2(|I|-1) + 1$\\
+Dann gilt für alle $j \in \{1,\ldots,n-1\}$
+\small
+\begin{equation}
+\begin{aligned}
+ \lambda_j = {} & { 2(|I|-1)+1 - \left(\mathrm{exp}{\left(\frac{2\pi \mathrm{i}j \mathrm{sup}(I)}{n}\right)}+ \sum_{k\in I/\mathrm{sup}(I)}\left(\mathrm{exp}{\left(\frac{2\pi \mathrm{i}jk}{n}\right)}+ \mathrm{exp}{\left(\frac{2\pi \mathrm{i}j(n-k)}{n}\right)}\right)\right)}\\
+  = {} &-\left(\mathrm{exp}{\left(\frac{\pi \mathrm{i}j \mathrm{sup}(I)}{n}\right)} +\sum_{k\in I/\mathrm{sup}(I)}\left(\mathrm{exp}{\left(\frac{\pi \mathrm{i}jk}{n}\right)}+ \mathrm{exp}{\left(\frac{\pi \mathrm{i}j(n-k)}{n}\right)}\right)^2\right)\\
+  = {} & 4\sum_{k\in I/\mathrm{sup}(I)} \sin^2 \left( \frac{kj\pi}{n}\right)-(-1)^j+1
+ \end{aligned}
+\end{equation}
+\normalsize
+Hier haben wir wieder das gleiche verwendet haben, wie oben.\\
 \par
 \endgroup
 \todo[inline]{Beweis fertig schreiben}

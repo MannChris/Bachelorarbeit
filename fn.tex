@@ -1,11 +1,13 @@
 \subsection{Fächer-Graphen}
-\todo[inline, color=yellow]{Fächergraphen als Name besser!}
 Nun werden wir Fächer-Graphen $F_n$, für $n \geq 1$ betrachten. Diese entstehen wenn wir an einen Pfad-Graphen $P_{n}$ einen weiteren Knoten so ankleben, dass er mit allen übrigen Knoten adjazent ist. 
 % Interessanterweise treffen wir hier auf die Fibonaccizahlen,die ja bekanntlich folgendermaßen erzeugt werden können, blablabla
 \todo[inline, color= red]{Achtung: Fn bei uns ist Fn+1 im Paper}
-Wir wollen in diesem Kapital folgendes über die Anzahl der Spannbäume in Fächer-Graphen zeigen:
+Wir wollen in diesem Kapital folgendes zeigen:
 \begin{Tms}
- %%Formel hier
+ Für die Anzahl der Spannbäume im Fächer-Graphen $F_n$ gilt:
+ \begin{equation}
+  \mathit{k}(F_n)=\frac{(3+\sqrt{5})^{n}-(3-\sqrt{5})^{n}}{2^{n}\sqrt{5}}
+ \end{equation}
  \label{ThmFn}
 \end{Tms}
 \textbf{Beweis:}
@@ -63,5 +65,4 @@ Daraus schließen wir nun, dass $a_n$ die gewünschte Rekursion $x^2-3x+1=0$ von
 Es bleibt also noch zu zeigen, dass sowohl $Fib(2n)$, als auch die Formel $\frac{(3+\sqrt{5})^{n}-(3-\sqrt{5})^{n}}{2^{n}\sqrt{5}}$ dieser Rekursionsvorschrift genügen;\\ 
 Das sind aber zwei sehr einfache Rechnungen, die wir uns an dieser Stelle sparen.\\
 Damit ist unser Beweis vollständig.
-\begin{flushright} $\Box$ \end{flushright} 
-\todo[inline, color=yellow]{Matrizen-Stil so in Ordnung?}
+\begin{flushright} $\Box$ \end{flushright}
