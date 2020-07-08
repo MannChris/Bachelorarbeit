@@ -1,12 +1,13 @@
 \subsection{Vollständige multipartite Graphen}
 Als nächste Graphenklasse betrachten wir vollständige multipartite Graphen.
-\todo[inline]{Notation}
+Ein vollständiger multipartiter Graph ist ein Graph, bei dem jeder Knoten mit jedem anderen Knoten, der nicht in seiner Partition ist, verbunden ist. Für $m\in \mathbb{n}$ schreiben wir kurz $K_{n_1,..,n_m}$ für einen vollständigen $m$-partiten Graphen, wobei $n_i$ für $i \in \{1,\ldots,m\}$ die Anzahl der Knoten in der $m$-ten Partition ist.\\
+Für diese Klasse von Graphen zeigen wir diesen Satz:
 \begin{Tms}
- Für die Anzahl der Spannbäume in einem vollständig m-partiten Graphen $K_{n_1,..,n_m}$ mit $n$ Knoten gilt:\\
+ Für die Anzahl der Spannbäume in einem vollständig $m$-partiten Graphen $K_{n_1,..,n_m}$ mit $n=\sum_{i=1}^mn_i$ Knoten gilt:\\
  $\mathit{k}(K_{n_1,..,n_m})=n^{m-2}\prod_{i=1}^{m}(n-n_1)^{n_i-1}$
 \end{Tms}
 \textbf{Beweis:}
-Wir beweisen den Satz ähnlich wie Austin in ~\cite{austin_1960}, der ein äquivalentes Problem zu dem ebengenannten bewiesen hat.\\
+Wir beweisen den Satz ähnlich wie Austin in~\cite{austin_1960}, der ein äquivalentes Problem zu dem ebengenannten bewiesen hat.\\
 Dazu werden wir im Geist dieser Arbeit Kirchhoffs Matrix-Tree-Theorem verwenden.\\
 Zuerst werden wir bemerken, dass alle Laplace-Matrizen, die unseren Sachverhalt beschreiben, bei geschickter Nummerierung Blockmatrizen einer bestimmten Gestalt sind und Schlüsse über deren Kofaktoren ziehen. Im nächsten Schritt werden wir dann einen beliebigen solchen Graphen auswählen und die entsprechenden Werte einsetzen.\\
 Mit Kirchhoffs Matrix-Tree-Theorem folgt dann der Satz.\\
@@ -50,6 +51,7 @@ Um die Eigenwerte herauszufinden betrachten wir das folgende Gleichungssystem:
 \end{equation}
 Hier sind die $Y_i:=(y_{i_1},\ldots,y_{i_j})^T$, wobei $j=d_i$.\\
 Für $\lambda$ verschieden von $\gamma_1,\ldots,\gamma_m$ können wir\\ \\
+\todo[inline]{ich steh grad aufm Schlauch}
 !!!!!!!If lamda is different from each of gamma1,gamma2, . . . , gammam then a consideration of the
 equations two at a time shows that each vector Yi must be a constant vector.
 !!!!!! \\ \\
@@ -61,7 +63,7 @@ Deswegen können wir das Gleichungssystem in die $m$ voneinander unabhängigen G
 umformulieren.
 Das gibt uns $m$  von $\gamma_1,\ldots,\gamma_m$ verschiedene Eigenwerte, deren Produkt die Determinante der Matrix $K \in M_m(\mathbb{R})$ mit Einträgen $k_{i,j}=((\gamma_j-d_j)\delta_{ij}-d_j)$ ist.\\
 Die übrigen Eigenwerte müssen also aus $\gamma_1,\ldots,\gamma_m$ sein.\\
-Angenommen $\lambda=\gamma_i$ für ein $i\in\{1,\ldots,m\}$; Dann sehen wir bei Betrachtung des Gleichungssystems von oben, dass $Y_j=0$ für $i\neq j$, !!!!!!!!!$\sum_iy_{li}=0$!!!!!.
+Angenommen $\lambda=\gamma_i$ für ein $i\in\{1,\ldots,m\}$; Dann sehen wir bei Betrachtung des Gleichungssystems von oben, dass $Y_j=0$ für $i\neq j$, !!!!!!!!!$\sum_iy_{li}=0$??????!!!!!.
 \todo[inline, color=blue]{Im folgenden Satz nachm Leerzeichen einfügen dieselben zwischen di-1 und facher wieder wegmachen, das gehört nämlich zusammen}
 Also ist $\gamma_i$ ein $(d_i-1)$-facher Eigenwert.
 Wir schließen also
