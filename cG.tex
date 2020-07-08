@@ -1,6 +1,5 @@
 \subsection{Zirkuläre Graphen}
-%Als Letztes werden wir Graphen betrachten, deren Adjazenzmatrizen zyklisch sind.\\
-%%Wo treten die auf (z.B. Circulant Graphs sind Cayley-Graphen zyklischer Gruppen)
+%Wo treten die auf (z.B. Circulant Graphs sind Cayley-Graphen zyklischer Gruppen)
 Im Kapitel Warm-up ist uns schon ein zirkulärer Graph begegnet; der Kreis-Graph.\\
 Wir nennen einen Graphen zirkulär (engl. "circulant") mit $n$ Knoten, wenn für $n \in \mathbb{N}$ und eine Menge $I \subset{\{1,..,\lfloor \frac{n}{2} \rfloor \}}\subset{\mathbb{N}}$ gilt, dass jeder Knoten $v$ genau zu jedem Knoten $(v+i) (\mod{n})$ mit $i \in I$ benachbart ist; wir bezeichnen solch einen Graphen kurz mit $C_n^I$.\\
 \todo[inline, color=blue]{Im folgenden Satz nachm Leerzeichen einfügen dieselben zwischen nxn und Matrix wieder wegmachen, das gehört nämlich zusammen}
@@ -10,16 +9,17 @@ Zu Gute kommt uns das bei der Berechnung der Anzahl von Spannbäumen in zirkulä
 Wir wollen in diesem Zusammenhang folgendes zeigen:
 \begin{Tms}
 Für die Anzahl der Spannbäume in zusammenhängenden zirkulären Graphen von Grad $d$ gilt:\\
-\todo[inline]{case distinction}
 \begin{equation}
-\mathit{k}\left( C_n^I \right) = \frac{1}{n} \prod_{j=1}^{n-1} \left(4 \sum_{k \in I} \sin^2 \left( \frac{kj\pi}{n}\right) \right),\,falls\,d\,gerade\,ist
+\mathit{k}\left( C_n^I \right) = 
+ \begin{cases}
+\frac{1}{n} \prod_{j=1}^{n-1} \left(4 \sum_{k \in I} \sin^2 \left( \frac{kj\pi}{n}\right) \right)\qquad\qquad\qquad\qquad\quad\; ,\,falls\,\,\,d\,\,\,gerade\,ist\\
+\frac{1}{n} \prod_{j=1}^{n-1} \left(4 \sum_{k \in I/\mathrm{sup}(I)} \sin^2 \left( \frac{kj\pi}{n}\right)-(-1)^j+1\right)\qquad,\,falls\,\,\,d\,\,\,ungerade\,ist
+\end{cases}
 \end{equation}
-\begin{equation}
-\mathit{k}\left( C_n^I \right) = \frac{1}{n} \prod_{j=1}^{n-1} \left(4 \sum_{k \in I/\mathrm{sup}(I)} \sin^2 \left( \frac{kj\pi}{n}\right)-(-1)^j+1\right),\,falls\,d\,ungerade\,ist
-\end{equation}
+\label{tmc}
 \end{Tms}
 \textbf{Beweis:}\\
-Wir beweisen den Satz ähnlich wie ~\cite{wang_yang_1984}, berechnen daher die Eigenwerte der Laplacematrix und können dann Kirchhoffs Matrix-Tree-Theorem anwenden.\\
+Wir beweisen den Satz ähnlich wie~\cite{wang_yang_1984}, berechnen daher die Eigenwerte der Laplacematrix und wenden danach Kirchhoffs Matrix-Tree-Theorem an.\\
 Für unseren Graphen $C_n^I$ ist die Laplacematrix zirkulär; wir können sie also durch die erste Spalte eindeutig beschreiben. Der erste Eintrag ist $|I|$, die Einträge $(i+1)$  und $(n-i)$ sind $-1$ für $i \in I$, die übrigen $0$.\\
 Des weiteren ist sind die Eigenwerte von zirkulären Matrizen ein bekanntes Resultat aus der linearen Algebra:
 \begin{equation}
@@ -31,36 +31,45 @@ Der Eigenwert $\lambda_0 = 0$. Da der Graph zusammenhängend ist, sind die übri
  \mathit{k}(C_n^I)=\prod_{j=1}^{n-1} \lambda_j
 \end{equation}
 An dieser Stelle machen wir die Fallunterscheidung, ob der Graph geraden Grad hat, oder nicht.\\
-\par %eingerückt
+\par
 \begingroup
-\leftskip=20pt% Parameter anpassen
+\leftskip=20pt
 \rightskip=20pt
 \noindent
-Fall 1: Grad gerade; das heißt der Grad ist gleich $2|I|$\\
+\textbf{Fall 1:} Grad gerade; das heißt der Grad ist gleich $2|I|$\\
 Dann ist für alle $j \in \{1,\ldots,n-1\}$
 \begin{equation}
 \begin{aligned}
  \lambda_j = {} & {2|I| - \left( \sum_{k\in I}\left(\mathrm{exp}{\left(\frac{2\pi \mathrm{i}jk}{n}\right)} + \mathrm{exp}{\left(\frac{2\pi \mathrm{i}j(n-k)}{n}\right)}\right)\right)}\\
- = {} &-\left( \sum_{k\in I}\left(\mathrm{exp}{\left(\frac{\pi \mathrm{i}jk}{n}\right)}+ \mathrm{exp}{\left(\frac{\pi \mathrm{i}j(n-k)}{n}\right)}\right)^2\right)\\
+ = {} & {\left( \sum_{k\in I}\left(\mathrm{exp}{\left(\frac{2\pi \mathrm{i}jk}{n}\right)} - 2 + \mathrm{exp}{\left(\frac{2\pi \mathrm{i}j(n-k)}{n}\right)}\right)\right)}\\
+ = {} &-\left( \sum_{k\in I}\left(\mathrm{exp}{\left(\frac{\pi \mathrm{i}jk}{n}\right)} - \mathrm{exp}{\left(\frac{\pi \mathrm{i}j(n-k)}{n}\right)}\right)^2\right)\\
  ={} & 4\sum_{k\in I} \sin^2 \left( \frac{kj\pi}{n}\right)
  \end{aligned}
 \end{equation}
-,wobei wir benutzt haben, dass exp...sin!!!!!!!
-Fall 2: Grad ungerade; das heißt der Grad ist $2(|I|-1) + 1$\\
+,wobei wir die berühmte eulersche Formel verwendet haben.\\
+\\ \textbf{Fall 2:} Grad ungerade; das bedeutet der Grad ist $2(|I|-1) + 1$\\
 Dann gilt für alle $j \in \{1,\ldots,n-1\}$
 \small
 \begin{equation}
 \begin{aligned}
  \lambda_j = {} & { 2(|I|-1)+1 - \left(\mathrm{exp}{\left(\frac{2\pi \mathrm{i}j \mathrm{sup}(I)}{n}\right)}+ \sum_{k\in I/\mathrm{sup}(I)}\left(\mathrm{exp}{\left(\frac{2\pi \mathrm{i}jk}{n}\right)}+ \mathrm{exp}{\left(\frac{2\pi \mathrm{i}j(n-k)}{n}\right)}\right)\right)}\\
-  = {} &-\left(\mathrm{exp}{\left(\frac{\pi \mathrm{i}j \mathrm{sup}(I)}{n}\right)} +\sum_{k\in I/\mathrm{sup}(I)}\left(\mathrm{exp}{\left(\frac{\pi \mathrm{i}jk}{n}\right)}+ \mathrm{exp}{\left(\frac{\pi \mathrm{i}j(n-k)}{n}\right)}\right)^2\right)\\
+  = {} &1-\left(\mathrm{exp}{\left(\frac{\pi \mathrm{i}j \mathrm{sup}(I)}{n}\right)} +\sum_{k\in I/\mathrm{sup}(I)}\left(\mathrm{exp}{\left(\frac{\pi \mathrm{i}jk}{n}\right)} - \mathrm{exp}{\left(\frac{\pi \mathrm{i}j(n-k)}{n}\right)}\right)^2\right)\\
   = {} & 4\sum_{k\in I/\mathrm{sup}(I)} \sin^2 \left( \frac{kj\pi}{n}\right)-(-1)^j+1
  \end{aligned}
 \end{equation}
 \normalsize
-Hier haben wir wieder das gleiche verwendet haben, wie oben.\\
+Hier sind wir wieder genauso vorgegangen, wie oben.\\
 \par
 \endgroup
-\todo[inline]{Beweis fertig schreiben}
+Jetzt kennen wir die Eigenwerte der Laplacematrix, können Kirchhoffs Matrix-Tree-Theorem anwenden und es folgt
+\begin{equation}
+\mathit{k}\left( C_n^I \right) = 
+ \begin{cases}
+\frac{1}{n} \prod_{j=1}^{n-1} \left(4 \sum_{k \in I} \sin^2 \left( \frac{kj\pi}{n}\right) \right)\qquad\qquad\qquad\qquad\quad\; ,\,falls\,\,\,d\,\,\,gerade\,ist\\
+\frac{1}{n} \prod_{j=1}^{n-1} \left(4 \sum_{k \in I/\mathrm{sup}(I)} \sin^2 \left( \frac{kj\pi}{n}\right)-(-1)^j+1\right)\qquad,\,falls\,\,\,d\,\,\,ungerade\,ist
+\end{cases}
+\end{equation}
+Das wollten wir zeigen.
 \begin{flushright} $\Box$ \end{flushright} 
 \begin{Bsps}[$C_n^2$ - Das Quadrat eines Kreises]
 \todo[inline, color=green]{Bild von einem Square of a cycle}
