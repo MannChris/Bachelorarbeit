@@ -46,9 +46,9 @@ Um das zu tun, werden die Spannbäume von $W_{n+1}$ in drei verschiedene Klassen
 
 Um zu zeigen dass die Klasse 3 genausoviele Spannbäume enthält wie $F_n$, werden wir beweisen, dass für die Anzahl der Spannbäume in Klasse 3 den gleichen rekursiven Formeln genügen, wie die von $F_n$.\\
 Sei $a_n$ die Anzahl der Subgraphen von $F_n$, die aus genau zwei Komponenten bestehen, von denen eine den Knoten $z$ und die andere $v_n$ enthält.\\
-Sei $n \geq 2$.
+Sei $n \geq 1$.
 Wir beweisen zuerst, dass $\mathit{k}\left(F_{n+1}\right)=2\mathit{k}\left(F_{n}\right)+a_n$.
-Dazu nehmen wir ohne Beschränkung der Allgemeinheit an, dass $v_{n+1}$ nur zu den Knoten $v_n$ und $z$ adjazent ist. Ein Spannbaum des $F_n+1$ ist dann entweder durch hinzufügen einer der beiden Kanten $v_nv_{n+1}$ und $v_{n+1}z$ entstanden, oder durch hinzufügen beider Kanten an einen Subgraphen von $F_n$, der aus genau zwei Komponenten, die Bäume sind, besteht, von denen eine den Knoten $z$ und die andere $v_n$ enthält.\\
+Dazu nehmen wir ohne Beschränkung der Allgemeinheit an, dass $v_{n+1}$ nur zu den Knoten $v_n$ und $z$ adjazent ist. Ein Spannbaum des $F_{n+1}$ ist dann entweder durch hinzufügen einer der beiden Kanten $v_nv_{n+1}$ und $v_{n+1}z$ entstanden, oder durch hinzufügen beider Kanten an einen Subgraphen von $F_n$, der aus genau zwei Komponenten, die Bäume sind, besteht, von denen eine den Knoten $z$ und die andere $v_n$ enthält.\\
 Es gilt also $\mathit{k}\left(F_{n+1}\right)=2\mathit{k}\left(F_{n}\right)+a_n$.\\
 Wir sehen leicht, dass $a_{n+1}=a_n+\mathit{k}\left(F_n\right)$.\\
 Jetzt betrachten wir die Spannbäume aus Klasse 3.\\
@@ -70,7 +70,7 @@ Wir unterteilen die Spannbäume davon auch in drei Klassen:\\
 \noindent
 Die Erste bilden diejenigen, in denen die Kante $v_{n+1}z$ enthalten ist; Wie wir in der Abbildung~\ref{mn2} erkennen können, sind das soviele, wie in $M_{n-1}$.\\
 Die Zweite besteht aus denen, die die Kante $v_nv_{n+1}$ enthalten; In Abbildung~\ref{mn3} sehen wir, dass das auch $|M_{n-1}|$ Stück sind.\\
-Die Dritte beinhaltet die, die weder die Kante $v_{n+1}z$ noch die Kante $v_nv_{n+1}$ enthalten; die Anzahl davon ist nach Definition genau $b_{n-1}$.\\
+Die Dritte beinhaltet die, die weder die Kante $v_{n+1}z$ noch die Kante $v_nv_{n+1}$ enthalten; die Anzahl davon ist nach Definition genau $b_{n}$.\\
 \par
 \endgroup
 \begin{figure}[H]
@@ -88,8 +88,8 @@ Die Dritte beinhaltet die, die weder die Kante $v_{n+1}z$ noch die Kante $v_nv_{
  \label{mn3} %caption vor label unbedingt
     \end{minipage}
 \end{figure}
-Daraus schließen wir also $|M_{n}|=2|M_{n-1}|+b_{n-1}$ für $n\geq4$.\\
-Wir sehen leicht, dass $\mathit{k}\left(F_2\right) = |M_2|$, $\mathit{k}\left(F_3\right)=|M_3|$ $a_2=b_2=2$ und $a_3=b_3=5$; daraus schließen wir, dass die Anzahl der Spannbäume in Klasse 3 gleich $\mathit{k}\left(F_{n}\right)$ ist, was wir zeigen wollten.\\
+Daraus schließen wir also $|M_{n}|=2|M_{n-1}|+b_{n}$ für $n\geq4$.\\
+Wir sehen leicht, dass s$a_1=1$, $a_3=b_4=5$ und $\mathit{k}\left(F_3\right)=|M_3|$; daraus schließen wir, dass die Anzahl der Spannbäume von $W_{n+1}$ in Klasse 3 gleich $\mathit{k}\left(F_{n}\right)$ ist, was wir zeigen wollten.\\
 Da jeder Spannbaum von $W_{n+1}$ in genau einer der 3 Klassen ist, gilt die rekursive Beziehung
 \begin{equation}
 \mathit{k}\left(W_{n+1}\right) = \mathit{k}\left(F_{n+1}\right) + \mathit{k}\left(F_n\right) + \mathit{k}\left(W_n\right)
@@ -128,5 +128,5 @@ Ausrechnen führt uns zu\\
 \begin{equation}
 \mathit{k}\left(W_{n+1}\right) = \left(\frac{3+\sqrt{5}}{2}\right)^{n+1}+\left(\frac{3+\sqrt{5}}{2}\right)^{n+1}-2
 \end{equation}
-Damit ist unser Induktionsbeweis abgeschlossen und wir haben gezeigt, dass unser Satz \ref{wn} über die Anzahl der Spannbäume in einem Rad gilt.
+Damit ist unser Induktionsbeweis abgeschlossen und wir haben gezeigt, dass unser Satz~\ref{wn} über die Anzahl der Spannbäume in einem Rad gilt.
 \begin{flushright} $\Box$ \end{flushright} 
