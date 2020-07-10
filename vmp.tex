@@ -50,11 +50,7 @@ Um die Eigenwerte herauszufinden betrachten wir das folgende Gleichungssystem:
 \end{pmatrix}
 \end{equation}
 Hier sind die $Y_i:=(y_{i_1},\ldots,y_{i_j})^T$, wobei $j=d_i$.\\
-Für $\lambda$ verschieden von $\gamma_1,\ldots,\gamma_m$ können wir\\ \\
-\todo[inline]{ich steh grad aufm Schlauch}
-!!!!!!!If lamda is different from each of gamma1,gamma2, . . . , gammam then a consideration of the
-equations two at a time shows that each vector Yi must be a constant vector.
-!!!!!! \\ \\
+Für $\lambda$ verschieden von $\gamma_1,\ldots,\gamma_m$ können wir, wenn wir immer zwei Gleichungen aus diesem System vergleichen, schließen dass für jedes $i \in \{1,\ldots,m\}$ alle Einträge eines Vektors $Y_i$ gleich sein müssen.\\
 Deswegen können wir das Gleichungssystem in die $m$ voneinander unabhängigen Gleichungen 
 \begin{equation}
  \sum_{i=1}^m((\gamma_j-d_j)\delta_{ij}-d_j)Y_j=\lambda_iY_i
@@ -63,7 +59,7 @@ Deswegen können wir das Gleichungssystem in die $m$ voneinander unabhängigen G
 umformulieren.
 Das gibt uns $m$  von $\gamma_1,\ldots,\gamma_m$ verschiedene Eigenwerte, deren Produkt die Determinante der Matrix $K \in M_m(\mathbb{R})$ mit Einträgen $k_{i,j}=((\gamma_j-d_j)\delta_{ij}-d_j)$ ist.\\
 Die übrigen Eigenwerte müssen also aus $\gamma_1,\ldots,\gamma_m$ sein.\\
-Angenommen $\lambda=\gamma_i$ für ein $i\in\{1,\ldots,m\}$; Dann sehen wir bei Betrachtung des Gleichungssystems von oben, dass $Y_j=0$ für $i\neq j$, !!!!!!!!!$\sum_iy_{li}=0$??????!!!!!.
+Angenommen $\lambda=\gamma_i$ für ein $i\in\{1,\ldots,m\}$; Dann sehen wir bei Betrachtung des Gleichungssystems von oben, dass $Y_j=0$ für $i\neq j$ und !$\sum_ly_{li}=0$.
 \todo[inline, color=blue]{Im folgenden Satz nachm Leerzeichen einfügen dieselben zwischen di-1 und facher wieder wegmachen, das gehört nämlich zusammen}
 Also ist $\gamma_i$ ein $(d_i-1)$-facher Eigenwert.
 Wir schließen also

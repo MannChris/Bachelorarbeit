@@ -1,6 +1,7 @@
 \subsection{Tuttes Matrix-Tree-Theorem}
 Um die Version des Matrix-Tree-Theorems für gerichtete Multigraphen und den Beweis zu verstehen, müssen wir erst den Begiff der Aboreszenz einführen.
-\todo[inline]{Aboreszenz, branching, etc.}
+Als Aboreszenz aus einem Knoten bezeichnen wir einen gerichteten Baum, der diesen Knoten als Wurzel hat, wobei die Kanten von der Wurzel ausgehen.\\
+Nun können wir ein Matrix-Tree-Theorem für gerichtete Multigraphen formulieren:
 \begin{Tms}[Tuttes Matrix-Tree-Theorem]
 Sei D ein gerichteter Multigraph mit Kirchoffmatrix K(D). Die Anzahl der Aboreszenzen aus einem Knoten $i$ ist gleich der det($K_{\bar{i}}(D)$).
 \end{Tms}
@@ -29,14 +30,13 @@ Nun können wir uns dem Beweis von Tuttes Matrix-Tree-Theorem widmen.
 
 \textbf{Beweis von Tuttes Matrix-Tree-Theorem:}
 Wir werden die Matrix $K(D)$ in kleinere Matrizen zerlegen und dann mit dem Lemma von oben arbeiten.\\
-Für die Zerlegung in kleinere Matrizen erinnern wir uns an ein Ergebnis aus der linearen Algebra;
-Für eine Matrix aus Spalten $c_1,..,c_n$ mit jeweils n Elementen gilt:
+Bei der Zerlegung in kleinere Matrizen erinnern wir uns an ein Ergebnis aus der linearen Algebra:
+Für eine Matrix aus Spalten $c_1,..,c_n$ mit jeweils $n$ Elementen gilt:
 \begin{equation}
  det(c_1,..,(c_i+\prime{c_i}),..,c_n) = det(c_1,..,c_i,..,c_n) + det(c_1,..,\prime{c_i},..,c_n)
 \end{equation}
 \todo[inline, color=blue]{Im folgenden Satz nachm Leerzeichen einfügen dieselben zwischen nxn und Matrix wieder wegmachen, das gehört nämlich zusammen}
-Weil sich die einzigen positiven Einträge von $K(D)$ auf der Diagonale befinden und die Spaltensummen alle $=0$ sind, können wir $K(D)$ in  $s=\prod_{i=1}^nk_{ii}$ $n \times n$-Matrizen $K(D_i), i\in\{1,..,s\}$ zerlegen, indem wir jede Spalte als Summe von $k_{ii}$ Spalten schreiben von denen jede mit einer in $i$ eingehenden Kante korrespondiert.\\
-\todo[inline, color=green]{Grafik oder Matrix}
+Weil sich die einzigen positiven Einträge von $K(D)$ auf der Diagonale befinden und die Spaltensummen alle $=0$ sind, können wir $K(D)$ auf diese Weise in  $s=\prod_{i=1}^nk_{ii}$ $n \times n$-Matrizen $K(D_i), i\in\{1,..,s\}$ zerlegen, indem wir jede Spalte als Summe von $k_{ii}$ Spalten schreiben von denen jede mit einer in $i$ eingehenden Kante korrespondiert.\\
 Ohne Beschränkung der Allgemeinheit können wir $i=1$ annehmen.\\
 Wir werden jetzt $det(K_{\bar{1}}(D))$ mithilfe der Matrizen von oben vereinfachen und dann ausrechnen.\\
 Hierzu sei $\hat{D}$ der Graph der aus $D$ durch löschen aller in den Knoten $1$ eingehenden Kanten entsteht und $d^{-}(j)$ der Eingangsgrad eines Knoten $j$. Dann folgt:
@@ -48,7 +48,7 @@ Wiederholen wir das für die übrigen Knoten, bekommen wir:
 \begin{equation}
   det(K_{\bar{1}}(\hat{D})) = \sum_{e_2}^{d^{-}(2)}...\sum_{e_n}^{d^{-}(n)}det(K_{e_n})
 \end{equation}
-Mit Lemma ~\ref{L1} schließen wir, dass genau das die Aboreszenzen mit Wurzel $i$ zählt.\\
+Mit Lemma~\ref{L1} schließen wir, dass genau das die Aboreszenzen mit Wurzel $i$ zählt.\\
 Da $det(K_{\bar{i}}(D))$ aus $K(D)$ durch löschen der mit Knoten $i$ korrespondierenden Zeile und Spalte entstanden ist und wir ohne Beschränkung der Allgemeinheit $i=1$ annehmen durften, gilt:
 \begin{equation}
  det(K_{\bar{1}}(\hat{D}))=det(K_{\bar{1}}(D))=det(K_{\bar{i}}(D))
