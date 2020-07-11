@@ -10,7 +10,7 @@ Dann gilt:
 \rightskip=20pt
 \noindent %ab hier der Text, der eingerückt werden soll
 (1) Die Anzahl der Spannbäume von $G$ gleich einem beliebigen Kofaktor von $L_n$.\\
-(2) Die Anzahl der Spannbäume von $G$ ist gleich $\frac{1}{n}\lambda_1\ldots\lambda_{n-1}$, wobei $\lambda_1,\ldots,\lambda_{n-1}$ die Eigenwerte von $L_n$ sind, die ungleich null sind.
+(2) Die Anzahl der Spannbäume von $G$ gleich $\frac{1}{n}\prod_{i=1}^{n-1}\lambda_i$ ist, wobei $\lambda_1,\ldots,\lambda_{n-1}$ die Eigenwerte von $L_n$ sind, die ungleich null sind.
 \par
 \endgroup
 % ab hier wieder Text ohne Einrückung
@@ -24,8 +24,8 @@ Da jede Kante in $\vec{G}$ auch in die entgegengesetzte Richtung vorhanden ist, 
 Da die Anzahl der Spannbäume gegenüber Permutationen der Knotenmenge invariant ist, wissen wir, dass jeder Kofaktor von $L_n$ also gleich jedem Kofaktor von $K(\vec{G})$ ist.\\
 Wir folgern daraus mit Tuttes Matrix-Tree-Theorem, dass die Anzahl der Spannbäume in G gleich einem beliebigen Kofaktor von $L_n$ ist.\\ \\
 Um Teil 2 zu zeigen, berufen wir uns auf ein bekanntes Ergebnis der linearen Algebra; \\
-Das Produkt der Eigenwerte einer Matrix ist gleich der Summe seiner Hauptminoren. Das kann man zum Beispiel in ~\cite{meyer_2005} nachlesen. \\
-Da $L_n$ $n$ Hauptminoren hat, folgt mit Teil 1, dass die Anzahl der Spannbäume von $G$ ist gleich $\frac{1}{n}\lambda_1\ldots\lambda_{n-1}$, wobei $\lambda_1,\ldots,\lambda_{n-1}$ die Eigenwerte von $L_n$ sind, die ungleich null sind. \\
+das Produkt der Eigenwerte einer Matrix ist gleich der Summe seiner Hauptminoren. Das kann man zum Beispiel in \cite{meyer_2005} nachlesen. \\
+Da $L_n$ $n$ Hauptminoren hat, folgt mit Teil 1, dass die Anzahl der Spannbäume von $G$ gleich $\frac{1}{n}\prod_{i=1}^{n-1}\lambda_i$ ist, wobei $\lambda_1,\ldots,\lambda_{n-1}$ die Eigenwerte von $L_n$ sind, die ungleich null sind. \\
 Damit ist Kirchhoffs Matrix-Tree-Theorem bewiesen.
 \begin{flushright} $\Box$ \end{flushright} 
  

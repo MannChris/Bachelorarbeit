@@ -1,6 +1,6 @@
 \subsection{Warm-up}
 Als kleines Aufwärmprogramm für den Rest dieser Arbeit werden wir in diesem Kapitel die Anzahl der Spannbäume von ein paar wohlbekannten sehr einfachen Graphen mit Kirchhoffs Matrix-Tree-Theorem berechnen.\\
-Unsere Ergebnisse aus diesem Kapitel wollen wir uns im Kapitel zu kartesischen Produkten von Graphen zu Nutze machen, deswegen werden wir jedes mal die Eigenwerte der Laplace Matrizen berechnen, weil wir diese später brauchen.\\
+Unsere Ergebnisse aus diesem Kapitel wollen wir uns im Kapitel zu kartesischen Produkten von Graphen zu Nutze machen. Deswegen werden wir jedes mal die Eigenwerte der Laplace Matrizen berechnen, weil wir diese später brauchen.\\
 \begin{Lms}
  Der Pfad-Graph $P_n$ mit $n$ Knoten hat genau einen Spannbaum.
 \end{Lms}
@@ -46,7 +46,7 @@ Sie sind der einfachste Spezialfall von zirkulären Graphen, die wir später auc
 \end{Lms}
 \textbf{Beweis:}
 \begin{equation}
-L(P_n)=
+L(C_n)=
 \begin{pmatrix}
 1&-1&0&\ldots&\ldots&\ldots\\
 -1&2&-1&0&\ldots&\ldots\\
@@ -60,15 +60,15 @@ Lemma 3, wieder aus~\cite{daoud_2014} bestimmt die Eigenwerte
 dieser Matrix als $2-2\cos {\left(\frac{2\pi k}{n}\right)}$ für $k \in \{0,\ldots,n-1\}$.
 Mit Kirchhoffs Matrix-Tree-Theorem folgt
 \begin{equation}
- \mathit{k}(P_n)=\frac{1}{n}\prod_{j=1}^{n-1} \left(2-2\cos \left(\frac{2\pi j}{n}\right)\right)
+ \mathit{k}(C_n)=\frac{1}{n}\prod_{j=1}^{n-1} \left(2-2\cos \left(\frac{2\pi j}{n}\right)\right)
 \end{equation}
 Jetzt verwenden wir unser Wissen über Doppelwinkelfunktionen und den "trigonometrischen Pythagoras" und formen das um.
 \begin{equation}
 \begin{split}
- \mathit{k}(P_n)={} & \frac{2^{n-1}}{n}\prod_{j=1}^{n-1} \left(1-\cos \left(\frac{2\pi j}{n}\right)\right)\\
+ \mathit{k}(C_n)={} & \frac{2^{n-1}}{n}\prod_{j=1}^{n-1} \left(1-\cos \left(\frac{2\pi j}{n}\right)\right)\\
  = {}&\frac{2^{n-1}}{n}\prod_{j=1}^{n-1} \left( 1 - \cos^2\left(\frac{\pi k}{n}\right)+\sin^2\left(\frac{\pi k}{n}\right) \right)\\
  = {}& \frac{4^{n-1}}{n}\prod_{j=1}^{n-1} \left(\sin^2\left(\frac{\pi k}{n}\right) \right)\\
 \end{split}
 \end{equation}
-Wir verwerten die Gleichung ~\ref{fiktor} wieder und schließen $\mathit{k}(P_n)=n$.
+Wir verwerten die Gleichung~\ref{fiktor} wieder und schließen $\mathit{k}(C_n)=n$.
 \begin{flushright} $\Box$ \end{flushright} 
