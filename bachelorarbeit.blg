@@ -9,32 +9,32 @@ The style file: plain.bst
 Database file #1: bachelorarbeit.bib
 You've used 13 entries,
             2118 wiz_defined-function locations,
-            583 strings with 6371 characters,
-and the built_in function-call counts, 4207 in all, are:
-= -- 415
-> -- 171
+            583 strings with 6190 characters,
+and the built_in function-call counts, 3990 in all, are:
+= -- 401
+> -- 136
 < -- 3
-+ -- 70
-- -- 56
-* -- 255
-:= -- 692
++ -- 56
+- -- 42
+* -- 227
+:= -- 650
 add.period$ -- 40
 call.type$ -- 13
-change.case$ -- 64
+change.case$ -- 57
 chr.to.int$ -- 0
 cite$ -- 13
 duplicate$ -- 179
 empty$ -- 333
-format.name$ -- 56
-if$ -- 899
+format.name$ -- 42
+if$ -- 864
 int.to.chr$ -- 0
 int.to.str$ -- 13
 missing$ -- 15
 newline$ -- 69
 num.names$ -- 26
-pop$ -- 76
+pop$ -- 69
 preamble$ -- 1
-purify$ -- 54
+purify$ -- 47
 quote$ -- 0
 skip$ -- 142
 stack$ -- 0

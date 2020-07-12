@@ -56,19 +56,31 @@ L(C_n)=
 \ldots&\ldots&\ldots&0&-1&1\\
 \end{pmatrix}
 \end{equation}
-Lemma 3, wieder aus~\cite{daoud_2014} bestimmt die Eigenwerte 
-dieser Matrix als $2-2\cos {\left(\frac{2\pi k}{n}\right)}$ für $k \in \{0,\ldots,n-1\}$.
-Mit Kirchhoffs Matrix-Tree-Theorem folgt
-\begin{equation}
- \mathit{k}(C_n)=\frac{1}{n}\prod_{j=1}^{n-1} \left(2-2\cos \left(\frac{2\pi j}{n}\right)\right)
-\end{equation}
-Jetzt verwenden wir unser Wissen über Doppelwinkelfunktionen und den "trigonometrischen Pythagoras" und formen das um.
+Lemma 3, wieder aus~\cite{daoud_2014} bestimmt die Eigenwerte $\lambda_k,\; k \in \{0,\ldots,n-1\}$
+dieser Matrix als $\lambda_k = 2-2\cos {\left(\frac{2\pi k}{n}\right)}$.
+Das gefällt uns noch nicht ganz, deswegen werden wir jetzt unser Wissen über trigonometrische Funktionen verwenden.
 \begin{equation}
 \begin{split}
- \mathit{k}(C_n)={} & \frac{2^{n-1}}{n}\prod_{j=1}^{n-1} \left(1-\cos \left(\frac{2\pi j}{n}\right)\right)\\
- = {}&\frac{2^{n-1}}{n}\prod_{j=1}^{n-1} \left( 1 - \cos^2\left(\frac{\pi k}{n}\right)+\sin^2\left(\frac{\pi k}{n}\right) \right)\\
- = {}& \frac{4^{n-1}}{n}\prod_{j=1}^{n-1} \left(\sin^2\left(\frac{\pi k}{n}\right) \right)\\
+ \lambda_k={} & 2 \left(1-\cos \left(\frac{2\pi j}{n}\right)\right)\\
+ = {}&2 \left( 1 - \cos^2\left(\frac{\pi k}{n}\right)+\sin^2\left(\frac{\pi k}{n}\right) \right)\\
+ = {}& 4 \left(\sin^2\left(\frac{\pi k}{n}\right) \right)\\
 \end{split}
+\label{ewc}
 \end{equation}
-Wir verwerten die Gleichung~\ref{fiktor} wieder und schließen $\mathit{k}(C_n)=n$.
+Mit Kirchhoffs Matrix-Tree-Theorem folgt
+\begin{equation}
+ \mathit{k}(C_n)=\frac{4^{n-1}}{n}\prod_{j=1}^{n-1} \left(\sin^2\left(\frac{\pi k}{n}\right) \right)\\
+\end{equation}
+%\begin{equation}
+ %\mathit{k}(C_n)=\frac{1}{n}\prod_{j=1}^{n-1} \left(2-2\cos \left(\frac{2\pi j}{n}\right)\right)
+%\end{equation}
+%Jetzt werden wir unser Wissen über trigonometrische Funktionen verwenden.
+%\begin{equation}
+%\begin{split}
+ %\mathit{k}(C_n)={} & \frac{2^{n-1}}{n}\prod_{j=1}^{n-1} \left(1-\cos \left(\frac{2\pi j}{n}\right)\right)\\
+ %= {}&\frac{2^{n-1}}{n}\prod_{j=1}^{n-1} \left( 1 - \cos^2\left(\frac{\pi k}{n}\right)+\sin^2\left(\frac{\pi k}{n}\right) \right)\\
+ %= {}& \frac{4^{n-1}}{n}\prod_{j=1}^{n-1} \left(\sin^2\left(\frac{\pi k}{n}\right) \right)\\
+%\end{split}
+%\end{equation}
+Wir verwerten die Gleichung (\ref{fiktor}) wieder und schließen $\mathit{k}(C_n)=n$.
 \begin{flushright} $\Box$ \end{flushright} 

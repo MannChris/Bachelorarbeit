@@ -28,19 +28,17 @@ Vittorio Giovannetti and Simone Severini.
   with the quantum relative entropy.
 \newblock {\em Advances in Network Complexity}, page 177–190, Dec 2013.
 
-\bibitem{hinchliffe_2007}
-Alan Hinchliffe, E.~A. Moore, Brian~T. Sutcliffe, A.~H Pakiari, Theodore~E
-  Simos, Stephen Wilson, Michael Springborg, David Pugh, Richard~A. Lewis,
-  Nedad Trinajstic, and et~al.
-\newblock {\em Chemical Modelling: Applications and Theory Volume 3}.
-\newblock Royal Society of Chemistry, 2007.
-
 \bibitem{fiktor_2010}
 Fiktor (https://math.stackexchange.com/users/695/fiktor).
 \newblock Prove that $\prod_{k=1}^{n-1}\sin\frac{k \pi}{n} =
   \frac{n}{2^{n-1}}$.
 \newblock Mathematics Stack Exchange.
 \newblock URL:https://math.stackexchange.com/q/8395 (version: 2018-02-11).
+
+\bibitem{janezic_2015}
+D.~Janezic, A.~Milicevic, S.~Nikolic, and N.~Trinajstic.
+\newblock {\em Graph-Theoretical Matrices in Chemistry}.
+\newblock CRC Press, 2015.
 
 \bibitem{kirchhoff_1847}
 G.~Kirchhoff.
