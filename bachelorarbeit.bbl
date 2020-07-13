@@ -12,7 +12,7 @@ Jørgen Bang-Jensen and Gregory~Z. Gutin.
 
 \bibitem{bogdanowicz_2008}
 Zbigniew Bogdanowicz.
-\newblock Formulas for the number of spanning trees in a fan.
+\newblock {Formulas for the Number of Spanning Trees in a Fan}.
 \newblock {\em Applied Mathematical Sciences (Ruse)}, pages 781 -- 786, 01
   2008.
 
@@ -24,8 +24,8 @@ S.~N. Daoud.
 
 \bibitem{giovannetti_severini_2013}
 Vittorio Giovannetti and Simone Severini.
-\newblock Kirchhoffs matrix-tree theorem revisited: Counting spanning trees
-  with the quantum relative entropy.
+\newblock {Kirchhoffs Matrix-Tree Theorem Revisited: Counting Spanning Trees
+  with the Quantum Relative Entropy}.
 \newblock {\em Advances in Network Complexity}, page 177–190, Dec 2013.
 
 \bibitem{fiktor_2010}
@@ -37,20 +37,20 @@ Fiktor (https://math.stackexchange.com/users/695/fiktor).
 
 \bibitem{janezic_2015}
 D.~Janezic, A.~Milicevic, S.~Nikolic, and N.~Trinajstic.
-\newblock {\em Graph-Theoretical Matrices in Chemistry}.
+\newblock {\em {Graph-Theoretical Matrices in Chemistry}}.
 \newblock CRC Press, 2015.
 
 \bibitem{kirchhoff_1847}
 G.~Kirchhoff.
-\newblock Ueber die auflösung der gleichungen, auf welche man bei der
-  untersuchung der linearen vertheilung galvanischer ströme geführt wird.
+\newblock {Ueber die Auflösung der Gleichungen, auf welche man bei der
+  Untersuchung der linearen Vertheilung galvanischer Ströme geführt wird}.
 \newblock {\em Annalen der Physik und Chemie}, 148(12):497–508, 1847.
 
 \bibitem{Lau_2004}
 Dietlinde Lau.
-\newblock {\em Algebra und Diskrete Mathematik. Vol. 2, Lineare Optimierung,
+\newblock {\em {Algebra und Diskrete Mathematik. Vol. 2, Lineare Optimierung,
   Graphen und Algorithmen, Algebraische Strukturen und Allgemeine Algebra mit
-  Anwendungen}.
+  Anwendungen}}.
 \newblock Springer, 2004.
 
 \bibitem{meyer_2005}
@@ -72,7 +72,7 @@ J.~F. Wang and C.~S. Yang.
 
 \bibitem{yakoubi_2019}
 Fouad Yakoubi, Noussaima EL~Khattabi, and Mohamed El~Marraki.
-\newblock Computing spanning trees in some multiple planar graphs.
+\newblock {Computing Spanning Trees In Some Multiple Planar Graphs}.
 \newblock {\em International Journal of Scientific \& Technology Research},
   8(9):2312--2315, 2019.
 

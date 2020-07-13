@@ -15,7 +15,7 @@ Um die Anzahl der Spannbäume von Rädern zu berechnen, zeigen wir zuerst die re
 \begin{equation}
  \mathit{k}\left(W_{n+1}\right) = \mathit{k}\left(F_{n+1}\right) + \mathit{k}\left(F_n\right) + \mathit{k}\left(W_n\right)
 \end{equation}
-Um das zu tun, werden die Spannbäume von $W_{n+1}$ in drei verschiedene Klassen einteilen:\\
+Dafür teilen wir die Spannbäume von $W_{n+1}$ in drei verschiedene Klassen ein:\\
 \par
 \begingroup
 \leftskip=20pt
@@ -44,7 +44,7 @@ Um das zu tun, werden die Spannbäume von $W_{n+1}$ in drei verschiedene Klassen
 %\end{figure}
 \vspace{1cm}
 
-Um zu zeigen dass die Klasse 3 genausoviele Spannbäume enthält wie $F_n$, werden wir beweisen, dass für die Anzahl der Spannbäume in Klasse 3 den gleichen rekursiven Formeln genügen, wie die von $F_n$.\\
+Um zu zeigen, dass die Klasse 3 genauso viele Spannbäume enthält wie $F_n$, werden wir beweisen, dass für die Anzahl der Spannbäume in Klasse 3 den gleichen rekursiven Formeln genügen, wie die von $F_n$.\\
 Sei $a_n$ die Anzahl der Subgraphen von $F_n$, die aus genau zwei Komponenten bestehen, von denen eine den Knoten $z$ und die andere $v_n$ enthält.\\
 Sei $n \geq 1$.
 Wir beweisen zuerst, dass $\mathit{k}\left(F_{n+1}\right)=2\mathit{k}\left(F_{n}\right)+a_n$.
@@ -55,7 +55,7 @@ Jetzt betrachten wir die Spannbäume aus Klasse 3.\\
 Wir definieren dazu $b_n$ als die Anzahl der Spannbäume in Klasse 3, die die Kanten $v_nv_{n+1}$ und $v_{n}z$ nicht enthalten.\\
 Sei $M_n$ die Menge der Spannbäume von $W_{n+1}$ aus Klasse 3;\\
 Nun zeigen wir, dass $|M_{n}|=2|M_{n-1}|+b_{n-1}$ für $n \geq 4$ ist.\\
-Im Folgenden betrachten wir nur ein $n \geq 3$. Wir erinnern uns an dieser Stelle daran, dass wir die Knoten beliebig umnummerieren können; in $M_{n}$ sind also die Spannbäume des Graphen aus Abbildung~\ref{mn1}.
+Im Folgenden betrachten wir nur ein $n \geq 3$. Wir erinnern uns an dieser Stelle daran, dass wir die Knoten beliebig umnummerieren können; in $M_{n}$ sind also die Spannbäume des Graphen aus Abbildung \ref{mn1}.
 \begin{figure}[H]
   \centering
  \includegraphics[width=0.5\textwidth]{mn1.png}
@@ -100,7 +100,7 @@ Da jeder Spannbaum von $W_{n+1}$ in genau einer der 3 Klassen ist, gilt die reku
 \label{eq:wrek}
 \end{equation}
 Wir werden nun den Beweis per Induktion über $n \in \mathbb{N}, \, n \geq 3$ vervollständigen, wobei uns natürlich zu Gute kommt, dass uns die Anzahl der Spannbäume von Fan-Graphen schon bekannt ist.\\
-Für unseren Induktionsanfang sehen wir -zum Beispiel durch Anwendung von Kirchhoffs Matrix-Tree-Theorem- leicht, dass \begin{equation}
+Für unseren Induktionsanfang sehen wir - zum Beispiel durch Anwendung von Kirchhoffs Matrix-Tree-Theorem - leicht, dass \begin{equation}
 \mathit{k}\left(W_3\right) = 16 = \left(\frac{3+\sqrt{5}}{2}\right)^3+\left(\frac{3+\sqrt{5}}{2}\right)^3-2.
 \end{equation}
 Wir nehmen nun an, dass für ein $n \in \mathbb{N}$ die Formel 
@@ -110,10 +110,10 @@ Wir nehmen nun an, dass für ein $n \in \mathbb{N}$ die Formel
 gilt.\\
 Damit bleibt noch zu zeigen, dass
 \begin{equation}
- \mathit{k}\left(W_{n+1}\right) = \left(\frac{3+\sqrt{5}}{2}\right)^{n+1}+\left(\frac{3+\sqrt{5}}{2}\right)^{n+1}-2.
+ \mathit{k}\left(W_{n+1}\right) = \left(\frac{3+\sqrt{5}}{2}\right)^{n+1}+\left(\frac{3+\sqrt{5}}{2}\right)^{n+1}-2
 \end{equation}
 Das werden wir nun einfach ausrechnen.
-Nachdem wir im vorherigen Kapitel herausgefunden haben, wieviele Spannbäume Fan-Graphen haben, setzen wir das und unsere Induktionsannahme in die Gleichung (\ref{eq:wrek}) ein, und erhalten:\\
+Nachdem wir im vorherigen Kapitel herausgefunden haben, wieviele Spannbäume Fan-Graphen haben, setzen wir das und unsere Induktionsannahme in die Glei\-chung (\ref{eq:wrek}) ein, und erhalten:\\
 \begin{equation}
 \begin{aligned}
 \mathit{k}\left(W_{n+1}\right) ={} & \frac{\left(3+\sqrt{5}\right)^{n+1}-\left(3-\sqrt{5}\right)^{n+1}}{2^{n+1}\sqrt{5}} + \frac{\left(3+\sqrt{5}\right)^{n}-\left(3-\sqrt{5}\right)^{n}}{2^{n}\sqrt{5}}\\

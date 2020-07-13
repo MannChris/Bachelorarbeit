@@ -1,12 +1,12 @@
 \subsection{Warm-up}
-Als kleines Aufwärmprogramm für den Rest dieser Arbeit werden wir in diesem Kapitel die Anzahl der Spannbäume von ein paar wohlbekannten sehr einfachen Graphen mit Kirchhoffs Matrix-Tree-Theorem berechnen.\\
-Unsere Ergebnisse aus diesem Kapitel wollen wir uns im Kapitel zu kartesischen Produkten von Graphen zu Nutze machen. Deswegen werden wir jedes mal die Eigenwerte der Laplace Matrizen berechnen, weil wir diese später brauchen.\\
+Als kleines Aufwärmprogramm für den Rest dieser Arbeit werden wir in diesem Kapitel die Anzahl der Spannbäume von ein paar wohlbekannten, sehr einfachen Graphen mit Kirchhoffs Matrix-Tree-Theorem berechnen.\\
+Unsere Ergebnisse aus diesem Kapitel wollen wir uns im Kapitel zu kartesischen Produkten von Graphen zuuntze machen. Weil wir die Eigenwerte der Laplacematrizen im Kapitel über kartesische Produkte von Graphen brauchen, werden wir diese hier jedes Mal ausrechnen.\\
 \begin{Lms}
  Der Pfad-Graph $P_n$ mit $n$ Knoten hat genau einen Spannbaum.
 \end{Lms}
 \textbf{Beweis:}\\
 Dass ein Pfad-Gaph nur einen Spannbaum hat ist offensichtlich; er ist selbst schon ein Baum.\\
-Wir sind aber an den Eigenwerten der Laplacematrix interessiert.\\
+Wir sind aber auch an den Eigenwerten der Laplacematrix interessiert.\\
 \begin{equation}
 L(P_n)=
 \begin{pmatrix}
@@ -39,7 +39,7 @@ An dieser Stelle verweisen wir auf~\cite{fiktor_2010} um folgendes zu zeigen:
 \end{equation}
 Damit folgt, dass $P_n$ wie erwartet einen einzigen Spannbaum besitzt.
 \begin{flushright} $\Box$ \end{flushright}
-Der zweite Klasse von Graphen, die wir in diesem Kapitel betrachten, sind Kreis-Graphen.
+Die zweite Klasse von Graphen, die wir in diesem Kapitel betrachten, sind Kreis-Graphen.
 Sie sind der einfachste Spezialfall von zirkulären Graphen, die wir später auch noch behandeln werden. In einem Kreis-Graphen $C_n$ mit $n$ Knoten sind genau die aufeinanderfolgenden Knoten, sowie der erste und der letzte adjazent. 
 \begin{Lms}
  Der Kreis-Graph $C_n$ mit $n$ Knoten hat genau $n$ Spannbäume.
@@ -58,7 +58,7 @@ L(C_n)=
 \end{equation}
 Lemma 3, wieder aus~\cite{daoud_2014} bestimmt die Eigenwerte $\lambda_k,\; k \in \{0,\ldots,n-1\}$
 dieser Matrix als $\lambda_k = 2-2\cos {\left(\frac{2\pi k}{n}\right)}$.
-Das gefällt uns noch nicht ganz, deswegen werden wir jetzt unser Wissen über trigonometrische Funktionen verwenden.
+Um das weiter zu vereinfachen, werden wir jetzt unser Wissen über trigonometrische Funktionen verwenden.
 \begin{equation}
 \begin{split}
  \lambda_k={} & 2 \left(1-\cos \left(\frac{2\pi j}{n}\right)\right)\\
@@ -82,5 +82,5 @@ Mit Kirchhoffs Matrix-Tree-Theorem folgt
  %= {}& \frac{4^{n-1}}{n}\prod_{j=1}^{n-1} \left(\sin^2\left(\frac{\pi k}{n}\right) \right)\\
 %\end{split}
 %\end{equation}
-Wir verwerten die Gleichung (\ref{fiktor}) wieder und schließen $\mathit{k}(C_n)=n$.
+Wir verwenden die Gleichung (\ref{fiktor}) wieder und schließen $\mathit{k}(C_n)=n$.
 \begin{flushright} $\Box$ \end{flushright} 

@@ -1,5 +1,5 @@
 \subsection{Kirchhoffs Matrix-Tree-Theorem}
-Nun werden wir das Matrix-Tree-Theorem für ungerichtete Graphen formulieren und beweisen, dass wir auch im weiteren Verlauf dieser Arbeit verwenden werden um die Anzahl der Spannbäume für verschiedene Graphenklassen zu bestimmen.
+Nun werden wir das Matrix-Tree-Theorem für ungerichtete Graphen formulieren und beweisen, das wir auch im weiteren Verlauf dieser Arbeit verwenden werden, um die Anzahl der Spannbäume für verschiedene Graphenklassen zu bestimmen.
 \begin{Tms}[Kirchoffs Matrix Tree Theorem]
 Sei $G$ ein ungerichteter Graph und $L_n$  die dazugehörige Laplacematrix. 
 Dann gilt:
@@ -17,14 +17,15 @@ Dann gilt:
 \end{Tms}
 \textbf{Beweis:}\\
 Teil 1 des Kirchhoffs Matrix-Tree-Theorem folgt quasi direkt aus Tuttes Matrix-Tree-Theorem. \\
-Sei $\vec{G}$ der gerichtete Graph, der entsteht, wenn man jede Kante in $G$ als zwei gerichtete ansieht.\\
+Sei $\vec{G}$ der gerichtete Graph, der entsteht, wenn man jede Kante in $G$ als zwei gerichtete Kante ansieht.\\
 Wir betrachten einen beliebigen Knoten aus $\vec{G}$, der natürlich auch in $G$ ist. \\
 Da nach Definition jeder Knoten in jedem Spannbaum mit jedem anderen wegverbunden ist, korrespondiert jeder Spannbaum von $G$ mit genau einer Aboreszenz mit unserem Knoten als Wurzel in $\vec{G}$. \\
-Da jede Kante in $\vec{G}$ auch in die entgegengesetzte Richtung vorhanden ist, können wir schließen, dass $L_n=K(\vec{G})$, wobei $L_n$ die Laplacematrix von $G$ ist. \\
-Da die Anzahl der Spannbäume gegenüber Permutationen der Knotenmenge invariant ist, wissen wir, dass jeder Kofaktor von $L_n$ also gleich jedem Kofaktor von $K(\vec{G})$ ist.\\
+Nachdem jede Kante in $\vec{G}$ auch in die entgegengesetzte Richtung vorhanden ist, können wir schließen, dass $L_n=K(\vec{G})$, wobei $L_n$ die Laplacematrix von $G$ ist. \\
+Weil die Anzahl der Spannbäume gegenüber Permutationen der Knotenmenge invariant ist, wissen wir, dass jeder Kofaktor von $L_n$ also gleich jedem Kofaktor von $K(\vec{G})$ ist.\\
 Wir folgern daraus mit Tuttes Matrix-Tree-Theorem, dass die Anzahl der Spannbäume in G gleich einem beliebigen Kofaktor von $L_n$ ist.\\ \\
-Um Teil 2 zu zeigen, berufen wir uns auf ein bekanntes Ergebnis der linearen Algebra; \\
-das Produkt der Eigenwerte einer Matrix ist gleich der Summe seiner Hauptminoren. Das kann man zum Beispiel in \cite{meyer_2005} nachlesen. \\
+Um Teil 2 zu zeigen, berufen wir uns auf ein bekanntes Ergebnis der linearen Algebra:\\
+Das Produkt der Eigenwerte einer Matrix ist gleich der Summe seiner Hauptminoren.\\
+Das kann man zum Beispiel in \cite{meyer_2005} nachlesen. \\
 Da $L_n$ $n$ Hauptminoren hat, folgt mit Teil 1, dass die Anzahl der Spannbäume von $G$ gleich $\frac{1}{n}\prod_{i=1}^{n-1}\lambda_i$ ist, wobei $\lambda_1,\ldots,\lambda_{n-1}$ die Eigenwerte von $L_n$ sind, die ungleich null sind. \\
 Damit ist Kirchhoffs Matrix-Tree-Theorem bewiesen.
 \begin{flushright} $\Box$ \end{flushright} 
