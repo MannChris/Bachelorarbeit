@@ -1,14 +1,13 @@
 \subsection{Zirkuläre Graphen}
 %Wo treten die auf (z.B. Circulant Graphs sind Cayley-Graphen zyklischer Gruppen)
 Im Kapitel Warm-up ist uns schon ein zirkulärer Graph begegnet; der Kreis-Graph.\\
-Wir nennen einen Graphen zirkulär (engl. "circulant") mit $n$ Knoten, wenn für $n \in \mathbb{N}$ und eine Menge $I \subset{\{1,..,\lfloor \frac{n}{2} \rfloor \}}\subset{\mathbb{N}}$ gilt, dass jeder Knoten $v$ genau zu jedem Knoten $(v+i) (\mod{n})$ mit $i \in I$ benachbart ist; wir bezeichnen solch einen Graphen kurz mit $C_n^I$.\\
-\todo[inline, color=blue]{Im folgenden Satz nachm Leerzeichen einfügen dieselben zwischen nxn und Matrix wieder wegmachen, das gehört nämlich zusammen}
-Wir erinnern uns, dass eine $(n\times n)$-Matrix zyklisch genannt wird, falls jede Spalte aus der vorherigen durch Anwendung der Permutation $(1...n)$ hervorgeht.\\
+Wir nennen einen Graphen zirkulär (engl. "circulant") mit $\,n\,$ Knoten, wenn für $\,n \in \mathbb{N}\,$ und eine Menge $\,I \subset{\{1,..,\lfloor \frac{n}{2} \rfloor \}}\subset{\mathbb{N}}\,$ gilt, dass jeder Knoten $\,v\,$ genau zu jedem Knoten $\,(v+i) (\mod{n})\,$ mit $\,i \in I\,$ benachbart ist; wir bezeichnen solch einen Graphen kurz mit $\,C_n^I$.\;\\
+Wir erinnern uns, dass eine $\,(n\times n)$-Matrix zyklisch genannt wird, falls jede Spalte aus der vorherigen durch Anwendung der Permutation $\,(1...n)\,$ hervorgeht.\\
 Das ist bei den Adjazenz- und Laplacematrizen von zirkulären Graphen, aufgrund dessen, wann Knoten benachbart sind, der Fall.\\
 Zugute kommt uns das bei der Berechnung der Anzahl von Spannbäumen in zirkulären Graphen, denn die Eigenwerte einer zyklischen Matrix sind wohlbekannt.\\
 Wir wollen in diesem Zusammenhang folgendes zeigen:
 \begin{Tms}
-Für die Anzahl der Spannbäume in zusammenhängenden zirkulären Graphen von Grad $d$ gilt:\\
+Für die Anzahl der Spannbäume in zusammenhängenden zirkulären Graphen von Grad $\,d\,$ gilt:\\
 \begin{equation}
 \mathit{k}\left( C_n^I \right) = 
  \begin{cases}
@@ -20,14 +19,14 @@ Für die Anzahl der Spannbäume in zusammenhängenden zirkulären Graphen von Gr
 \end{Tms}
 \textbf{Beweis:}\\
 Wir beweisen den Satz ähnlich wie \cite{wang_yang_1984}, berechnen daher die Eigenwerte der Laplacematrix und wenden danach Kirchhoffs Matrix-Tree-Theorem an.\\
-Für unseren Graphen $C_n^I$ ist die Laplacematrix zirkulär; wir können sie also durch die erste Spalte eindeutig beschreiben. Der erste Eintrag ist $|I|$, die Einträge $(i+1)$  und $(n-i)$ sind $-1$ für $i \in I$, die übrigen $0$.\\
+Für unseren Graphen $\,C_n^I\,$ ist die Laplacematrix zirkulär; wir können sie also durch die erste Spalte eindeutig beschreiben. Der erste Eintrag ist $\,|I|$,\; die Einträge $\,(i+1)\,$  und $\,(n-i)\,$ sind $\,-1\,$ für $\,i \in I$,\; die übrigen $\,0$.\;\\
 Des weiteren sind die Eigenwerte von zirkulären Matrizen ein bekanntes Resultat aus der linearen Algebra:
 \begin{equation}
  \lambda_j = \sum_{k=1}^{n}l_k\mathrm{exp}{\left(\frac{2\pi \mathrm{i}j(k-1)}{n}\right)}, \,\,\,\,\, {j\in\{0,\ldots,n-1\}}
  \label{cGE}
 \end{equation}
-$l_k$ ist hier der $k$-te Eintrag der ersten Spalte.\\ 
-Der Eigenwert $\lambda_0 = 0$. Da der Graph zusammenhängend ist, sind die übrigen Eigenwerte ungleich $0$ und mit Kirchhoffs Matrix-Tree-Theorem folgt:
+$l_k\,$ ist hier der $\,k$-te Eintrag der ersten Spalte.\\ 
+Der Eigenwert $\,\lambda_0 = 0$.\; \;  Da der Graph zusammenhängend ist, sind die übrigen Eigenwerte ungleich $\,0\,$ und mit Kirchhoffs Matrix-Tree-Theorem folgt:
 \begin{equation}
  \mathit{k}(C_n^I)=\prod_{j=1}^{n-1} \lambda_j
 \end{equation}
@@ -37,8 +36,8 @@ An dieser Stelle machen wir die Fallunterscheidung, ob der Graph geraden Grad ha
 \leftskip=20pt
 \rightskip=20pt
 \noindent
-\textbf{Fall 1:} Grad gerade; das heißt der Grad ist gleich $2|I|$\\
-Dann ist für alle $j \in \{1,\ldots,n-1\}$
+\textbf{Fall 1:} Grad gerade; das heißt der Grad ist gleich $\,2|I|$\\
+Dann ist für alle $\,j \in \{1,\ldots,n-1\}$
 \begin{equation}
 \begin{aligned}
  \lambda_j = {} & {2|I| - \left( \sum_{k\in I}\left(\mathrm{exp}{\left(\frac{2\pi \mathrm{i}jk}{n}\right)} + \mathrm{exp}{\left(\frac{2\pi \mathrm{i}j(n-k)}{n}\right)}\right)\right)}\\
@@ -48,8 +47,8 @@ Dann ist für alle $j \in \{1,\ldots,n-1\}$
  \end{aligned}
 \end{equation}
 ,wobei wir die berühmte eulersche Formel verwendet haben.\\
-\\ \textbf{Fall 2:} Grad ungerade; das bedeutet der Grad ist $2(|I|-1) + 1$\\
-Dann gilt für alle $j \in \{1,\ldots,n-1\}$
+\\ \textbf{Fall 2:} Grad ungerade; das bedeutet der Grad ist $\,2(|I|-1) + 1$\\
+Dann gilt für alle $\,j \in \{1,\ldots,n-1\}$
 \small
 \begin{equation}
 \begin{aligned}
@@ -71,9 +70,9 @@ Jetzt kennen wir die Eigenwerte der Laplacematrix und können Kirchhoffs Matrix-
 \end{cases}
 \end{equation}
 Das wollten wir zeigen.
-\begin{flushright} $\Box$ \end{flushright} 
-\begin{Bsps}[$C_n^2$ - Das Quadrat eines Kreises]
+\begin{flushright} $\,\Box\,$ \end{flushright} 
+\begin{Bsps}[$C_n^2\,$ - Das Quadrat eines Kreises]
 \todo[inline, color=green]{Bild von einem Square of a cycle}
 \todo[inline]{Herleitung Formel}
-%Im Notfall einen anderen Beweis für $C_n^{(1,2)}$ raussuchen (eher nicht), der jetzige ist lang, allerdings nutzt er er das MTT was von Vorteil ist (ich werde die Rechnungen verkürzen und nur die wichtigen Teile ausführlich machen, sonst werden das 4-6 Seiten quasi nur mit Rechnungen)
+%Im Notfall einen anderen Beweis für $\,C_n^{(1,2)}\,$ raussuchen (eher nicht), der jetzige ist lang, allerdings nutzt er er das MTT was von Vorteil ist (ich werde die Rechnungen verkürzen und nur die wichtigen Teile ausführlich machen, sonst werden das 4-6 Seiten quasi nur mit Rechnungen)
 \end{Bsps} 

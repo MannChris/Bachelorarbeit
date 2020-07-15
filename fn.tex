@@ -1,19 +1,17 @@
 \subsection{Fächer-Graphen}
-Nun werden wir Fächer-Graphen $F_n$, für $n \geq 1$ betrachten. Diese entstehen, wenn wir an einen Pfad-Graphen $P_{n}$ einen weiteren Knoten so ankleben, dass er mit allen übrigen Knoten adjazent ist. 
-% Interessanterweise treffen wir hier auf die Fibonaccizahlen,die ja bekanntlich folgendermaßen erzeugt werden können, blablabla
-\todo[inline]{Blabla vorher fertigschreiben}
+Nun werden wir Fächer-Graphen $\,F_n$,\; für $\,n \geq 1\,$ betrachten. Diese entstehen, wenn wir an einen Pfad-Graphen $\,P_{n}\,$ einen weiteren Knoten so ankleben, dass er mit allen übrigen Knoten adjazent ist. Interessanterweise treffen wir im Zusammenhang mit den Spannbäumen der Fächer-Graphen auf die  Fibonaccizahlen; eine der berühmtesten Zahlenfolgen überhaupt. Sie tritt häufig bei Wachstumsprozessen in der Natur, aber auch in anderen Gebieten der Wissenschaft und Kunst auf. Die Fibonaccizahlen erhält man bekanntlicherweise rekursiv indem man - mit den  beiden Startwerten gleich $\,1\,$ - die vorherigen zwei Fibonaccizahlen addiert. Wir bezeichnen die $\,n$-te solche Zahl als $\,\mathrm{Fib}(n)$,\; die beiden ersten sind also $\,\mathrm{Fib}(0)=\mathrm{Fib}(1)=1$.\;\\
 Wir wollen in diesem Kapital folgendes zeigen:
 \begin{Tms}
- Für die Anzahl der Spannbäume im Fächer-Graphen $F_n$ gilt:
+ Für die Anzahl der Spannbäume im Fächer-Graphen $\,F_n\,$ gilt:
  \begin{equation}
-  \mathit{k}(F_n)=\frac{(3+\sqrt{5})^{n}-(3-\sqrt{5})^{n}}{2^{n}\sqrt{5}}
+  \mathit{k}(F_n)=\frac{(3+\sqrt{5})^{n}-(3-\sqrt{5})^{n}}{2^{n}\sqrt{5}}=\mathrm{Fib}(2n)
  \end{equation}
  \label{ThmFn}
 \end{Tms}
 \textbf{Beweis:}
-Diesmal halten wir uns an einen Beweis von Bogdanowicz \cite{bogdanowicz_2008}, wobei dieser $F_n$ leicht anders definiert.\\
-Zuerst werden wir zeigen, dass ein Kofaktor der Laplacematrix von Fächer-Graphen einer bestimmten Rekursion folgt und dann, dass $Fib(2n)$ die gleiche Rekursionsvorschrift einhält; mit Kirchhoffs Matrix-Tree-Theorem folgt dann der Satz.\\
-Wir betrachten also zunächst die Laplacematrix von $F_n$; wenn wir die Knoten entsprechend nummerieren ist\\
+Diesmal halten wir uns an einen Beweis von Bogdanowicz \cite{bogdanowicz_2008}, wobei dieser $\,F_n\,$ leicht anders definiert.\\
+Zuerst werden wir zeigen, dass ein Kofaktor der Laplacematrix von Fächer-Graphen einer bestimmten Rekursion folgt und dann, dass $\,\mathrm{Fib}(2n)\,$ die gleiche Rekursionsvorschrift einhält; mit Kirchhoffs Matrix-Tree-Theorem folgt dann der Satz.\\
+Wir betrachten also zunächst die Laplacematrix von $\,F_n$; wenn wir die Knoten entsprechend nummerieren ist\\
 \begin{equation}
 L_n(F_n)=
 \begin{pmatrix}
@@ -44,9 +42,9 @@ A_n:=
 0&\ldots&\ldots&\ldots&\ldots&\ldots&0&-1&2\\
 \end{pmatrix}
 \end{equation}
-Die Determinante dieser Matrix ist der gesuchte Kofaktor; wir benennen sie mit $a_n$.\\
-Nun zeigen wir, dass die Folge $(a_n)_{n \in \mathbb{N}}$ der Rekursion $x^2-3x+1=0$ folgt, \\wobei $x$ den Shift-Operator $a_n = xa_{n-1}$ darstellt.\\
-Wir entwickeln $A_n$ nach der ersten Reihe und erhalten $a_n = 2b_{n-1} - b_{n-2}$, wobei $b_i$ die Determinante der folgenden Hilfsmatrix ist:\\
+Die Determinante dieser Matrix ist der gesuchte Kofaktor; wir benennen sie mit $\,a_n$.\;\\
+Nun zeigen wir, dass die Folge $\,(a_n)_{n \in \mathbb{N}}\,$ der Rekursion $\,x^2-3x+1=0\,$ folgt, \\wobei $\,x\,$ den Shift-Operator $\,a_n = xa_{n-1}\,$ darstellt.\\
+Wir entwickeln $\,A_n\,$ nach der ersten Reihe und erhalten $\,a_n = 2b_{n-1} - b_{n-2}$,\; wobei $\,b_i\,$ die Determinante der folgenden Hilfsmatrix ist:\\
 \begin{equation}
 \begin{pmatrix}
 3&-1&0&\ldots&\ldots&\ldots&\ldots&\ldots&0\\
@@ -60,9 +58,9 @@ Wir entwickeln $A_n$ nach der ersten Reihe und erhalten $a_n = 2b_{n-1} - b_{n-2
 0&\ldots&\ldots&\ldots&\ldots&\ldots&0&-1&2\\
 \end{pmatrix}
 \end{equation}
-Entwickeln wir die Determinante dieser Matrix für $i=n$ ebenfalls nach der ersten Reihe, sehen wir, dass die Rekursion $b_n-3b_{n-1} + b_{n-2}$ gilt.\\
-Daraus schließen wir nun, dass $a_n$ die gewünschte Rekursion $x^2-3x+1=0$ von oben erfüllt.\\
-Es bleibt also noch zu zeigen, dass sowohl $Fib(2n)$, als auch die Formel $\frac{(3+\sqrt{5})^{n}-(3-\sqrt{5})^{n}}{2^{n}\sqrt{5}}$ dieser Rekursionsvorschrift genügen;\\ 
+Entwickeln wir die Determinante dieser Matrix für $\,i=n\,$ ebenfalls nach der ersten Reihe, sehen wir, dass die Rekursion $\,b_n-3b_{n-1} + b_{n-2}\,$ gilt.\\
+Daraus schließen wir nun, dass $\,a_n\,$ die gewünschte Rekursion $\,x^2-3x+1=0\,$ von oben erfüllt.\\
+Es bleibt also noch zu zeigen, dass sowohl $\,\mathrm{Fib}(2n)$,\; als auch die Formel $\,\frac{(3+\sqrt{5})^{n}-(3-\sqrt{5})^{n}}{2^{n}\sqrt{5}}\,$ dieser Rekursionsvorschrift genügen;\\ 
 Das sind aber zwei einfache Rechnungen, die wir uns an dieser Stelle sparen.\\
 Damit ist unser Beweis vollständig.
-\begin{flushright} $\Box$ \end{flushright}
+\begin{flushright} $\,\Box\,$ \end{flushright}
