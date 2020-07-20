@@ -12,9 +12,9 @@ Um die Formel für die Berechnung der Anzahl der Spannbäume eines solchen Graph
 Wir beobachten, dass wir den Fan-Graphen $\,F_n\,$ bekommen, wenn wir die Kante $\,v_1v_n\,$ aus $\,W_n\,$ entfernen.
 Die Anzahl der Spannbäume von $\,F_n\,$ kennen wir bereits von oben.
 Um die Anzahl der Spannbäume von Rädern zu berechnen, zeigen wir zuerst die rekursive Beziehung
-\begin{equation}
+\begin{equation*}
  \mathit{k}\left(W_{n+1}\right) = \mathit{k}\left(F_{n+1}\right) + \mathit{k}\left(F_n\right) + \mathit{k}\left(W_n\right)
-\end{equation}
+\end{equation*}
 Dafür teilen wir die Spannbäume von $\,W_{n+1}\,$ in drei verschiedene Klassen ein:\\
 \par
 \begingroup
@@ -100,36 +100,36 @@ Da jeder Spannbaum von $\,W_{n+1}\,$ in genau einer der 3 Klassen ist, gilt die 
 \label{eq:wrek}
 \end{equation}
 Wir werden nun den Beweis per Induktion über $\,n \in \mathbb{N}, \, n \geq 3\,$ vervollständigen, wobei uns natürlich zu Gute kommt, dass uns die Anzahl der Spannbäume von Fan-Graphen schon bekannt ist.\\
-Für unseren Induktionsanfang sehen wir - zum Beispiel durch Anwendung von Kirchhoffs Matrix-Tree-Theorem - leicht, dass \begin{equation}
+Für unseren Induktionsanfang sehen wir - zum Beispiel durch Anwendung von Kirchhoffs Matrix-Tree-Theorem - leicht, dass \begin{equation*}
 \mathit{k}\left(W_3\right) = 16 = \left(\frac{3+\sqrt{5}}{2}\right)^3+\left(\frac{3+\sqrt{5}}{2}\right)^3-2.
-\end{equation}
+\end{equation*}
 Wir nehmen nun an, dass für ein $\,n \in \mathbb{N}\,$ die Formel 
-\begin{equation}
+\begin{equation*}
  \mathit{k}\left(W_n\right) = \left(\frac{3+\sqrt{5}}{2}\right)^n+\left(\frac{3+\sqrt{5}}{2}\right)^n-2
-\end{equation}
+\end{equation*}
 gilt.\\
 Damit bleibt noch zu zeigen, dass
-\begin{equation}
+\begin{equation*}
  \mathit{k}\left(W_{n+1}\right) = \left(\frac{3+\sqrt{5}}{2}\right)^{n+1}+\left(\frac{3+\sqrt{5}}{2}\right)^{n+1}-2
-\end{equation}
+\end{equation*}
 Das werden wir nun einfach ausrechnen.
 Nachdem wir im vorherigen Kapitel herausgefunden haben, wieviele Spannbäume Fan-Graphen haben, setzen wir das und unsere Induktionsannahme in die Glei\-chung (\ref{eq:wrek}) ein, und erhalten:\\
-\begin{equation}
+\begin{equation*}
 \begin{aligned}
 \mathit{k}\left(W_{n+1}\right) ={} & \frac{\left(3+\sqrt{5}\right)^{n+1}-\left(3-\sqrt{5}\right)^{n+1}}{2^{n+1}\sqrt{5}} + \frac{\left(3+\sqrt{5}\right)^{n}-\left(3-\sqrt{5}\right)^{n}}{2^{n}\sqrt{5}}\\
 & + \left(\frac{3+\sqrt{5}}{2}\right)^n+\left(\frac{3-\sqrt{5}}{2}\right)^n-2
 \end{aligned}
-\end{equation}
+\end{equation*}
 Wir bringen fast alles auf einen Nenner, sortieren die Terme und bekommen
-\begin{equation}
+\begin{equation*}
 \begin{aligned}
 \mathit{k}\left(W_{n+1}\right) = {}  & \frac{\left(3+\sqrt{5}+2+2\sqrt{5}\right)\left(3+\sqrt{5}\right)^{n}}{2^{n+1}\sqrt{5}} \\%% {} steht da nur, weils hin muss, wegen dem =
                         & -\frac{\left(3+\sqrt{5}+2-2\sqrt{5}\right)\left(3-\sqrt{5}\right)^{n}}{2^{n+1}\sqrt{5}}-2 
 \end{aligned}
-\end{equation}s
+\end{equation*}s
 Ausrechnen führt uns zu\\
-\begin{equation}
+\begin{equation*}
 \mathit{k}\left(W_{n+1}\right) = \left(\frac{3+\sqrt{5}}{2}\right)^{n+1}+\left(\frac{3+\sqrt{5}}{2}\right)^{n+1}-2
-\end{equation}
+\end{equation*}
 Damit ist unser Induktionsbeweis abgeschlossen und wir haben gezeigt, dass unser Satz~\ref{wn} über die Anzahl der Spannbäume in einem Rad gilt.
 \begin{flushright} $\,\Box\,$ \end{flushright} 

@@ -6,8 +6,8 @@ Unsere Ergebnisse aus diesem Kapitel wollen wir uns im Kapitel zu kartesischen P
 \end{Lms}
 \textbf{Beweis:}\\
 Dass ein Pfad-Gaph nur einen Spannbaum hat ist offensichtlich; er ist selbst schon ein Baum.\\
-Wir sind aber auch an den Eigenwerten der Laplacematrix interessiert.\\
-\begin{equation}
+Wir sind aber auch an den Eigenwerten der Laplacematrix interessiert. Wir betrachten also\\
+\begin{equation*}
 L(P_n)=
 \begin{pmatrix}
 1&-1&0&\ldots&\ldots&\ldots\\
@@ -17,21 +17,21 @@ L(P_n)=
 \ldots&\ldots&0&-1&2&-1\\
 \ldots&\ldots&\ldots&0&-1&1\\
 \end{pmatrix}
-\end{equation}
-Lemma 2 von~\cite{daoud_2014}, zeigt unter Verwendung einiger Eigenschaften von Chebychev-Polynomen, dass die Eigenwerte $\,\neq 0\,$ dieser Matrix gleich $\,2-2\cos \left(\frac{\pi k}{n}\right)\,$ für $\,k \in \{1,\ldots,n-1\}\,$ sind.
+\end{equation*}
+Lemma 2 von \cite{daoud_2014}, zeigt unter Verwendung einiger Eigenschaften von Chebychev-Polynomen, dass die Eigenwerte $\,\neq 0\,$ dieser Matrix gleich $\,2-2\cos \left(\frac{\pi k}{n}\right)\,$ für $\,k \in \{1,\ldots,n-1\}\,$ sind.
 Mit Kirchhoffs Matrix-Tree-Theorem folgt
-\begin{equation}
+\begin{equation*}
  \mathit{k}(P_n)=\frac{1}{n}\prod_{j=1}^{n-1} \left(2-2\cos \left(\frac{\pi j}{n}\right)\right)
-\end{equation}
+\end{equation*}
 Wir rechnen weiter
-\begin{equation}
+\begin{equation*}
 \begin{split}
  \mathit{k}(P_n)={} & \frac{2^{n-1}}{n}\prod_{j=1}^{n-1} \left(1-\cos \left(\frac{\pi j}{n}\right)\right) \\
   ={}& \frac{2^{n-1}}{n}\prod_{j=1}^{n-1} \left(\left(1-\cos \left(\frac{\pi j}{n}\right)\right)^2\right)^{\frac{1}{2}} \\
   ={}&\frac{2^{n-1}}{n}\prod_{j=1}^{n-1} \left(\left(1-2\cos^2 \left(\frac{\pi j}{n}\right)+\cos^2 \left(\frac{\pi j}{n}\right)\right)\right)^{\frac{1}{2}} \\
   ={}& \frac{2^{n-1}}{n}\prod_{j=1}^{n-1} \left(\sin\left(\frac{\pi k}{n}\right) \right)
   \end{split}
-\end{equation}
+\end{equation*}
 An dieser Stelle verweisen wir auf~\cite{fiktor_2010} um folgendes zu zeigen:
 \begin{equation}
  \prod_{j=1}^{n-1} \left(\sin\left(\frac{\pi k}{n}\right) ist \right)=n2^{n-1}
@@ -44,8 +44,9 @@ Sie sind der einfachste Spezialfall von zirkulären Graphen, die wir später auc
 \begin{Lms}
  Der Kreis-Graph $\,C_n\,$ mit $\,n\,$ Knoten hat genau $\,n\,$ Spannbäume.
 \end{Lms}
-\textbf{Beweis:}
-\begin{equation}
+\textbf{Beweis:}\\
+Wir sehen uns hier wieder die Laplacematrix an.\\
+\begin{equation*}
 L(C_n)=
 \begin{pmatrix}
 1&-1&0&\ldots&\ldots&\ldots\\
@@ -55,7 +56,7 @@ L(C_n)=
 \ldots&\ldots&0&-1&2&-1\\
 \ldots&\ldots&\ldots&0&-1&1\\
 \end{pmatrix}
-\end{equation}
+\end{equation*}
 Lemma 3, wieder aus~\cite{daoud_2014} bestimmt die Eigenwerte $\,\lambda_k,\; k \in \{0,\ldots,n-1\}$
 dieser Matrix als $\,\lambda_k = 2-2\cos {\left(\frac{2\pi k}{n}\right)}$.\; 
 Um das weiter zu vereinfachen, werden wir jetzt unser Wissen über trigonometrische Funktionen verwenden.
@@ -68,19 +69,19 @@ Um das weiter zu vereinfachen, werden wir jetzt unser Wissen über trigonometris
 \label{ewc}
 \end{equation}
 Mit Kirchhoffs Matrix-Tree-Theorem folgt
-\begin{equation}
+\begin{equation*}
  \mathit{k}(C_n)=\frac{4^{n-1}}{n}\prod_{j=1}^{n-1} \left(\sin^2\left(\frac{\pi k}{n}\right) \right)\\
-\end{equation}
-%\begin{equation}
+\end{equation*}
+%\begin{equation*}
  %\mathit{k}(C_n)=\frac{1}{n}\prod_{j=1}^{n-1} \left(2-2\cos \left(\frac{2\pi j}{n}\right)\right)
-%\end{equation}
+%\end{equation*}
 %Jetzt werden wir unser Wissen über trigonometrische Funktionen verwenden.
-%\begin{equation}
+%\begin{equation*}
 %\begin{split}
  %\mathit{k}(C_n)={} & \frac{2^{n-1}}{n}\prod_{j=1}^{n-1} \left(1-\cos \left(\frac{2\pi j}{n}\right)\right)\\
  %= {}&\frac{2^{n-1}}{n}\prod_{j=1}^{n-1} \left( 1 - \cos^2\left(\frac{\pi k}{n}\right)+\sin^2\left(\frac{\pi k}{n}\right) \right)\\
  %= {}& \frac{4^{n-1}}{n}\prod_{j=1}^{n-1} \left(\sin^2\left(\frac{\pi k}{n}\right) \right)\\
 %\end{split}
-%\end{equation}
+%\end{equation*}
 Wir verwenden die Gleichung (\ref{fiktor}) wieder und schließen $\,\mathit{k}(C_n)=n$.\; 
 \begin{flushright} $\,\Box\,$ \end{flushright} 
