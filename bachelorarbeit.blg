@@ -7,44 +7,44 @@ A level-1 auxiliary file: mtt.aux
 A level-1 auxiliary file: as.aux
 The style file: plain.bst
 Database file #1: bachelorarbeit.bib
-You've used 13 entries,
+You've used 15 entries,
             2118 wiz_defined-function locations,
-            583 strings with 6202 characters,
-and the built_in function-call counts, 3990 in all, are:
-= -- 401
-> -- 136
+            592 strings with 6407 characters,
+and the built_in function-call counts, 4456 in all, are:
+= -- 444
+> -- 156
 < -- 3
-+ -- 56
-- -- 42
-* -- 227
-:= -- 650
-add.period$ -- 40
-call.type$ -- 13
-change.case$ -- 57
++ -- 65
+- -- 48
+* -- 244
+:= -- 730
+add.period$ -- 47
+call.type$ -- 15
+change.case$ -- 65
 chr.to.int$ -- 0
-cite$ -- 13
-duplicate$ -- 179
-empty$ -- 333
-format.name$ -- 42
-if$ -- 864
+cite$ -- 15
+duplicate$ -- 198
+empty$ -- 377
+format.name$ -- 48
+if$ -- 964
 int.to.chr$ -- 0
-int.to.str$ -- 13
-missing$ -- 15
-newline$ -- 69
-num.names$ -- 26
-pop$ -- 69
+int.to.str$ -- 15
+missing$ -- 17
+newline$ -- 80
+num.names$ -- 30
+pop$ -- 88
 preamble$ -- 1
-purify$ -- 47
+purify$ -- 54
 quote$ -- 0
-skip$ -- 142
+skip$ -- 154
 stack$ -- 0
-substring$ -- 258
-swap$ -- 52
+substring$ -- 269
+swap$ -- 54
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 46
+type$ -- 52
 warning$ -- 0
-while$ -- 37
-width$ -- 15
-write$ -- 141
+while$ -- 41
+width$ -- 17
+write$ -- 162

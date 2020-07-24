@@ -18,7 +18,8 @@
 \usepackage{url}
 \usepackage{float}
 \usepackage{caption}
-
+%\usepackage[ngerman, num]{isodate}
+\usepackage[ngerman]{datetime}
 \newtheorem{Tm}{Satz}[section]
 \newtheorem{Tms}{Satz}[subsection]
 \newtheorem{Lm}[Tm]{Lemma}
@@ -28,6 +29,7 @@
 \newtheorem{Bsps}[Tms]{Beispiel}
 \newtheorem{Bsp}[Tm]{Beispiel}
 %Abbildungen sollen Abb. genannt werden und nicht Figure
+\newdateformat{myformat}{\THEDAY{. }\monthnamengerman[\THEMONTH], \THEYEAR}
 \addto{\captionsngerman}{%
   \renewcommand*{\contentsname}{Inhalt}
   \renewcommand*{\listfigurename}{Abbildungen}
@@ -127,7 +129,7 @@
 \vspace*{2.5cm}
 \vspace*{0.4cm}
 \hspace*{-0.73cm}
-\hspace*{-0.43cm}München, den ..........\\
+\hspace*{-0.43cm}München, den \myformat\today\\
 \end{center}
 \end{titlepage}
 
@@ -149,7 +151,6 @@
 \setcounter{page}{1}
 
 \tableofcontents
-\todo[inline, color=blue]{Quellen doppelt und dreifach prüfen!!!!!!!!}
 \cleardoublepage
 
 \include{einleitung}
@@ -188,6 +189,6 @@ selbständig verfasst zu haben und keine anderen als die angegebenen Quellen und
 Christopher Mann
 
 \vspace*{1cm}
-München, den .................
+München, den \myformat\today
 
 \end{document}

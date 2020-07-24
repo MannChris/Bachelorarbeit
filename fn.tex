@@ -1,5 +1,5 @@
 \subsection{Fächer-Graphen}
-Nun werden wir Fächer-Graphen $\,F_n$,\; für $\,n \geq 1\,$ betrachten. Diese entstehen, wenn wir an einen Pfad-Graphen $\,P_{n}\,$ einen weiteren Knoten so ankleben, dass er mit allen übrigen Knoten adjazent ist. Interessanterweise treffen wir im Zusammenhang mit den Spannbäumen der Fächer-Graphen auf die  Fibonaccizahlen; eine der berühmtesten Zahlenfolgen überhaupt. Sie tritt häufig bei Wachstumsprozessen in der Natur, aber auch in anderen Gebieten der Wissenschaft und Kunst auf. Die Fibonaccizahlen erhält man bekanntlicherweise rekursiv indem man - mit den  beiden Startwerten gleich $\,1\,$ - die vorherigen zwei Fibonaccizahlen addiert. Wir bezeichnen die $\,n$-te solche Zahl als $\,\mathrm{Fib}(n)$,\; die beiden ersten sind also $\,\mathrm{Fib}(0)=\mathrm{Fib}(1)=1$.\;\\
+Nun werden wir Fächer-Graphen $\,F_n$,\; für $\,n \geq 1\,$ betrachten. Diese entstehen, wenn wir an einen Pfad-Graphen $\,P_{n}\,$ einen weiteren Knoten so ankleben, dass er mit allen übrigen Knoten adjazent ist. Interessanterweise treffen wir im Zusammenhang mit den Spannbäumen der Fächer-Graphen auf die  Fibonaccizahlen; eine der berühmtesten Zahlenfolgen überhaupt. Sie tritt häufig bei Wachstumsprozessen in der Natur, aber auch in anderen Gebieten der Wissenschaft und Kunst auf. Die Fibonaccizahlen erhält man bekanntlicherweise rekursiv indem man - mit den  beiden Startwerten gleich $\,1\,$ - die vorherigen zwei Fibonaccizahlen addiert \cite{a45}. Wir bezeichnen die $\,n$-te solche Zahl als $\,\mathrm{Fib}(n)$;\; die beiden ersten sind also $\,\mathrm{Fib}(0)=0\,$ und $\,\mathrm{Fib}(1)=1$.\;\\
 Wir wollen in diesem Kapital folgendes zeigen:
 \begin{Tms}
  Für die Anzahl der Spannbäume im Fächer-Graphen $\,F_n\,$ gilt:
@@ -60,7 +60,11 @@ Wir entwickeln $\,A_n\,$ nach der ersten Reihe und erhalten $\,a_n = 2b_{n-1} - 
 \end{equation*}
 Entwickeln wir die Determinante dieser Matrix für $\,i=n\,$ ebenfalls nach der ersten Reihe, sehen wir, dass die Rekursion $\,b_n-3b_{n-1} + b_{n-2}\,$ gilt.\\
 Daraus schließen wir nun, dass $\,a_n\,$ die gewünschte Rekursion $\,x^2-3x+1=0\,$ von oben erfüllt.\\
-Es bleibt also noch zu zeigen, dass sowohl $\,\mathrm{Fib}(2n)$,\; als auch die Formel $\,\frac{(3+\sqrt{5})^{n}-(3-\sqrt{5})^{n}}{2^{n}\sqrt{5}}\,$ dieser Rekursionsvorschrift genügen;\\ 
+Es bleibt also noch zu zeigen, dass sowohl $\,\mathrm{Fib}(2n)$,\; als auch die Formel
+\begin{equation*}
+ \,\frac{(3+\sqrt{5})^{n}-(3-\sqrt{5})^{n}}{2^{n}\sqrt{5}}\,
+\end{equation*}
+dieser Rekursionsvorschrift genügen;\\ 
 Das sind aber zwei einfache Rechnungen, die wir uns an dieser Stelle sparen.\\
 Damit ist unser Beweis vollständig.
 \begin{flushright} $\,\Box\,$ \end{flushright}

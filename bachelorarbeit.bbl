@@ -28,6 +28,11 @@ Vittorio Giovannetti and Simone Severini.
   with the Quantum Relative Entropy}.
 \newblock {\em Advances in Network Complexity}, page 177–190, Dec 2013.
 
+\bibitem{horn_johnson_1991}
+Roger~A. Horn and Charles~R. Johnson.
+\newblock {\em Topics in Matrix Analysis}.
+\newblock Cambridge University Press, 1991.
+
 \bibitem{fiktor_2010}
 Fiktor (https://math.stackexchange.com/users/695/fiktor).
 \newblock Prove that $\prod_{k=1}^{n-1}\sin\frac{k \pi}{n} =
@@ -63,6 +68,12 @@ J~Sedlacek.
 \newblock On the skeletons of a graph or digraph.
 \newblock {\em Proc. Calgary International Conference on Combinatorial
   Structures and their Applications, Gordon and Breach}, pages 387--391, 1970.
+
+\bibitem{a45}
+N.~J.~A. Sloane.
+\newblock The on-line encyclopedia of integer sequences.
+\newblock \url{https://oeis.org/A000045}.
+\newblock abgerufen am 24. Juli, 2020.
 
 \bibitem{wang_yang_1984}
 J.~F. Wang and C.~S. Yang.
