@@ -1,44 +1,36 @@
 \begin{thebibliography}{10}
 
 \bibitem{austin_1960}
-TL~Austin.
+T.~L. Austin.
 \newblock The enumeration of point labelled chromatic graphs and trees.
-\newblock {\em Canadian Journal of Mathematics}, 12:535--545, 1960.
+\newblock {\em Canadian Journal of Mathematics}, 1960.
 
 \bibitem{bang-jensen_2009}
-Jørgen Bang-Jensen and Gregory~Z. Gutin.
+J.~Bang-Jensen and G.~Z. Gutin.
 \newblock Digraphs.
 \newblock {\em Springer Monographs in Mathematics}, 2009.
 
 \bibitem{bogdanowicz_2008}
-Zbigniew Bogdanowicz.
+Z.~Bogdanowicz.
 \newblock {Formulas for the Number of Spanning Trees in a Fan}.
-\newblock {\em Applied Mathematical Sciences (Ruse)}, pages 781 -- 786, 01
-  2008.
+\newblock {\em Applied Mathematical Sciences (Ruse)}, 2008.
 
 \bibitem{daoud_2014}
 S.~N. Daoud.
 \newblock Generating formulas of the number of spanning trees of some special
   graphs.
-\newblock {\em The European Physical Journal Plus}, 129(7), 2014.
+\newblock {\em The European Physical Journal Plus}, 2014.
 
 \bibitem{giovannetti_severini_2013}
-Vittorio Giovannetti and Simone Severini.
+V.~Giovannetti and S.~Severini.
 \newblock {Kirchhoffs Matrix-Tree Theorem Revisited: Counting Spanning Trees
   with the Quantum Relative Entropy}.
-\newblock {\em Advances in Network Complexity}, page 177–190, Dec 2013.
+\newblock {\em Advances in Network Complexity}, 2013.
 
 \bibitem{horn_johnson_1991}
-Roger~A. Horn and Charles~R. Johnson.
+R.~A. Horn and Charles~R. J.
 \newblock {\em Topics in Matrix Analysis}.
 \newblock Cambridge University Press, 1991.
-
-\bibitem{fiktor_2010}
-Fiktor (https://math.stackexchange.com/users/695/fiktor).
-\newblock Prove that $\prod_{k=1}^{n-1}\sin\frac{k \pi}{n} =
-  \frac{n}{2^{n-1}}$.
-\newblock Mathematics Stack Exchange.
-\newblock URL:https://math.stackexchange.com/q/8395 (version: 2018-02-11).
 
 \bibitem{janezic_2015}
 D.~Janezic, A.~Milicevic, S.~Nikolic, and N.~Trinajstic.
@@ -49,17 +41,17 @@ D.~Janezic, A.~Milicevic, S.~Nikolic, and N.~Trinajstic.
 G.~Kirchhoff.
 \newblock {Ueber die Auflösung der Gleichungen, auf welche man bei der
   Untersuchung der linearen Vertheilung galvanischer Ströme geführt wird}.
-\newblock {\em Annalen der Physik und Chemie}, 148(12):497–508, 1847.
+\newblock {\em Annalen der Physik und Chemie}, 148, 1847.
 
 \bibitem{Lau_2004}
-Dietlinde Lau.
+D.~Lau.
 \newblock {\em {Algebra und Diskrete Mathematik. Vol. 2, Lineare Optimierung,
   Graphen und Algorithmen, Algebraische Strukturen und Allgemeine Algebra mit
   Anwendungen}}.
 \newblock Springer, 2004.
 
 \bibitem{meyer_2005}
-Carl~D. Meyer.
+C.~D. Meyer.
 \newblock {\em Matrix analysis and applied linear algebra}.
 \newblock SIAM, Society for Industrial and Applied Mathematics, 2005.
 
@@ -67,7 +59,7 @@ Carl~D. Meyer.
 J~Sedlacek.
 \newblock On the skeletons of a graph or digraph.
 \newblock {\em Proc. Calgary International Conference on Combinatorial
-  Structures and their Applications, Gordon and Breach}, pages 387--391, 1970.
+  Structures and their Applications, Gordon and Breach}, 1970.
 
 \bibitem{a45}
 N.~J.~A. Sloane.
@@ -78,13 +70,12 @@ N.~J.~A. Sloane.
 \bibitem{wang_yang_1984}
 J.~F. Wang and C.~S. Yang.
 \newblock On the number of spanning trees of circulant graphs.
-\newblock {\em International Journal of Computer Mathematics}, 16(4):229–241,
-  1984.
+\newblock {\em International Journal of Computer Mathematics}, 1984.
 
 \bibitem{yakoubi_2019}
-Fouad Yakoubi, Noussaima EL~Khattabi, and Mohamed El~Marraki.
+F.~Yakoubi, N.~EL~Khattabi, and M.~El~Marraki.
 \newblock {Computing Spanning Trees In Some Multiple Planar Graphs}.
 \newblock {\em International Journal of Scientific \& Technology Research},
-  8(9):2312--2315, 2019.
+  2019.
 
 \end{thebibliography}

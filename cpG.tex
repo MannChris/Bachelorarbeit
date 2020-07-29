@@ -46,11 +46,11 @@ Man nennt diese dann auch Torus-Graphen, kurz $\,T_{m,n}$.\;  Hier sehen wir so 
 \end{figure}
 Da wir die Eigenwerte der Laplacematrix eines Kreis-Graphen im Kapitel Warm-up in Gleichung \ref{ewc} schon berechnet haben können wir einfach Satz \ref{tmcpG} anwenden und erhalten
 \begin{equation*}
- \mathit{k}(T_{m,n})= \frac{1}{mn} \prod_{j=1}^{n-1} 4\sin^2\left(\frac{\pi j}{n} \right)\prod_{i=1}^{n-1} 4\sin^2\left(\frac{\pi i}{n}\right)\prod_{i=1}^{n-1}\prod_{j=1}^{n-1} 4\left(\sin^2\left(\frac{\pi j}{n}\right)+ \sin^2\left(\frac{\pi i}{n}\right)\right)\
+ \mathit{k}(T_{m,n})= \frac{1}{mn} \prod_{j=1}^{n-1} 4\sin^2\left(\frac{\pi j}{n} \right)\prod_{i=1}^{m-1} 4\sin^2\left(\frac{\pi i}{m}\right)\prod_{i=1}^{m-1}\prod_{j=1}^{n-1} 4\left(\sin^2\left(\frac{\pi j}{n}\right)+ \sin^2\left(\frac{\pi i}{m}\right)\right)\
 \end{equation*}
 Mit Gleichung \ref{fiktor} können wir schließen
 \begin{equation*}
- \mathit{k}(T_{m,n})= mn4^{(n-1)(m-1)}\prod_{i=1}^{n-1}\prod_{j=1}^{n-1} \left(\sin^2\left(\frac{\pi j}{n}\right)+ \sin^2\left(\frac{\pi i}{n}\right)\right)\
+ \mathit{k}(T_{m,n})= mn4^{(n-1)(m-1)}\prod_{i=1}^{m-1}\prod_{j=1}^{n-1} \left(\sin^2\left(\frac{\pi j}{n}\right)+ \sin^2\left(\frac{\pi i}{m}\right)\right)\
 \end{equation*}
 \begin{Bsps}[kartesisches Produkt von vollständigen Graphen]
 %z.B. rooks graph
