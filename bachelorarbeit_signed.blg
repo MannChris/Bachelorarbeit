@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: bachelorarbeit_signed.aux
+A level-1 auxiliary file: einleitung.aux
+A level-1 auxiliary file: tLuD.aux
+A level-1 auxiliary file: mtt.aux
+A level-1 auxiliary file: as.aux
+The style file: plain.bst
+Database file #1: bachelorarbeit.bib
+You've used 14 entries,
+            2118 wiz_defined-function locations,
+            573 strings with 6079 characters,
+and the built_in function-call counts, 3248 in all, are:
+= -- 302
+> -- 149
+< -- 0
++ -- 62
+- -- 46
+* -- 150
+:= -- 605
+add.period$ -- 43
+call.type$ -- 14
+change.case$ -- 61
+chr.to.int$ -- 0
+cite$ -- 14
+duplicate$ -- 145
+empty$ -- 264
+format.name$ -- 46
+if$ -- 659
+int.to.chr$ -- 0
+int.to.str$ -- 14
+missing$ -- 17
+newline$ -- 74
+num.names$ -- 28
+pop$ -- 85
+preamble$ -- 1
+purify$ -- 51
+quote$ -- 0
+skip$ -- 96
+stack$ -- 0
+substring$ -- 72
+swap$ -- 14
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 48
+warning$ -- 0
+while$ -- 28
+width$ -- 16
+write$ -- 144
